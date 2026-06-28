@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sledování IL-8 | Imunelia Biotech</title>
+  <meta name="description" content="Panel pro nahrání dat IL-8 z Excelu, vykreslení trendu, doplnění diagnózy, popisu a kardio měření.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Imunelia Biotech domů"><img class="brand-logo" src="assets/imunelia-biotech-logo.jpg" alt="Imunelia Biotech"></a>
+    <nav class="nav" aria-label="Hlavní navigace"><a href="index.html">Úvod</a><a href="produkty.html">Produkty</a><a href="il-8.html">IL-8</a><a href="#data">Data</a></nav>
+    <a class="header-cta" href="#data">Nahrát data</a>
+  </header>
+
+  <main>
+    <section class="science-hero">
+      <div>
+        <p class="eyebrow">IL-8 / CXCL8</p>
+        <h1>Vyhodnocení IL-8 podle dat z Excelu.</h1>
+        <p>Panel slouží k přehlednému sledování hodnot IL-8 v čase, doplnění diagnózy, klinického popisu a souvisejících kardio měření. Výstup je orientační a nenahrazuje lékařské hodnocení.</p>
+      </div>
+      <div class="metric-panel" aria-label="Souhrn IL-8">
+        <span>Aktuální souhrn</span>
+        <strong id="summary-count">0 měření</strong>
+        <div class="mini-stat"><b id="summary-last">--</b><small>poslední hodnota IL-8</small></div>
+        <div class="mini-stat"><b id="summary-trend">bez dat</b><small>trend v čase</small></div>
+      </div>
+    </section>
+
+    <section id="data" class="data-lab">
+      <div class="upload-panel">
+        <p class="section-kicker">Data z Excelu</p>
+        <h2>PL odběry výsledky.</h2>
+        <p>Načtený soubor obsahuje 62 záznamů. Vyberte pacienta a panel zobrazí jeho odběry IL-8 v čase včetně diagnózy z tabulky.</p>
+        <div class="dataset-controls">
+          <button id="load-pl-dataset" class="button primary" type="button">Načíst PL odběry</button>
+          <label>Pacient<select id="patient-select"><option value="">Nejprve načtěte dataset</option></select></label>
+        </div>
+        <div id="patient-context" class="patient-context">Dataset zatím není načtený.</div>
+      </div>
+
+      <div class="upload-panel">
+        <p class="section-kicker">Vlastní data IL-8</p>
+        <h2>Nahrání laboratorních dat.</h2>
+        <p>Vložte soubor Excel nebo CSV. Doporučené sloupce: datum, IL-8, jednotka, laboratoř, diagnóza, poznámka. U Excelu se načítá první list.</p>
+        <label class="file-drop">Soubor IL-8<input id="il8-file" type="file" accept=".xlsx,.xls,.csv,.tsv"></label>
+        <div class="manual-grid">
+          <label>Datum<input id="manual-date" type="date"></label>
+          <label>IL-8<input id="manual-value" type="text" placeholder="např. 12,4"></label>
+          <label>Jednotka<input id="manual-unit" type="text" placeholder="pg/ml"></label>
+          <button id="add-manual" class="button secondary" type="button">Přidat ručně</button>
+        </div>
+      </div>
+
+      <div class="upload-panel subtle-panel">
+        <p class="section-kicker">Klinický kontext</p>
+        <h2>Diagnóza a popis.</h2>
+        <label>Diagnóza nebo pracovní závěr<input id="diagnosis" type="text" placeholder="např. sledování zánětlivé aktivity"></label>
+        <label>Popis stavu<textarea id="clinical-note" rows="6" placeholder="Doplňte symptomy, medikaci, doporučení odborníka nebo okolnosti odběru."></textarea></label>
+      </div>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="chart-card wide-card">
+        <div class="card-head"><div><p class="section-kicker">Graf</p><h2>Trend IL-8 v čase.</h2></div><button id="clear-il8" class="text-button" type="button">Vymazat data</button></div>
+        <canvas id="il8-chart" width="1100" height="420" aria-label="Graf IL-8 v čase"></canvas>
+      </article>
+      <article class="chart-card">
+        <p class="section-kicker">Vyhodnocení</p>
+        <h3>Orientační interpretace</h3>
+        <div id="interpretation" class="interpretation">Nahrajte data IL-8 nebo přidejte měření ručně.</div>
+      </article>
+    </section>
+
+    <section class="table-section">
+      <div class="card-head"><div><p class="section-kicker">Tabulka</p><h2>Záznam IL-8.</h2></div><button id="export-il8" class="button secondary" type="button">Export CSV</button></div>
+      <div class="table-wrap"><table id="il8-table"><thead><tr><th>Datum</th><th>IL-8</th><th>Jednotka</th><th>Laboratoř</th><th>Poznámka</th></tr></thead><tbody></tbody></table></div>
+    </section>
+
+    <section class="data-lab cardio-block">
+      <div class="upload-panel">
+        <p class="section-kicker">Kardio měření</p>
+        <h2>Nahrání kardio dat.</h2>
+        <p>Vložte Excel nebo CSV s kardio měřeními. Doporučené sloupce: datum, tep, systolický tlak, diastolický tlak, HRV, SpO2, poznámka.</p>
+        <label class="file-drop">Soubor kardio měření<input id="cardio-file" type="file" accept=".xlsx,.xls,.csv,.tsv"></label>
+      </div>
+      <div class="chart-card">
+        <p class="section-kicker">Kardio souhrn</p>
+        <h3>Souvislosti k IL-8</h3>
+        <div id="cardio-summary" class="interpretation">Kardio data zatím nejsou nahraná.</div>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <div class="card-head"><div><p class="section-kicker">Kardio tabulka</p><h2>Poslední nahraná měření.</h2></div><button id="clear-cardio" class="text-button" type="button">Vymazat kardio data</button></div>
+      <div class="table-wrap"><table id="cardio-table"><thead><tr><th>Datum</th><th>Tep</th><th>Tlak</th><th>HRV</th><th>SpO2</th><th>Poznámka</th></tr></thead><tbody></tbody></table></div>
+    </section>
+
+    <section class="note-band">
+      <p>Upozornění: IL-8 ani kardio hodnoty nelze hodnotit izolovaně. Panel je určený pro organizaci a sledování trendů. Interpretaci výsledků vždy konzultujte s lékařem nebo kvalifikovaným odborníkem.</p>
+    </section>
+  </main>
+
+  <footer class="footer"><span>© 2026 Imunelia Biotech</span><span>Sledování IL-8 / CXCL8</span></footer>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="assets/il8-tracker.js"></script>
+</body>
+</html>
