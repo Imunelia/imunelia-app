@@ -6,7 +6,7 @@
   <title>Imunelia Biotech | Rovnováha imunity začíná uvnitř</title>
   <meta name="description" content="Imunelia Biotech propojuje vědu, data a citlivý přístup k imunitní rovnováze. Poutavý úvod do značky bez produktové prezentace.">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="home.css?v=20260630-orbit5">
 </head>
 <body>
   <header class="site-header premium-header">
@@ -39,26 +39,142 @@
       <div class="brand-visual" aria-label="Produktové linie Imunelia obíhající kolem značky">
         <div class="brand-orbit">
           <div class="orbit-sun" aria-label="Imunelia Biotech">
-            <span>Imunelia</span>
-            <small>Biotech</small>
+            <svg class="orbit-logo" viewBox="0 0 220 220" role="img" aria-labelledby="orbit-logo-title">
+              <title id="orbit-logo-title">Imunelia Biotech</title>
+              <defs>
+                <radialGradient id="orbitLogoAura" cx="50%" cy="46%" r="58%">
+                  <stop offset="0%" stop-color="#f3e3bf" stop-opacity="0.72"></stop>
+                  <stop offset="58%" stop-color="#d8c08e" stop-opacity="0.24"></stop>
+                  <stop offset="100%" stop-color="#f3e3bf" stop-opacity="0"></stop>
+                </radialGradient>
+                <linearGradient id="orbitLogoGold" x1="34" y1="48" x2="186" y2="168" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#d7b46a"></stop>
+                  <stop offset="1" stop-color="#8f682d"></stop>
+                </linearGradient>
+                <linearGradient id="orbitLogoBlue" x1="52" y1="70" x2="172" y2="154" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#0c3470"></stop>
+                  <stop offset="1" stop-color="#031936"></stop>
+                </linearGradient>
+              </defs>
+              <circle cx="110" cy="110" r="104" fill="url(#orbitLogoAura)"></circle>
+              <circle cx="110" cy="110" r="72" fill="#efe4cf" fill-opacity="0.28" stroke="url(#orbitLogoGold)" stroke-opacity="0.48" stroke-width="1.4"></circle>
+              <path d="M39 116c31-34 77-45 142-35" fill="none" stroke="url(#orbitLogoGold)" stroke-width="3" stroke-linecap="round"></path>
+              <path d="M48 139c37 17 78 17 124-1" fill="none" stroke="#08295b" stroke-opacity="0.28" stroke-width="2" stroke-linecap="round"></path>
+              <circle cx="62" cy="103" r="5" fill="#b88b43"></circle>
+              <circle cx="165" cy="87" r="4" fill="#08295b" fill-opacity="0.78"></circle>
+              <text x="110" y="108" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="url(#orbitLogoBlue)">Imunelia</text>
+              <text x="110" y="132" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="4" fill="#b88b43">BIOTECH</text>
+            </svg>
           </div>
           <span class="orbit-ring ring-one"></span>
           <span class="orbit-ring ring-two"></span>
           <span class="orbit-ring ring-three"></span>
+          <span class="orbit-ring ring-four"></span>
+          <span class="orbit-ring ring-five"></span>
           <a class="planet-orbit orbit-balance" href="produkty.html#balance" aria-label="Balance">
-            <span class="planet-object"><span class="planet-card"><span class="planet-core core-balance"></span><span class="planet-name">Balance</span></span></span>
+            <span class="planet-object">
+              <span class="planet-card">
+                <svg class="planet-image product-balance" width="86" height="86" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                  <defs>
+                    <radialGradient id="balancePlanet" cx="35%" cy="28%" r="70%">
+                      <stop offset="0%" stop-color="#fff9e9"></stop>
+                      <stop offset="45%" stop-color="#d9b66d"></stop>
+                      <stop offset="100%" stop-color="#08295b"></stop>
+                    </radialGradient>
+                  </defs>
+                  <circle cx="60" cy="60" r="48" fill="url(#balancePlanet)"></circle>
+                  <path d="M23 65c18 10 53 10 74-7" fill="none" stroke="#fff7df" stroke-width="3" stroke-linecap="round" opacity="0.72"></path>
+                  <rect x="43" y="30" width="34" height="56" rx="8" fill="#fffdf7" opacity="0.92"></rect>
+                  <path d="M50 56c6-9 14-9 20 0" fill="none" stroke="#b88b43" stroke-width="3" stroke-linecap="round"></path>
+                  <circle cx="54" cy="42" r="4" fill="#08295b" opacity="0.82"></circle>
+                  <circle cx="67" cy="42" r="4" fill="#b88b43"></circle>
+                </svg>
+                <span class="planet-name">Balance</span>
+              </span>
+            </span>
           </a>
           <a class="planet-orbit orbit-restart" href="produkty.html#restart" aria-label="Restart">
-            <span class="planet-object"><span class="planet-card"><span class="planet-core core-restart"></span><span class="planet-name">Restart</span></span></span>
+            <span class="planet-object">
+              <span class="planet-card">
+                <svg class="planet-image product-restart" width="78" height="78" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                  <defs>
+                    <radialGradient id="restartPlanet" cx="34%" cy="28%" r="70%">
+                      <stop offset="0%" stop-color="#ffffff"></stop>
+                      <stop offset="48%" stop-color="#d6e3ea"></stop>
+                      <stop offset="100%" stop-color="#517c92"></stop>
+                    </radialGradient>
+                  </defs>
+                  <circle cx="60" cy="60" r="46" fill="url(#restartPlanet)"></circle>
+                  <rect x="39" y="28" width="42" height="62" rx="9" fill="#f8fbfc" opacity="0.9"></rect>
+                  <path d="M75 52a17 17 0 1 0 1 17" fill="none" stroke="#08295b" stroke-width="6" stroke-linecap="round"></path>
+                  <path d="M74 39l4 15-15-3" fill="none" stroke="#b88b43" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M49 79h22" stroke="#b88b43" stroke-width="3" stroke-linecap="round"></path>
+                </svg>
+                <span class="planet-name">Restart</span>
+              </span>
+            </span>
           </a>
           <a class="planet-orbit orbit-shield" href="produkty.html#shield" aria-label="Shield">
-            <span class="planet-object"><span class="planet-card"><span class="planet-core core-shield"></span><span class="planet-name">Shield</span></span></span>
+            <span class="planet-object">
+              <span class="planet-card">
+                <svg class="planet-image product-shield" width="82" height="82" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                  <defs>
+                    <radialGradient id="shieldPlanet" cx="34%" cy="28%" r="72%">
+                      <stop offset="0%" stop-color="#ffffff"></stop>
+                      <stop offset="46%" stop-color="#d8d0bf"></stop>
+                      <stop offset="100%" stop-color="#08295b"></stop>
+                    </radialGradient>
+                  </defs>
+                  <circle cx="60" cy="60" r="47" fill="url(#shieldPlanet)"></circle>
+                  <path d="M60 25l28 10v23c0 23-12 36-28 44-16-8-28-21-28-44V35l28-10z" fill="#fffdf7" opacity="0.92"></path>
+                  <path d="M60 35l18 7v17c0 14-7 23-18 29-11-6-18-15-18-29V42l18-7z" fill="#08295b" opacity="0.88"></path>
+                  <path d="M50 60l7 8 16-22" fill="none" stroke="#d8b66d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span class="planet-name">Shield</span>
+              </span>
+            </span>
           </a>
           <a class="planet-orbit orbit-flow" href="produkty.html#flow" aria-label="Flow">
-            <span class="planet-object"><span class="planet-card"><span class="planet-core core-flow"></span><span class="planet-name">Flow</span></span></span>
+            <span class="planet-object">
+              <span class="planet-card">
+                <svg class="planet-image product-flow" width="74" height="74" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                  <defs>
+                    <radialGradient id="flowPlanet" cx="34%" cy="28%" r="70%">
+                      <stop offset="0%" stop-color="#ffffff"></stop>
+                      <stop offset="45%" stop-color="#d5eeea"></stop>
+                      <stop offset="100%" stop-color="#4d8b9b"></stop>
+                    </radialGradient>
+                  </defs>
+                  <circle cx="60" cy="60" r="44" fill="url(#flowPlanet)"></circle>
+                  <path d="M30 50c13-12 25 12 38 0s20-9 27-3" fill="none" stroke="#08295b" stroke-width="5" stroke-linecap="round" opacity="0.88"></path>
+                  <path d="M27 68c16-11 27 10 41-1 10-8 18-7 26-2" fill="none" stroke="#b88b43" stroke-width="5" stroke-linecap="round" opacity="0.86"></path>
+                  <path d="M60 30c9 14 18 24 18 38a18 18 0 0 1-36 0c0-14 9-24 18-38z" fill="#fffdf7" opacity="0.76"></path>
+                </svg>
+                <span class="planet-name">Flow</span>
+              </span>
+            </span>
           </a>
           <a class="planet-orbit orbit-night" href="produkty.html#night" aria-label="Night">
-            <span class="planet-object"><span class="planet-card"><span class="planet-core core-night"></span><span class="planet-name">Night</span></span></span>
+            <span class="planet-object">
+              <span class="planet-card">
+                <svg class="planet-image product-night" width="80" height="80" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                  <defs>
+                    <radialGradient id="nightPlanet" cx="34%" cy="28%" r="70%">
+                      <stop offset="0%" stop-color="#f5f0ff"></stop>
+                      <stop offset="44%" stop-color="#686d96"></stop>
+                      <stop offset="100%" stop-color="#031936"></stop>
+                    </radialGradient>
+                  </defs>
+                  <circle cx="60" cy="60" r="47" fill="url(#nightPlanet)"></circle>
+                  <path d="M72 31a27 27 0 1 0 18 48 31 31 0 1 1-18-48z" fill="#fff4cf"></path>
+                  <circle cx="39" cy="39" r="3" fill="#fffdf7"></circle>
+                  <circle cx="84" cy="45" r="2.5" fill="#fffdf7"></circle>
+                  <circle cx="48" cy="83" r="2" fill="#d8b66d"></circle>
+                  <path d="M35 94h51" stroke="#d8b66d" stroke-width="3" stroke-linecap="round" opacity="0.86"></path>
+                </svg>
+                <span class="planet-name">Night</span>
+              </span>
+            </span>
           </a>
         </div>
       </div>
