@@ -27,118 +27,216 @@
 }
 
 .brand-orbit {
-  --orbit-radius: min(43vw, 228px);
+  position: relative;
+  width: min(92vw, 560px);
+  aspect-ratio: 1;
   overflow: visible;
 }
 
-.brand-orbit img {
-  width: min(38%, 198px);
-  border-radius: 0;
-  mix-blend-mode: multiply;
-  box-shadow: none;
-  filter: drop-shadow(0 18px 34px rgba(3, 25, 54, .10));
+.orbit-sun {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: min(38%, 210px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  color: var(--blue);
+  background: radial-gradient(circle, rgba(234, 216, 181, .22), rgba(234, 216, 181, .06) 48%, rgba(234, 216, 181, 0) 72%);
+  border: 1px solid rgba(184, 139, 67, .24);
+  border-radius: 50%;
+  box-shadow: 0 24px 70px rgba(3, 25, 54, .08);
 }
 
-.brand-orbit::before {
-  content: "";
-  position: absolute;
-  inset: 31%;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(234, 216, 181, .16), rgba(234, 216, 181, 0) 68%);
-  z-index: 1;
-  pointer-events: none;
+.orbit-sun span {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.9rem, 3vw, 2.75rem);
+  line-height: .9;
+}
+
+.orbit-sun small {
+  display: block;
+  margin-top: 10px;
+  color: var(--gold);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
 }
 
 .brand-orbit .orbit-ring {
-  border-color: rgba(184, 139, 67, .38);
+  border-color: rgba(184, 139, 67, .28);
 }
 
 .brand-orbit .ring-one {
-  animation: ring-spin 46s linear infinite;
+  inset: 7%;
 }
 
 .brand-orbit .ring-two {
-  border-color: rgba(8, 41, 91, .16);
-  animation: ring-spin-reverse 62s linear infinite;
+  inset: 19%;
+  border-color: rgba(8, 41, 91, .15);
+  transform: rotate(-16deg);
 }
 
-.brand-orbit .orbit-note {
+.brand-orbit .ring-three {
+  position: absolute;
+  inset: 31%;
+  border: 1px solid rgba(184, 139, 67, .18);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.planet-orbit {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  transform-origin: 50% 50%;
+  animation-name: orbit-spin;
+  animation-duration: var(--orbit-time);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.planet-object {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  transform: translate(-50%, -50%) translateX(var(--orbit-radius));
+}
+
+.planet-card {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  min-width: 86px;
+  pointer-events: auto;
+  transform: rotate(var(--counter-start));
+  animation-name: planet-counter-spin;
+  animation-duration: var(--orbit-time);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.planet-core {
+  position: relative;
+  display: block;
+  width: var(--planet-size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 0 18px 46px rgba(3, 25, 54, .13), inset 0 -12px 28px rgba(3, 25, 54, .10);
+}
+
+.planet-core::before,
+.planet-core::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.planet-core::before {
+  inset: 18%;
+  border: 1px solid rgba(255, 255, 255, .55);
+}
+
+.planet-core::after {
+  top: 22%;
+  left: 20%;
+  width: 24%;
+  aspect-ratio: 1;
+  background: rgba(255, 255, 255, .58);
+}
+
+.planet-name {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 84px;
-  min-height: 34px;
-  padding: 9px 14px;
+  min-height: 28px;
+  padding: 6px 10px;
   color: var(--blue);
-  background: rgba(255, 255, 255, .62);
-  border: 1px solid rgba(184, 139, 67, .34);
+  background: rgba(255, 255, 255, .58);
+  border: 1px solid rgba(184, 139, 67, .30);
   border-radius: 999px;
-  box-shadow: 0 18px 50px rgba(3, 25, 54, .08);
+  box-shadow: 0 12px 30px rgba(3, 25, 54, .08);
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .11em;
+  text-transform: uppercase;
   backdrop-filter: blur(10px);
-  letter-spacing: .12em;
 }
 
-.product-planet {
-  top: 50%;
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  z-index: 4;
-  animation: product-orbit 34s linear infinite;
+.orbit-balance {
+  --orbit-radius: 218px;
+  --orbit-time: 38s;
+  --orbit-start: -18deg;
+  --counter-start: 18deg;
 }
 
-.planet-balance {
-  --orbit-start: 270deg;
-  --orbit-end: 630deg;
-  --orbit-counter-start: -270deg;
-  --orbit-counter-end: -630deg;
+.orbit-restart {
+  --orbit-radius: 178px;
+  --orbit-time: 30s;
+  --orbit-start: 84deg;
+  --counter-start: -84deg;
 }
 
-.planet-restart {
-  --orbit-start: 342deg;
-  --orbit-end: 702deg;
-  --orbit-counter-start: -342deg;
-  --orbit-counter-end: -702deg;
+.orbit-shield {
+  --orbit-radius: 238px;
+  --orbit-time: 46s;
+  --orbit-start: 155deg;
+  --counter-start: -155deg;
 }
 
-.planet-shield {
-  --orbit-start: 54deg;
-  --orbit-end: 414deg;
-  --orbit-counter-start: -54deg;
-  --orbit-counter-end: -414deg;
+.orbit-flow {
+  --orbit-radius: 152px;
+  --orbit-time: 26s;
+  --orbit-start: 230deg;
+  --counter-start: -230deg;
 }
 
-.planet-flow {
-  --orbit-start: 126deg;
-  --orbit-end: 486deg;
-  --orbit-counter-start: -126deg;
-  --orbit-counter-end: -486deg;
+.orbit-night {
+  --orbit-radius: 202px;
+  --orbit-time: 54s;
+  --orbit-start: 304deg;
+  --counter-start: -304deg;
 }
 
-.planet-night {
-  --orbit-start: 198deg;
-  --orbit-end: 558deg;
-  --orbit-counter-start: -198deg;
-  --orbit-counter-end: -558deg;
+.core-balance {
+  --planet-size: 72px;
+  background: radial-gradient(circle at 32% 28%, #fff8e7, #d8b66d 45%, #0b2d61 100%);
 }
 
-@keyframes product-orbit {
-  from {
-    transform: translate(-50%, -50%) rotate(var(--orbit-start)) translateX(var(--orbit-radius)) rotate(var(--orbit-counter-start));
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(var(--orbit-end)) translateX(var(--orbit-radius)) rotate(var(--orbit-counter-end));
-  }
+.core-restart {
+  --planet-size: 58px;
+  background: radial-gradient(circle at 32% 28%, #ffffff, #d6e3ea 38%, #557e93 100%);
 }
 
-@keyframes ring-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.core-shield {
+  --planet-size: 66px;
+  background: radial-gradient(circle at 32% 28%, #fff, #d7d0bf 42%, #08295b 100%);
 }
 
-@keyframes ring-spin-reverse {
-  from { transform: rotate(-16deg); }
-  to { transform: rotate(-376deg); }
+.core-flow {
+  --planet-size: 52px;
+  background: radial-gradient(circle at 32% 28%, #ffffff, #d5eeea 42%, #4d8b9b 100%);
+}
+
+.core-night {
+  --planet-size: 62px;
+  background: radial-gradient(circle at 32% 28%, #f5f0ff, #686d96 42%, #031936 100%);
+}
+
+@keyframes orbit-spin {
+  from { transform: rotate(var(--orbit-start)); }
+  to { transform: rotate(calc(var(--orbit-start) + 360deg)); }
+}
+
+@keyframes planet-counter-spin {
+  from { transform: rotate(var(--counter-start)); }
+  to { transform: rotate(calc(var(--counter-start) - 360deg)); }
 }
 
 @media (max-width: 980px) {
@@ -149,13 +247,14 @@
   }
 
   .brand-orbit {
-    --orbit-radius: min(38vw, 188px);
+    width: min(88vw, 460px);
   }
 
-  .brand-orbit .orbit-note {
-    min-width: 78px;
-    font-size: .68rem;
-  }
+  .orbit-balance { --orbit-radius: 180px; }
+  .orbit-restart { --orbit-radius: 146px; }
+  .orbit-shield { --orbit-radius: 194px; }
+  .orbit-flow { --orbit-radius: 126px; }
+  .orbit-night { --orbit-radius: 164px; }
 }
 
 @media (max-width: 540px) {
@@ -170,13 +269,35 @@
   }
 
   .brand-orbit {
-    --orbit-radius: min(34vw, 142px);
+    width: min(92vw, 350px);
   }
 
-  .brand-orbit .orbit-note {
-    min-width: 66px;
-    min-height: 30px;
-    padding: 7px 10px;
-    font-size: .56rem;
+  .orbit-sun {
+    width: 42%;
   }
+
+  .orbit-sun span {
+    font-size: 1.55rem;
+  }
+
+  .orbit-balance { --orbit-radius: 132px; }
+  .orbit-restart { --orbit-radius: 108px; }
+  .orbit-shield { --orbit-radius: 144px; }
+  .orbit-flow { --orbit-radius: 92px; }
+  .orbit-night { --orbit-radius: 120px; }
+
+  .planet-card {
+    min-width: 64px;
+  }
+
+  .planet-name {
+    padding: 5px 8px;
+    font-size: .52rem;
+  }
+
+  .core-balance { --planet-size: 54px; }
+  .core-restart { --planet-size: 44px; }
+  .core-shield { --planet-size: 50px; }
+  .core-flow { --planet-size: 40px; }
+  .core-night { --planet-size: 48px; }
 }
