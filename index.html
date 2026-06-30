@@ -26,6 +26,10 @@
         <p class="eyebrow">Imunelia Biotech</p>
         <h1>Rovnováha imunity<br><em>začíná uvnitř.</em></h1>
         <p>Budujeme značku, která propojuje vědeckou přesnost, klidný lidský přístup a dlouhodobé sledování biologických signálů. Imunelia je prostor pro lepší porozumění tělu, ne rychlé sliby.</p>
+        <div class="chaos-slogans" aria-live="polite" aria-label="Slogany z knihy Chaos">
+          <p class="chaos-source">Z knihy Chaos</p>
+          <p id="chaos-slogan" class="chaos-slogan">Chaos není konec řádu. Je to místo, kde řád teprve začíná dýchat.</p>
+        </div>
         <div class="hero-actions">
           <a class="button primary" href="#znacka">Poznat značku</a>
           <a class="button secondary" href="#veda">Vědecký přístup</a>
@@ -94,5 +98,27 @@
   </main>
 
   <footer class="footer"><span>© 2026 Imunelia Biotech</span><span>Zymogen-based immune balance</span></footer>
+  <script>
+    (() => {
+      const slogans = [
+        'Chaos není konec řádu. Je to místo, kde řád teprve začíná dýchat.',
+        'V hluku těla se neskrývá slabost, ale zpráva, které jsme se ještě nenaučili naslouchat.',
+        'Rovnováha nevzniká útěkem před chaosem. Vzniká schopností proměnit ho v informaci.',
+        'Když se systém rozkolísá, nevolá po strachu. Volá po pozornosti.',
+        'Největší síla není v potlačení změny, ale v návratu k vnitřnímu rytmu.'
+      ];
+      const target = document.getElementById('chaos-slogan');
+      if (!target) return;
+      let index = 0;
+      setInterval(() => {
+        index = (index + 1) % slogans.length;
+        target.classList.add('is-changing');
+        window.setTimeout(() => {
+          target.textContent = slogans[index];
+          target.classList.remove('is-changing');
+        }, 260);
+      }, 4200);
+    })();
+  </script>
 </body>
 </html>
