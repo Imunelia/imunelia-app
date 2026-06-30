@@ -1,0 +1,56 @@
+.chaos-slogans {
+  position: relative;
+  max-width: 620px;
+  min-height: 148px;
+  margin-top: 30px;
+  padding: 24px 26px 26px;
+  background: rgba(255, 255, 255, .72);
+  border: 1px solid rgba(184, 139, 67, .32);
+  border-left: 3px solid var(--gold);
+  box-shadow: 0 24px 70px rgba(3, 25, 54, .08);
+}
+
+.chaos-source {
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.hero-text .chaos-slogan {
+  max-width: none;
+  min-height: 70px;
+  margin: 0;
+  color: var(--blue);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.45rem, 2.2vw, 2.2rem);
+  line-height: 1.14;
+  transition: opacity .26s ease, transform .26s ease;
+}
+
+.chaos-slogan.is-changing {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+@media (max-width: 980px) {
+  .chaos-slogans {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+}
+
+@media (max-width: 540px) {
+  .chaos-slogans {
+    min-height: 160px;
+    padding: 20px;
+  }
+
+  .hero-text .chaos-slogan {
+    min-height: 84px;
+    font-size: 1.35rem;
+  }
+}
