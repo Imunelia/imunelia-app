@@ -13,12 +13,13 @@
     <a class="brand lockup" href="index.html" aria-label="Imunelia Biotech domů"><img class="brand-logo" src="assets/imunelia-biotech-logo.jpg" alt="Imunelia Biotech"></a>
     <nav class="nav" aria-label="Hlavní navigace">
       <a href="index.html">Úvod</a>
+      <a href="produkty.html">Produkty</a>
       <a href="#znacka">O značce</a>
       <a href="#veda">Věda</a>
       <a href="il-8.html">IL-8</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
-    <a class="header-cta" href="#kontakt">Kontakt</a>
+    <a class="header-cta" href="produkty.html">Produkty</a>
   </header>
 
   <main>
@@ -27,13 +28,12 @@
         <p class="eyebrow">Imunelia Biotech</p>
         <h1>Rovnováha imunity<br><em>začíná uvnitř.</em></h1>
         <p>Budujeme značku, která propojuje vědeckou přesnost, klidný lidský přístup a dlouhodobé sledování biologických signálů. Imunelia je prostor pro lepší porozumění tělu, ne rychlé sliby.</p>
-        <div class="chaos-slogans" aria-live="polite" aria-label="Slogany z knihy Chaos">
-          <p class="chaos-source">Z knihy Chaos</p>
-          <p id="chaos-slogan" class="chaos-slogan">Když se tělo znovu začne slyšet.</p>
+        <div class="chaos-slogans" aria-live="polite" aria-label="Myšlenky o chaosu a rovnováze">
+          <p id="chaos-slogan" class="chaos-slogan">Když se tělo znovu začne slyšet, nejde o návrat k minulosti. Je to okamžik, kdy se z hluku stává zpráva a člověk poprvé pozná, co mu systém celou dobu říkal.</p>
         </div>
         <div class="hero-actions">
           <a class="button primary" href="#znacka">Poznat značku</a>
-          <a class="button secondary" href="#veda">Vědecký přístup</a>
+          <a class="button secondary" href="produkty.html">Produktové linie</a>
         </div>
       </div>
       <div class="brand-visual" aria-label="Vizuální symbol Imunelia Biotech">
@@ -81,11 +81,11 @@
 
     <section class="science-cta">
       <div>
-        <p class="section-kicker">IL-8 panel</p>
-        <h2>Odborná část zůstává oddělená od úvodního webu.</h2>
-        <p>Laboratorní data, diagnóza, grafy a kardio měření mají vlastní stránku, aby hlavní web zůstal čistý a poutavý.</p>
+        <p class="section-kicker">Produktové linie</p>
+        <h2>Každý produkt má svůj vlastní rytmus a jasnou roli.</h2>
+        <p>Balance, Restart a další linie vznikají jako systém: rovnováha, návrat, ochrana, dech a noční obnova.</p>
       </div>
-      <a class="button secondary" href="il-8.html">Otevřít IL-8</a>
+      <a class="button secondary" href="produkty.html">Otevřít produkty</a>
     </section>
 
     <section id="kontakt" class="bottom-cta brand-close">
@@ -102,11 +102,11 @@
   <script>
     (() => {
       const slogans = [
-        'Když se tělo znovu začne slyšet.',
-        'Možná jsme se celou dobu dívali na špatné místo.',
-        'Jenže chaos nemá prst. Chaos je rozprostřený. Je jako mlha.',
-        'Musíš pochopit vzduch.',
-        'Když máš sevřenou pěst, nemůžeš nic přijmout.'
+        'Když se tělo znovu začne slyšet, nejde o návrat k minulosti. Je to okamžik, kdy se z hluku stává zpráva a člověk poprvé pozná, co mu systém celou dobu říkal.',
+        'Možná jsme se celou dobu dívali na špatné místo. Hledali jsme jednu chybu, jedno místo a jeden důvod, ale život se často nerozpadá v bodě. Rozprostře se jako mlha.',
+        'Chaos nemá prst, kterým by ukázal na jedinou příčinu. Je jako prostor, ve kterém se ztratila souvislost, a právě proto nestačí hledat strom. Musíme pochopit vzduch.',
+        'Když se systém rozkolísá, nemusí to být konec. Může to být začátek nové orientace, kdy tělo přestane jen křičet a začne znovu posílat čitelné signály.',
+        'Když máš sevřenou pěst, nemůžeš nic přijmout. Někdy obnova nezačíná větší kontrolou, ale schopností povolit místo, kde se tělo příliš dlouho bránilo.'
       ];
       const target = document.getElementById('chaos-slogan');
       if (!target) return;
@@ -117,8 +117,8 @@
         window.setTimeout(() => {
           target.textContent = slogans[index];
           target.classList.remove('is-changing');
-        }, 260);
-      }, 4200);
+        }, 360);
+      }, 14000);
     })();
   </script>
 </body>
