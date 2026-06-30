@@ -1,0 +1,260 @@
+body.il8-page {
+  background: #f6f4ef;
+}
+
+.il8-page h1 {
+  max-width: 960px;
+  font-size: clamp(3rem, 6vw, 6.8rem);
+  line-height: .92;
+}
+
+.il8-page h2 {
+  font-size: clamp(1.85rem, 3.2vw, 3.2rem);
+}
+
+.il8-page h3 {
+  font-size: 1.55rem;
+}
+
+.il8-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: clamp(26px, 5vw, 72px);
+  align-items: end;
+  min-height: 78vh;
+  padding: 148px clamp(22px, 6vw, 96px) 72px;
+  background: linear-gradient(135deg, #fff 0%, #fbfaf7 48%, #e9e3d7 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.il8-hero-copy p:last-child {
+  max-width: 740px;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 1.45vw, 1.22rem);
+}
+
+.il8-summary-card,
+.il8-panel {
+  background: rgba(255, 255, 255, .92);
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 70px rgba(3, 25, 54, .07);
+}
+
+.il8-summary-card {
+  padding: 30px;
+}
+
+.il8-summary-card > span {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--gold);
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.il8-summary-card strong {
+  display: block;
+  margin-bottom: 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--blue);
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.il8-summary-card dl,
+.il8-summary-card dt,
+.il8-summary-card dd {
+  margin: 0;
+}
+
+.il8-summary-card dl {
+  display: grid;
+  gap: 14px;
+}
+
+.il8-summary-card dl div {
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.il8-summary-card dt {
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.il8-summary-card dd {
+  margin-top: 4px;
+  color: var(--blue);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+}
+
+.il8-workspace,
+.il8-dashboard,
+.table-panel,
+.il8-note {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.il8-workspace {
+  display: grid;
+  grid-template-columns: 1.12fr .88fr;
+  gap: 22px;
+  padding: 54px 0 24px;
+}
+
+.il8-panel {
+  padding: clamp(24px, 4vw, 36px);
+}
+
+.il8-panel-primary {
+  grid-row: span 2;
+}
+
+.il8-context-panel {
+  background: linear-gradient(135deg, #fff, #fbf8f1);
+}
+
+.panel-heading p:last-child,
+.il8-panel > p,
+.interpretation {
+  color: var(--muted);
+}
+
+.control-row,
+.il8-manual-grid {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 14px;
+  align-items: end;
+  margin-top: 22px;
+}
+
+.il8-manual-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+}
+
+.compact-drop {
+  margin: 20px 0 0;
+}
+
+.patient-context {
+  margin-top: 20px;
+  padding: 18px 20px;
+  color: var(--muted);
+  background: var(--porcelain);
+  border-left: 3px solid var(--gold);
+}
+
+.il8-dashboard {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(280px, .72fr);
+  gap: 22px;
+  padding: 24px 0;
+}
+
+.chart-panel canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 18px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.interpretation-panel {
+  align-self: stretch;
+}
+
+.interpretation-panel .text-button {
+  margin-top: 22px;
+}
+
+.table-panel {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.il8-page table {
+  min-width: 760px;
+  background: #fff;
+}
+
+.il8-page th {
+  background: #fbfaf7;
+}
+
+.il8-page tbody tr:hover td {
+  background: #fbfaf7;
+}
+
+.cardio-dashboard {
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.il8-note {
+  padding: 8px 0 84px;
+}
+
+.il8-note p {
+  margin: 0;
+  padding: 22px 26px;
+  color: var(--muted);
+  background: #fff;
+  border-left: 3px solid var(--gold);
+}
+
+@media (max-width: 980px) {
+  .il8-hero,
+  .il8-workspace,
+  .il8-dashboard,
+  .control-row,
+  .il8-manual-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .il8-hero {
+    min-height: auto;
+    padding-top: 124px;
+  }
+
+  .il8-panel-primary {
+    grid-row: auto;
+  }
+
+  .il8-page .button,
+  .il8-page .text-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .il8-page h1 {
+    font-size: clamp(2.7rem, 14vw, 4.4rem);
+  }
+
+  .il8-hero,
+  .il8-workspace,
+  .il8-dashboard,
+  .table-panel,
+  .il8-note {
+    width: calc(100% - 28px);
+  }
+
+  .il8-panel,
+  .il8-summary-card {
+    padding: 22px;
+  }
+
+  .card-head {
+    display: grid;
+  }
+}
