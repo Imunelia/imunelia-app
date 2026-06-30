@@ -1,3 +1,12 @@
+.premium-header {
+  position: fixed;
+}
+
+.brand-hero h1 {
+  font-size: clamp(2.8rem, 5.95vw, 6.02rem);
+  line-height: .92;
+}
+
 .chaos-slogans {
   position: relative;
   max-width: 680px;
@@ -75,7 +84,7 @@
   top: 50%;
   left: 50%;
   display: block;
-  width: clamp(210px, 36%, 268px);
+  width: clamp(156px, 28%, 198px);
   aspect-ratio: 1;
   transform: translate(-50%, -50%);
   background: transparent;
@@ -97,10 +106,10 @@
     radial-gradient(circle at 32% 24%, rgba(255, 252, 240, .96), rgba(234, 216, 181, .74) 32%, rgba(184, 139, 67, .72) 62%, rgba(8, 41, 91, .18) 100%),
     linear-gradient(135deg, rgba(255, 255, 255, .28), rgba(3, 25, 54, .1));
   box-shadow:
-    0 34px 84px rgba(3, 25, 54, .18),
-    0 0 72px rgba(184, 139, 67, .32),
-    inset -18px -22px 44px rgba(3, 25, 54, .14),
-    inset 16px 18px 40px rgba(255, 255, 255, .36);
+    0 28px 66px rgba(3, 25, 54, .16),
+    0 0 54px rgba(184, 139, 67, .28),
+    inset -14px -18px 34px rgba(3, 25, 54, .14),
+    inset 14px 16px 32px rgba(255, 255, 255, .36);
 }
 
 .sun-sphere::before,
@@ -252,6 +261,54 @@
   --planet-size: 118px;
 }
 
+.story-card details {
+  height: 100%;
+}
+
+.story-card summary {
+  position: relative;
+  display: grid;
+  align-content: start;
+  min-height: 100%;
+  padding-right: 24px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.story-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.story-card summary::after {
+  content: "+";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  aspect-ratio: 1;
+  color: var(--gold);
+  border: 1px solid rgba(184, 139, 67, .32);
+  border-radius: 50%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform .22s ease, background .22s ease;
+}
+
+.story-card details[open] summary::after {
+  background: var(--gold-soft);
+  transform: rotate(45deg);
+}
+
+.story-more {
+  margin-top: 18px !important;
+  padding-top: 16px;
+  border-top: 1px solid rgba(184, 139, 67, .22);
+  color: var(--blue) !important;
+}
+
 @keyframes orbit-spin {
   from { transform: rotate(var(--orbit-start)); }
   to { transform: rotate(var(--orbit-end)); }
@@ -263,9 +320,18 @@
 }
 
 @media (max-width: 980px) {
+  .site-header,
+  .premium-header {
+    position: fixed;
+  }
+
   .premium-header .brand-logo {
     width: 86px;
     height: 86px;
+  }
+
+  .brand-hero h1 {
+    font-size: clamp(2.45rem, 10.8vw, 4.1rem);
   }
 
   .chaos-slogans {
@@ -279,7 +345,7 @@
   }
 
   .orbit-sun {
-    width: clamp(174px, 38%, 214px);
+    width: clamp(132px, 30%, 166px);
   }
 
   .orbit-balance { --orbit-radius: 232px; --planet-size: 92px; }
@@ -293,6 +359,10 @@
   .premium-header .brand-logo {
     width: 78px;
     height: 78px;
+  }
+
+  .brand-hero h1 {
+    font-size: clamp(2.1rem, 11.2vw, 3.5rem);
   }
 
   .chaos-slogans {
@@ -310,7 +380,7 @@
   }
 
   .orbit-sun {
-    width: 42%;
+    width: 34%;
   }
 
   .orbit-balance { --orbit-radius: 168px; --planet-size: 66px; }
