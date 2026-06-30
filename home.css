@@ -173,35 +173,45 @@
   --orbit-radius: 218px;
   --orbit-time: 38s;
   --orbit-start: -18deg;
+  --orbit-end: 342deg;
   --counter-start: 18deg;
+  --counter-end: -342deg;
 }
 
 .orbit-restart {
   --orbit-radius: 178px;
   --orbit-time: 30s;
   --orbit-start: 84deg;
+  --orbit-end: 444deg;
   --counter-start: -84deg;
+  --counter-end: -444deg;
 }
 
 .orbit-shield {
   --orbit-radius: 238px;
   --orbit-time: 46s;
   --orbit-start: 155deg;
+  --orbit-end: 515deg;
   --counter-start: -155deg;
+  --counter-end: -515deg;
 }
 
 .orbit-flow {
   --orbit-radius: 152px;
   --orbit-time: 26s;
   --orbit-start: 230deg;
+  --orbit-end: 590deg;
   --counter-start: -230deg;
+  --counter-end: -590deg;
 }
 
 .orbit-night {
   --orbit-radius: 202px;
   --orbit-time: 54s;
   --orbit-start: 304deg;
+  --orbit-end: 664deg;
   --counter-start: -304deg;
+  --counter-end: -664deg;
 }
 
 .core-balance {
@@ -231,12 +241,12 @@
 
 @keyframes orbit-spin {
   from { transform: rotate(var(--orbit-start)); }
-  to { transform: rotate(calc(var(--orbit-start) + 360deg)); }
+  to { transform: rotate(var(--orbit-end)); }
 }
 
 @keyframes planet-counter-spin {
   from { transform: rotate(var(--counter-start)); }
-  to { transform: rotate(calc(var(--counter-start) - 360deg)); }
+  to { transform: rotate(var(--counter-end)); }
 }
 
 @media (max-width: 980px) {
