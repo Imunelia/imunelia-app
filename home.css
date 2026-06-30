@@ -26,79 +26,100 @@
   transform: translateY(8px);
 }
 
+.brand-visual {
+  isolation: isolate;
+}
+
 .brand-orbit {
   position: relative;
-  width: min(92vw, 560px);
+  display: block;
+  width: min(92vw, 580px);
   aspect-ratio: 1;
+  margin-inline: auto;
   overflow: visible;
+}
+
+.brand-orbit::before {
+  content: "";
+  position: absolute;
+  inset: 6%;
+  z-index: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 52% 50%, rgba(234, 216, 181, .32), rgba(234, 216, 181, .12) 28%, rgba(234, 216, 181, 0) 66%),
+    radial-gradient(circle at 48% 52%, rgba(8, 41, 91, .11), rgba(8, 41, 91, 0) 58%);
+  filter: blur(.2px);
+  pointer-events: none;
 }
 
 .orbit-sun {
   position: absolute;
-  z-index: 5;
+  z-index: 8;
   top: 50%;
   left: 50%;
-  display: grid;
-  place-items: center;
-  width: min(38%, 210px);
+  display: block;
+  width: clamp(148px, 34%, 218px);
   aspect-ratio: 1;
   transform: translate(-50%, -50%);
-  color: var(--blue);
-  background: radial-gradient(circle, rgba(234, 216, 181, .22), rgba(234, 216, 181, .06) 48%, rgba(234, 216, 181, 0) 72%);
-  border: 1px solid rgba(184, 139, 67, .24);
+  background: transparent;
+  border: 0;
   border-radius: 50%;
-  box-shadow: 0 24px 70px rgba(3, 25, 54, .08);
+  box-shadow: none;
+  pointer-events: none;
 }
 
-.orbit-sun span {
+.orbit-logo {
   display: block;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.9rem, 3vw, 2.75rem);
-  line-height: .9;
-}
-
-.orbit-sun small {
-  display: block;
-  margin-top: 10px;
-  color: var(--gold);
-  font-size: .72rem;
-  font-weight: 800;
-  letter-spacing: .18em;
-  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 22px 44px rgba(3, 25, 54, .16));
 }
 
 .brand-orbit .orbit-ring {
-  border-color: rgba(184, 139, 67, .28);
+  position: absolute;
+  z-index: 1;
+  border: 1px solid rgba(184, 139, 67, .26);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .brand-orbit .ring-one {
-  inset: 7%;
+  inset: 4%;
 }
 
 .brand-orbit .ring-two {
-  inset: 19%;
-  border-color: rgba(8, 41, 91, .15);
+  inset: 15%;
+  border-color: rgba(8, 41, 91, .16);
   transform: rotate(-16deg);
 }
 
 .brand-orbit .ring-three {
-  position: absolute;
-  inset: 31%;
-  border: 1px solid rgba(184, 139, 67, .18);
-  border-radius: 50%;
-  pointer-events: none;
+  inset: 25%;
+  border-color: rgba(184, 139, 67, .2);
+}
+
+.brand-orbit .ring-four {
+  inset: 34%;
+  border-color: rgba(8, 41, 91, .12);
+}
+
+.brand-orbit .ring-five {
+  inset: 42%;
+  border-color: rgba(184, 139, 67, .14);
 }
 
 .planet-orbit {
   position: absolute;
   inset: 0;
-  z-index: 6;
+  z-index: 7;
+  display: block;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   transform-origin: 50% 50%;
-  animation-name: orbit-spin;
-  animation-duration: var(--orbit-time);
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation: orbit-spin var(--orbit-time, 36s) linear infinite;
+  will-change: transform;
 }
 
 .planet-object {
@@ -112,43 +133,25 @@
 .planet-card {
   display: grid;
   justify-items: center;
-  gap: 8px;
-  min-width: 86px;
+  gap: 7px;
+  min-width: 88px;
   pointer-events: auto;
   transform: rotate(var(--counter-start));
-  animation-name: planet-counter-spin;
-  animation-duration: var(--orbit-time);
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation: planet-counter-spin var(--orbit-time, 36s) linear infinite;
+  will-change: transform;
 }
 
-.planet-core {
-  position: relative;
+.planet-image {
   display: block;
   width: var(--planet-size);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  box-shadow: 0 18px 46px rgba(3, 25, 54, .13), inset 0 -12px 28px rgba(3, 25, 54, .10);
+  height: var(--planet-size);
+  overflow: visible;
+  filter: drop-shadow(0 18px 30px rgba(3, 25, 54, .18));
+  transition: filter .22s ease;
 }
 
-.planet-core::before,
-.planet-core::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-}
-
-.planet-core::before {
-  inset: 18%;
-  border: 1px solid rgba(255, 255, 255, .55);
-}
-
-.planet-core::after {
-  top: 22%;
-  left: 20%;
-  width: 24%;
-  aspect-ratio: 1;
-  background: rgba(255, 255, 255, .58);
+.planet-card:hover .planet-image {
+  filter: drop-shadow(0 24px 38px rgba(3, 25, 54, .28));
 }
 
 .planet-name {
@@ -158,85 +161,66 @@
   min-height: 28px;
   padding: 6px 10px;
   color: var(--blue);
-  background: rgba(255, 255, 255, .58);
-  border: 1px solid rgba(184, 139, 67, .30);
+  background: rgba(255, 253, 248, .68);
+  border: 1px solid rgba(184, 139, 67, .32);
   border-radius: 999px;
   box-shadow: 0 12px 30px rgba(3, 25, 54, .08);
   font-size: .66rem;
   font-weight: 800;
   letter-spacing: .11em;
+  line-height: 1;
   text-transform: uppercase;
   backdrop-filter: blur(10px);
 }
 
 .orbit-balance {
-  --orbit-radius: 218px;
-  --orbit-time: 38s;
+  --orbit-radius: 232px;
+  --orbit-time: 40s;
   --orbit-start: -18deg;
   --orbit-end: 342deg;
   --counter-start: 18deg;
   --counter-end: -342deg;
+  --planet-size: 82px;
 }
 
 .orbit-restart {
-  --orbit-radius: 178px;
-  --orbit-time: 30s;
-  --orbit-start: 84deg;
-  --orbit-end: 444deg;
-  --counter-start: -84deg;
-  --counter-end: -444deg;
+  --orbit-radius: 184px;
+  --orbit-time: 31s;
+  --orbit-start: 78deg;
+  --orbit-end: 438deg;
+  --counter-start: -78deg;
+  --counter-end: -438deg;
+  --planet-size: 72px;
 }
 
 .orbit-shield {
-  --orbit-radius: 238px;
-  --orbit-time: 46s;
-  --orbit-start: 155deg;
-  --orbit-end: 515deg;
-  --counter-start: -155deg;
-  --counter-end: -515deg;
+  --orbit-radius: 254px;
+  --orbit-time: 48s;
+  --orbit-start: 148deg;
+  --orbit-end: 508deg;
+  --counter-start: -148deg;
+  --counter-end: -508deg;
+  --planet-size: 78px;
 }
 
 .orbit-flow {
-  --orbit-radius: 152px;
-  --orbit-time: 26s;
-  --orbit-start: 230deg;
-  --orbit-end: 590deg;
-  --counter-start: -230deg;
-  --counter-end: -590deg;
+  --orbit-radius: 144px;
+  --orbit-time: 27s;
+  --orbit-start: 222deg;
+  --orbit-end: 582deg;
+  --counter-start: -222deg;
+  --counter-end: -582deg;
+  --planet-size: 66px;
 }
 
 .orbit-night {
-  --orbit-radius: 202px;
-  --orbit-time: 54s;
+  --orbit-radius: 210px;
+  --orbit-time: 55s;
   --orbit-start: 304deg;
   --orbit-end: 664deg;
   --counter-start: -304deg;
   --counter-end: -664deg;
-}
-
-.core-balance {
-  --planet-size: 72px;
-  background: radial-gradient(circle at 32% 28%, #fff8e7, #d8b66d 45%, #0b2d61 100%);
-}
-
-.core-restart {
-  --planet-size: 58px;
-  background: radial-gradient(circle at 32% 28%, #ffffff, #d6e3ea 38%, #557e93 100%);
-}
-
-.core-shield {
-  --planet-size: 66px;
-  background: radial-gradient(circle at 32% 28%, #fff, #d7d0bf 42%, #08295b 100%);
-}
-
-.core-flow {
-  --planet-size: 52px;
-  background: radial-gradient(circle at 32% 28%, #ffffff, #d5eeea 42%, #4d8b9b 100%);
-}
-
-.core-night {
-  --planet-size: 62px;
-  background: radial-gradient(circle at 32% 28%, #f5f0ff, #686d96 42%, #031936 100%);
+  --planet-size: 76px;
 }
 
 @keyframes orbit-spin {
@@ -257,14 +241,18 @@
   }
 
   .brand-orbit {
-    width: min(88vw, 460px);
+    width: min(88vw, 470px);
   }
 
-  .orbit-balance { --orbit-radius: 180px; }
-  .orbit-restart { --orbit-radius: 146px; }
-  .orbit-shield { --orbit-radius: 194px; }
-  .orbit-flow { --orbit-radius: 126px; }
-  .orbit-night { --orbit-radius: 164px; }
+  .orbit-sun {
+    width: clamp(136px, 36%, 184px);
+  }
+
+  .orbit-balance { --orbit-radius: 188px; --planet-size: 72px; }
+  .orbit-restart { --orbit-radius: 150px; --planet-size: 64px; }
+  .orbit-shield { --orbit-radius: 204px; --planet-size: 68px; }
+  .orbit-flow { --orbit-radius: 122px; --planet-size: 58px; }
+  .orbit-night { --orbit-radius: 170px; --planet-size: 66px; }
 }
 
 @media (max-width: 540px) {
@@ -279,35 +267,29 @@
   }
 
   .brand-orbit {
-    width: min(92vw, 350px);
+    width: min(92vw, 360px);
   }
 
   .orbit-sun {
-    width: 42%;
+    width: 44%;
   }
 
-  .orbit-sun span {
-    font-size: 1.55rem;
-  }
-
-  .orbit-balance { --orbit-radius: 132px; }
-  .orbit-restart { --orbit-radius: 108px; }
-  .orbit-shield { --orbit-radius: 144px; }
-  .orbit-flow { --orbit-radius: 92px; }
-  .orbit-night { --orbit-radius: 120px; }
+  .orbit-balance { --orbit-radius: 142px; --planet-size: 58px; }
+  .orbit-restart { --orbit-radius: 114px; --planet-size: 52px; }
+  .orbit-shield { --orbit-radius: 152px; --planet-size: 56px; }
+  .orbit-flow { --orbit-radius: 92px; --planet-size: 48px; }
+  .orbit-night { --orbit-radius: 128px; --planet-size: 54px; }
 
   .planet-card {
-    min-width: 64px;
+    min-width: 66px;
+    gap: 5px;
   }
 
   .planet-name {
-    padding: 5px 8px;
-    font-size: .52rem;
+    max-width: 72px;
+    min-height: 22px;
+    padding: 5px 7px;
+    font-size: .5rem;
+    letter-spacing: .08em;
   }
-
-  .core-balance { --planet-size: 54px; }
-  .core-restart { --planet-size: 44px; }
-  .core-shield { --planet-size: 50px; }
-  .core-flow { --planet-size: 40px; }
-  .core-night { --planet-size: 48px; }
 }
