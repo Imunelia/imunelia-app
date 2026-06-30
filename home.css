@@ -1,7 +1,7 @@
 .chaos-slogans {
   position: relative;
   max-width: 680px;
-  min-height: 220px;
+  min-height: 238px;
   margin-top: 30px;
   padding: 28px 30px 30px;
   background: rgba(255, 255, 255, .72);
@@ -12,18 +12,29 @@
 
 .hero-text .chaos-slogan {
   max-width: none;
-  min-height: 156px;
+  min-height: 174px;
   margin: 0;
   color: var(--blue);
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.35rem, 1.85vw, 1.95rem);
   line-height: 1.24;
-  transition: opacity .36s ease, transform .36s ease;
+  white-space: pre-wrap;
+  transition: opacity .28s ease;
 }
 
-.chaos-slogan.is-changing {
-  opacity: 0;
-  transform: translateY(8px);
+.chaos-slogan.is-typing::after {
+  content: "";
+  display: inline-block;
+  width: .08em;
+  height: .92em;
+  margin-left: 4px;
+  background: var(--gold);
+  transform: translateY(2px);
+  animation: slogan-caret 1s steps(2, start) infinite;
+}
+
+@keyframes slogan-caret {
+  50% { opacity: 0; }
 }
 
 .premium-header .brand-logo {
@@ -40,7 +51,7 @@
 .brand-orbit {
   position: relative;
   display: block;
-  width: min(92vw, 640px);
+  width: min(94vw, 690px);
   aspect-ratio: 1;
   margin-inline: auto;
   overflow: visible;
@@ -49,13 +60,12 @@
 .brand-orbit::before {
   content: "";
   position: absolute;
-  inset: 5%;
+  inset: 2%;
   z-index: 0;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 52% 50%, rgba(234, 216, 181, .32), rgba(234, 216, 181, .12) 28%, rgba(234, 216, 181, 0) 66%),
-    radial-gradient(circle at 48% 52%, rgba(8, 41, 91, .11), rgba(8, 41, 91, 0) 58%);
-  filter: blur(.2px);
+    radial-gradient(circle at 52% 50%, rgba(234, 216, 181, .35), rgba(234, 216, 181, .12) 30%, rgba(234, 216, 181, 0) 69%),
+    radial-gradient(circle at 48% 52%, rgba(8, 41, 91, .13), rgba(8, 41, 91, 0) 62%);
   pointer-events: none;
 }
 
@@ -65,7 +75,7 @@
   top: 50%;
   left: 50%;
   display: block;
-  width: clamp(184px, 34%, 238px);
+  width: clamp(210px, 36%, 268px);
   aspect-ratio: 1;
   transform: translate(-50%, -50%);
   background: transparent;
@@ -75,49 +85,73 @@
   pointer-events: none;
 }
 
-.brand-orbit .orbit-logo-image {
-  position: static;
-  display: block;
+.sun-sphere {
+  position: relative;
+  display: grid;
+  place-items: center;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 32% 24%, rgba(255, 252, 240, .96), rgba(234, 216, 181, .74) 32%, rgba(184, 139, 67, .72) 62%, rgba(8, 41, 91, .18) 100%),
+    linear-gradient(135deg, rgba(255, 255, 255, .28), rgba(3, 25, 54, .1));
+  box-shadow:
+    0 34px 84px rgba(3, 25, 54, .18),
+    0 0 72px rgba(184, 139, 67, .32),
+    inset -18px -22px 44px rgba(3, 25, 54, .14),
+    inset 16px 18px 40px rgba(255, 255, 255, .36);
+}
+
+.sun-sphere::before,
+.sun-sphere::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.sun-sphere::before {
+  top: 15%;
+  left: 18%;
+  width: 36%;
+  height: 20%;
+  background: rgba(255, 255, 255, .42);
+  filter: blur(1px);
+  transform: rotate(-18deg);
+}
+
+.sun-sphere::after {
+  inset: 9%;
+  border: 1px solid rgba(255, 255, 255, .46);
+  box-shadow: inset 0 0 28px rgba(255, 255, 255, .2);
+}
+
+.brand-orbit .orbit-logo-image {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 78%;
+  height: 78%;
   object-fit: contain;
   border-radius: 50%;
-  box-shadow: 0 26px 58px rgba(3, 25, 54, .13);
   mix-blend-mode: multiply;
+  opacity: .96;
 }
 
 .brand-orbit .orbit-ring {
   position: absolute;
   z-index: 1;
-  border: 1px solid rgba(184, 139, 67, .24);
+  border: 1px solid rgba(184, 139, 67, .22);
   border-radius: 50%;
   pointer-events: none;
 }
 
-.brand-orbit .ring-one {
-  inset: 2.5%;
-}
-
-.brand-orbit .ring-two {
-  inset: 9.5%;
-  border-color: rgba(8, 41, 91, .15);
-  transform: rotate(-16deg);
-}
-
-.brand-orbit .ring-three {
-  inset: 17%;
-  border-color: rgba(184, 139, 67, .19);
-}
-
-.brand-orbit .ring-four {
-  inset: 25.5%;
-  border-color: rgba(8, 41, 91, .12);
-}
-
-.brand-orbit .ring-five {
-  inset: 34%;
-  border-color: rgba(184, 139, 67, .14);
-}
+.brand-orbit .ring-one { inset: 1.5%; }
+.brand-orbit .ring-two { inset: 8.5%; border-color: rgba(8, 41, 91, .14); transform: rotate(-16deg); }
+.brand-orbit .ring-three { inset: 16.5%; border-color: rgba(184, 139, 67, .19); }
+.brand-orbit .ring-four { inset: 25%; border-color: rgba(8, 41, 91, .12); }
+.brand-orbit .ring-five { inset: 34%; border-color: rgba(184, 139, 67, .13); }
 
 .planet-orbit {
   position: absolute;
@@ -128,7 +162,7 @@
   height: 100%;
   pointer-events: none;
   transform-origin: 50% 50%;
-  animation: orbit-spin var(--orbit-time, 120s) linear infinite;
+  animation: orbit-spin var(--orbit-time, 150s) linear infinite;
   will-change: transform;
 }
 
@@ -144,84 +178,78 @@
   display: block;
   pointer-events: auto;
   transform: rotate(var(--counter-start));
-  animation: planet-counter-spin var(--orbit-time, 120s) linear infinite;
+  animation: planet-counter-spin var(--orbit-time, 150s) linear infinite;
   will-change: transform;
 }
 
-.product-pack {
+.product-sphere {
   overflow: visible;
+  border-radius: 50%;
 }
 
 .planet-image {
   display: block;
   width: var(--planet-size);
+  aspect-ratio: 1;
   height: auto;
   overflow: visible;
-  filter: drop-shadow(0 22px 34px rgba(3, 25, 54, .2));
+  filter: drop-shadow(0 26px 38px rgba(3, 25, 54, .23));
   transition: filter .22s ease, transform .22s ease;
 }
 
 .planet-card:hover .planet-image {
-  filter: drop-shadow(0 28px 44px rgba(3, 25, 54, .3));
-  transform: translateY(-2px);
-}
-
-.planet-name {
-  color: var(--blue);
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  backdrop-filter: none;
+  filter: drop-shadow(0 32px 48px rgba(3, 25, 54, .34));
+  transform: translateY(-2px) scale(1.03);
 }
 
 .orbit-balance {
-  --orbit-radius: 292px;
-  --orbit-time: 128s;
-  --orbit-start: -12deg;
-  --orbit-end: 348deg;
-  --counter-start: 12deg;
-  --counter-end: -348deg;
-  --planet-size: 104px;
+  --orbit-radius: 310px;
+  --orbit-time: 158s;
+  --orbit-start: -14deg;
+  --orbit-end: 346deg;
+  --counter-start: 14deg;
+  --counter-end: -346deg;
+  --planet-size: 126px;
 }
 
 .orbit-restart {
-  --orbit-radius: 238px;
-  --orbit-time: 128s;
-  --orbit-start: 58deg;
-  --orbit-end: 418deg;
-  --counter-start: -58deg;
-  --counter-end: -418deg;
-  --planet-size: 96px;
+  --orbit-radius: 252px;
+  --orbit-time: 158s;
+  --orbit-start: 56deg;
+  --orbit-end: 416deg;
+  --counter-start: -56deg;
+  --counter-end: -416deg;
+  --planet-size: 114px;
 }
 
 .orbit-shield {
-  --orbit-radius: 304px;
-  --orbit-time: 128s;
+  --orbit-radius: 322px;
+  --orbit-time: 158s;
   --orbit-start: 132deg;
   --orbit-end: 492deg;
   --counter-start: -132deg;
   --counter-end: -492deg;
-  --planet-size: 102px;
+  --planet-size: 122px;
 }
 
 .orbit-flow {
-  --orbit-radius: 196px;
-  --orbit-time: 128s;
-  --orbit-start: 210deg;
-  --orbit-end: 570deg;
-  --counter-start: -210deg;
-  --counter-end: -570deg;
-  --planet-size: 88px;
+  --orbit-radius: 210px;
+  --orbit-time: 158s;
+  --orbit-start: 216deg;
+  --orbit-end: 576deg;
+  --counter-start: -216deg;
+  --counter-end: -576deg;
+  --planet-size: 104px;
 }
 
 .orbit-night {
-  --orbit-radius: 260px;
-  --orbit-time: 128s;
-  --orbit-start: 286deg;
-  --orbit-end: 646deg;
-  --counter-start: -286deg;
-  --counter-end: -646deg;
-  --planet-size: 98px;
+  --orbit-radius: 278px;
+  --orbit-time: 158s;
+  --orbit-start: 294deg;
+  --orbit-end: 654deg;
+  --counter-start: -294deg;
+  --counter-end: -654deg;
+  --planet-size: 118px;
 }
 
 @keyframes orbit-spin {
@@ -247,18 +275,18 @@
   }
 
   .brand-orbit {
-    width: min(88vw, 500px);
+    width: min(88vw, 520px);
   }
 
   .orbit-sun {
-    width: clamp(158px, 36%, 198px);
+    width: clamp(174px, 38%, 214px);
   }
 
-  .orbit-balance { --orbit-radius: 224px; --planet-size: 84px; }
-  .orbit-restart { --orbit-radius: 184px; --planet-size: 78px; }
-  .orbit-shield { --orbit-radius: 236px; --planet-size: 82px; }
-  .orbit-flow { --orbit-radius: 150px; --planet-size: 70px; }
-  .orbit-night { --orbit-radius: 204px; --planet-size: 80px; }
+  .orbit-balance { --orbit-radius: 232px; --planet-size: 92px; }
+  .orbit-restart { --orbit-radius: 190px; --planet-size: 84px; }
+  .orbit-shield { --orbit-radius: 246px; --planet-size: 90px; }
+  .orbit-flow { --orbit-radius: 156px; --planet-size: 76px; }
+  .orbit-night { --orbit-radius: 214px; --planet-size: 88px; }
 }
 
 @media (max-width: 540px) {
@@ -268,26 +296,26 @@
   }
 
   .chaos-slogans {
-    min-height: 250px;
+    min-height: 268px;
     padding: 22px;
   }
 
   .hero-text .chaos-slogan {
-    min-height: 198px;
+    min-height: 214px;
     font-size: 1.18rem;
   }
 
   .brand-orbit {
-    width: min(92vw, 370px);
+    width: min(92vw, 380px);
   }
 
   .orbit-sun {
-    width: 45%;
+    width: 42%;
   }
 
-  .orbit-balance { --orbit-radius: 164px; --planet-size: 62px; }
-  .orbit-restart { --orbit-radius: 134px; --planet-size: 58px; }
-  .orbit-shield { --orbit-radius: 174px; --planet-size: 62px; }
-  .orbit-flow { --orbit-radius: 108px; --planet-size: 52px; }
-  .orbit-night { --orbit-radius: 148px; --planet-size: 60px; }
+  .orbit-balance { --orbit-radius: 168px; --planet-size: 66px; }
+  .orbit-restart { --orbit-radius: 138px; --planet-size: 60px; }
+  .orbit-shield { --orbit-radius: 178px; --planet-size: 64px; }
+  .orbit-flow { --orbit-radius: 116px; --planet-size: 54px; }
+  .orbit-night { --orbit-radius: 152px; --planet-size: 62px; }
 }
