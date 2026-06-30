@@ -2,6 +2,14 @@
 
 Privátní statický náhled webu Imunelia Biotech.
 
+## Web
+
+Po zapnutí GitHub Pages pro větev `main` / GitHub Actions bude web dostupný na:
+
+https://imunelia.github.io/imunelia-app/
+
+Ovládání a úpravy probíhají přes GitHub repozitář `Imunelia/imunelia-app`. Na iPhonu uvidíte hlavně výslednou stránku nebo soubory v aplikaci GitHub; samotné ovládání Codexu je v desktopové relaci.
+
 ## Stránky
 
 - `index.html` - úvodní stránka značky
