@@ -1,0 +1,6 @@
+# Private or sensitive data must never be published
+assets/pl-odbery-vysledky.json
+
+# Local/system files
+.DS_Store
+Thumbs.db
