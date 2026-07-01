@@ -219,6 +219,7 @@
 .story-card summary::-webkit-details-marker { display: none; }
 .story-card summary::after { content: "+"; position: absolute; top: 0; right: 0; display: grid; place-items: center; width: 26px; aspect-ratio: 1; color: var(--gold); border: 1px solid rgba(184,139,67,.32); border-radius: 50%; }
 .story-card details[open] summary::after { background: var(--gold-soft); transform: rotate(45deg); }
+.principle-icon { display: grid; place-items: center; width: 44px; aspect-ratio: 1; margin-bottom: 20px; color: var(--gold); border: 1px solid rgba(184,139,67,.38); border-radius: 50%; background: rgba(234,216,181,.16); font-family: Georgia, "Times New Roman", serif; font-size: 1.62rem; line-height: 1; }
 .story-more { margin-top: 8px !important; padding-top: 10px; border-top: 1px solid rgba(184,139,67,.22); color: var(--blue) !important; font-size: 1.08rem !important; line-height: 1.48; }
 
 @keyframes orbit-spin { from { transform: rotate(var(--orbit-start)); } to { transform: rotate(var(--orbit-end)); } }
@@ -252,6 +253,7 @@
   .orbit-shield { --orbit-radius: 162px; --planet-size: 60px; }
   .orbit-flow { --orbit-radius: 102px; --planet-size: 50px; }
   .orbit-night { --orbit-radius: 140px; --planet-size: 58px; }
+  .principle-icon { margin-left: auto; margin-right: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
