@@ -11,8 +11,19 @@
 }
 
 .brand-hero h1 {
+  color: var(--blue);
+  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2.8rem, 5.95vw, 6.02rem);
+  font-weight: 400;
   line-height: .92;
+  letter-spacing: 0;
+}
+
+.brand-hero h1 em {
+  display: inline-block;
+  color: var(--gold);
+  font: inherit;
+  font-style: normal;
 }
 
 .hero-text {
