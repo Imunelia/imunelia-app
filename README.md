@@ -1,25 +1,34 @@
-# Imunelia Biotech preview
+# Imunelia Biotech
 
-Privátní statický náhled webu Imunelia Biotech.
+Statický web značky Imunelia Biotech publikovaný přes GitHub Pages.
 
 ## Web
 
-Po zapnutí GitHub Pages pro větev `main` / GitHub Actions bude web dostupný na:
+Po zapnutí GitHub Pages pro větev `main` bude web dostupný na:
 
 https://imunelia.github.io/imunelia-app/
 
-Ovládání a úpravy probíhají přes GitHub repozitář `Imunelia/imunelia-app`. Na iPhonu uvidíte hlavně výslednou stránku nebo soubory v aplikaci GitHub; samotné ovládání Codexu je v desktopové relaci.
+Veřejná část webu je postavená kolem hlavní produktové linie Imunelia Balance. Odborné a datové nástroje jsou oddělené od hlavní zákaznické navigace.
 
 ## Stránky
 
-- `index.html` - úvodní stránka značky
-- `produkty.html` - produktová stránka Balance / Recover
-- `il-8.html` - privátní panel pro IL-8, Excel data, graf a kardio měření
+- `index.html` - veřejný úvod značky a Imunelia Balance
+- `balance.html` - hlavní landing page produktové linie Balance
+- `produkty.html` - produktová architektura Imunelia
+- `veda.html` - veřejné vysvětlení vědy a biologických signálů
+- `o-znacce.html` - příběh, jazyk a principy značky
+- `kontakt.html` - kontaktní stránka a mailto workflow
+- `odborna-sekce.html` - oddělený vstup do odborné/demo části
+- `il-8.html` - pouze bezpečný demo panel se syntetickými daty
 
-## Důležité
+## Pravidla pro data a soukromí
 
-Repozitář obsahuje privátní datový soubor:
+Reálná laboratorní, pacientská, zdravotní, diagnostická, identifikační ani pseudonymizovaná data se nikdy nesmí commitovat do veřejného repozitáře ani publikovat přes GitHub Pages.
 
-- `assets/pl-odbery-vysledky.json`
+Soubor `assets/pl-odbery-vysledky.json` je z veřejného buildu odstraněn a je uvedený v `.gitignore`. Pro ukázky se smí používat pouze syntetická demo data bez jmen, diagnóz, roků narození, souhlasů, poznámek, reálných laboratorních hodnot nebo jiných reidentifikovatelných údajů.
 
-Nahrávejte pouze do privátního repozitáře nebo do prostředí s řízeným přístupem.
+Pokud byl původní soubor s reálnými daty někdy commitnutý do historie repozitáře, je nutné mimo tento commit vyčistit historii pomocí BFG Repo-Cleaner nebo `git filter-repo`, zneplatnit případné cache a znovu publikovat GitHub Pages.
+
+## Komunikační pravidla
+
+Veřejná produktová komunikace Imunelia nepoužívá léčebné sliby, diagnózy ani tvrzení o konkrétních účincích na laboratorní hodnoty. Preferovaný jazyk: rovnováha, rytmus, dlouhodobost, kontext, kvalita, regenerace, každodenní péče, biologické signály a odborná střídmost.
