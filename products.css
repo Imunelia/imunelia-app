@@ -95,10 +95,11 @@ body.products-page {
 
 .ritual-card h3 {
   margin-top: 28px;
-  color: #082b55;
+  color: #c8a24a;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.55rem;
   letter-spacing: .08em;
+  text-shadow: 0 1px 0 rgba(255,255,255,.82), 0 6px 14px rgba(8,43,85,.12);
 }
 
 .ritual-card p {
@@ -260,7 +261,7 @@ body.products-page {
 .pack-title {
   position: relative;
   width: fit-content;
-  color: #082b55;
+  color: #c8a24a;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(3rem, 6vw, 5.75rem);
   font-weight: 400;
@@ -268,9 +269,9 @@ body.products-page {
   letter-spacing: 0;
   text-shadow:
     0 1px 0 rgba(255,255,255,.9),
-    0 2px 4px rgba(8,43,85,.28),
-    0 -1px 0 rgba(4,20,42,.34),
-    -1px -1px 0 rgba(255,255,255,.7);
+    0 2px 4px rgba(94,67,20,.26),
+    0 -1px 0 rgba(82,56,12,.38),
+    -1px -1px 0 rgba(255,248,226,.76);
   filter: drop-shadow(0 12px 16px rgba(8,43,85,.13));
 }
 
@@ -278,7 +279,7 @@ body.products-page {
   content: attr(data-text);
   position: absolute;
   inset: 0;
-  color: rgba(255,255,255,.26);
+  color: rgba(255,247,218,.32);
   transform: translate(-1px, -1px);
   pointer-events: none;
 }
@@ -396,6 +397,11 @@ body.products-page {
 .ritual-why h3,
 .materials-grid h3 {
   color: #082b55;
+}
+
+.ritual-detail h3 {
+  color: #c8a24a;
+  text-shadow: 0 1px 0 rgba(255,255,255,.82), 0 6px 14px rgba(8,43,85,.1);
 }
 
 .ritual-detail b {
