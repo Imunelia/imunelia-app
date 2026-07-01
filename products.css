@@ -122,19 +122,6 @@ body.products-page {
   transform: rotate(-7deg);
 }
 
-.balance-pack {
-  border-left-color: var(--gold);
-  background: linear-gradient(135deg, #fffaf0, #f4ead6 48%, #e9edf1 100%);
-}
-
-.balance-pack span {
-  color: var(--blue);
-}
-
-.balance-pack b {
-  color: var(--gold);
-}
-
 .dark-pack {
   background: linear-gradient(135deg, #f9f8f4, #e8edf1);
 }
