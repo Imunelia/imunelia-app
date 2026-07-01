@@ -3,308 +3,126 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Imunelia Biotech | Rovnováha imunity začíná uvnitř</title>
-  <meta name="description" content="Imunelia Biotech propojuje vědu, data a citlivý přístup k imunitní rovnováze. Poutavý úvod do značky bez produktové prezentace.">
+  <title>Imunelia Balance | Prémiová produktová linie pro vnitřní rovnováhu</title>
+  <meta name="description" content="Imunelia Balance je hlavní produktová linie značky Imunelia. Klidný, prémiový a odborně střídmý přístup k rovnováze, regeneraci a dlouhodobému porozumění tělu.">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="home.css?v=20260630-orbit9">
-  <link rel="stylesheet" href="site-fixes.css?v=20260701-nav1">
+  <link rel="stylesheet" href="site-fixes.css?v=20260701-balance1">
 </head>
 <body>
-  <header class="site-header premium-header">
-    <a class="brand lockup" href="index.html" aria-label="Imunelia Biotech domů"><img class="brand-logo" src="assets/imunelia-biotech-logo.jpg" alt="Imunelia Biotech"></a>
-    <nav class="nav" aria-label="Hlavní navigace">
-      <a href="index.html">Úvod</a>
+  <header class="site-header" data-site-header>
+    <a class="brand" href="index.html" aria-label="Imunelia domů"><img class="brand-logo" src="assets/imunelia-biotech-logo.jpg" alt="Imunelia Biotech"><span class="brand-name">Imunelia</span></a>
+    <nav id="site-nav" class="nav" aria-label="Hlavní navigace">
+      <a class="active" href="index.html">Úvod</a>
+      <a href="balance.html">Balance</a>
       <a href="produkty.html">Produkty</a>
-      <a href="#znacka">O značce</a>
-      <a href="#veda">Věda</a>
-      <a href="il-8.html">IL-8</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="veda.html">Věda</a>
+      <a href="o-znacce.html">O značce</a>
+      <a href="kontakt.html">Kontakt</a>
     </nav>
-    <a class="header-cta" href="produkty.html">Produkty</a>
+    <a class="header-cta" href="kontakt.html">Mám zájem</a>
+    <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Otevřít navigaci" data-nav-toggle><span></span><span></span><span></span></button>
   </header>
 
   <main>
-    <section class="showcase-hero brand-hero">
-      <div class="hero-text">
+    <section class="hero">
+      <div class="hero-copy">
         <p class="eyebrow">Imunelia Biotech</p>
-        <h1>Rovnováha imunity<br><em>začíná uvnitř.</em></h1>
-        <p>Budujeme značku, která propojuje vědeckou přesnost, klidný lidský přístup a dlouhodobé sledování biologických signálů. Imunelia je prostor pro lepší porozumění tělu, ne rychlé sliby.</p>
-        <div class="chaos-slogans" aria-live="polite" aria-label="Myšlenky o chaosu a rovnováze">
-          <p id="chaos-slogan" class="chaos-slogan">Když se tělo znovu začne slyšet, nejde o návrat k minulosti. Je to okamžik, kdy se z hluku stává zpráva a člověk poprvé pozná, co mu systém celou dobu říkal.</p>
-        </div>
-        <div class="hero-actions">
-          <a class="button primary" href="#znacka">Poznat značku</a>
-          <a class="button secondary" href="produkty.html">Produktové linie</a>
-        </div>
+        <h1>Imunelia Balance</h1>
+        <p class="lead">Vnitřní rovnováha začíná tam, kde tělo znovu nachází svůj rytmus.</p>
+        <p>Prémiová produktová linie Imunelia pro každodenní péči o vnitřní rytmus, regeneraci a klidnou odolnost organismu. Bez přehnaných slibů. S důrazem na kvalitu, kontext a dlouhodobé porozumění tělu.</p>
+        <div class="slogan-panel" aria-live="polite"><p id="home-slogan">Klid není prázdno. Je to okamžik, kdy se z hluku začne stávat čitelný signál.</p></div>
+        <div class="actions"><a class="button primary" href="balance.html">Poznat Balance</a><a class="button secondary" href="kontakt.html">Mám zájem o informace</a></div>
       </div>
-      <div class="brand-visual" aria-label="Produktové linie Imunelia obíhající kolem značky">
-        <div class="brand-orbit">
-          <div class="orbit-sun" aria-label="Imunelia Biotech">
-            <div class="sun-sphere">
-              <img class="orbit-logo-image" src="assets/imunelia-biotech-logo.jpg" alt="Imunelia Biotech">
-            </div>
-          </div>
-          <span class="orbit-ring ring-one"></span>
-          <span class="orbit-ring ring-two"></span>
-          <span class="orbit-ring ring-three"></span>
-          <span class="orbit-ring ring-four"></span>
-          <span class="orbit-ring ring-five"></span>
-          <a class="planet-orbit orbit-balance" href="produkty.html#balance" aria-label="Balance">
-            <span class="planet-object">
-              <span class="planet-card">
-                <svg class="planet-image product-sphere product-balance" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
-                  <defs>
-                    <radialGradient id="balanceSphere" cx="34%" cy="28%" r="78%">
-                      <stop offset="0%" stop-color="#fff8e8"></stop>
-                      <stop offset="38%" stop-color="#e1bd70"></stop>
-                      <stop offset="72%" stop-color="#9a773f"></stop>
-                      <stop offset="100%" stop-color="#08295b"></stop>
-                    </radialGradient>
-                    <linearGradient id="balanceBelt" x1="31" y1="48" x2="131" y2="116" gradientUnits="userSpaceOnUse">
-                      <stop offset="0" stop-color="#fffaf0" stop-opacity="0.9"></stop>
-                      <stop offset="1" stop-color="#ead8b5" stop-opacity="0.46"></stop>
-                    </linearGradient>
-                  </defs>
-                  <circle cx="80" cy="80" r="67" fill="url(#balanceSphere)"></circle>
-                  <ellipse cx="58" cy="40" rx="23" ry="14" fill="#fffaf0" opacity="0.55"></ellipse>
-                  <path d="M24 82c31-26 79-28 112-4v31c-35 22-82 20-112-3z" fill="url(#balanceBelt)" opacity="0.9"></path>
-                  <path d="M34 87c22-14 40-14 54 0s25 13 39 1" fill="none" stroke="#08295b" stroke-width="4" stroke-linecap="round" opacity="0.7"></path>
-                  <path d="M43 104c23 10 50 10 76 0" fill="none" stroke="#b88b43" stroke-width="4" stroke-linecap="round"></path>
-                  <text x="80" y="127" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="2.2" fill="#fffaf0">BALANCE</text>
-                  <circle cx="80" cy="80" r="66" fill="none" stroke="#fffaf0" stroke-opacity="0.28" stroke-width="2"></circle>
-                </svg>
-              </span>
-            </span>
-          </a>
-          <a class="planet-orbit orbit-restart" href="produkty.html#restart" aria-label="Restart">
-            <span class="planet-object">
-              <span class="planet-card">
-                <svg class="planet-image product-sphere product-restart" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
-                  <defs>
-                    <radialGradient id="restartSphere" cx="35%" cy="26%" r="78%">
-                      <stop offset="0%" stop-color="#ffffff"></stop>
-                      <stop offset="42%" stop-color="#d6e5ea"></stop>
-                      <stop offset="75%" stop-color="#6e98a9"></stop>
-                      <stop offset="100%" stop-color="#08295b"></stop>
-                    </radialGradient>
-                    <linearGradient id="restartRise" x1="37" y1="60" x2="125" y2="96" gradientUnits="userSpaceOnUse">
-                      <stop offset="0" stop-color="#fffaf0" stop-opacity="0.92"></stop>
-                      <stop offset="1" stop-color="#d7b46a" stop-opacity="0.58"></stop>
-                    </linearGradient>
-                  </defs>
-                  <circle cx="80" cy="80" r="65" fill="url(#restartSphere)"></circle>
-                  <ellipse cx="58" cy="39" rx="22" ry="13" fill="#ffffff" opacity="0.58"></ellipse>
-                  <path d="M33 102c18-34 44-55 84-63 10 17 14 36 10 56-28 22-61 28-94 19z" fill="url(#restartRise)" opacity="0.88"></path>
-                  <path d="M42 98c22-26 47-42 77-48" fill="none" stroke="#08295b" stroke-width="5" stroke-linecap="round" opacity="0.58"></path>
-                  <path d="M58 111h44" stroke="#08295b" stroke-opacity="0.38" stroke-width="4" stroke-linecap="round"></path>
-                  <text x="80" y="129" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="2" fill="#08295b">RESTART</text>
-                  <circle cx="80" cy="80" r="64" fill="none" stroke="#fffaf0" stroke-opacity="0.32" stroke-width="2"></circle>
-                </svg>
-              </span>
-            </span>
-          </a>
-          <a class="planet-orbit orbit-shield" href="produkty.html#shield" aria-label="Shield">
-            <span class="planet-object">
-              <span class="planet-card">
-                <svg class="planet-image product-sphere product-shield" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
-                  <defs>
-                    <radialGradient id="shieldSphere" cx="34%" cy="28%" r="78%">
-                      <stop offset="0%" stop-color="#fffdf7"></stop>
-                      <stop offset="42%" stop-color="#d8d0bf"></stop>
-                      <stop offset="74%" stop-color="#65748c"></stop>
-                      <stop offset="100%" stop-color="#031936"></stop>
-                    </radialGradient>
-                    <linearGradient id="shieldCrest" x1="44" y1="42" x2="116" y2="115" gradientUnits="userSpaceOnUse">
-                      <stop offset="0" stop-color="#0c3470"></stop>
-                      <stop offset="1" stop-color="#031936"></stop>
-                    </linearGradient>
-                  </defs>
-                  <circle cx="80" cy="80" r="67" fill="url(#shieldSphere)"></circle>
-                  <ellipse cx="57" cy="40" rx="24" ry="14" fill="#fffaf0" opacity="0.5"></ellipse>
-                  <path d="M80 38l39 14v31c0 29-16 46-39 57-23-11-39-28-39-57V52l39-14z" fill="url(#shieldCrest)" opacity="0.9"></path>
-                  <path d="M55 78h50" stroke="#ead8b5" stroke-width="5" stroke-linecap="round" opacity="0.82"></path>
-                  <path d="M64 95h32" stroke="#ead8b5" stroke-width="5" stroke-linecap="round" opacity="0.62"></path>
-                  <text x="80" y="128" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="2.3" fill="#fffaf0">SHIELD</text>
-                  <circle cx="80" cy="80" r="66" fill="none" stroke="#fffaf0" stroke-opacity="0.26" stroke-width="2"></circle>
-                </svg>
-              </span>
-            </span>
-          </a>
-          <a class="planet-orbit orbit-flow" href="produkty.html#flow" aria-label="Flow">
-            <span class="planet-object">
-              <span class="planet-card">
-                <svg class="planet-image product-sphere product-flow" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
-                  <defs>
-                    <radialGradient id="flowSphere" cx="34%" cy="28%" r="78%">
-                      <stop offset="0%" stop-color="#ffffff"></stop>
-                      <stop offset="44%" stop-color="#c5eee7"></stop>
-                      <stop offset="76%" stop-color="#5d9fad"></stop>
-                      <stop offset="100%" stop-color="#08295b"></stop>
-                    </radialGradient>
-                    <linearGradient id="flowWater" x1="32" y1="66" x2="127" y2="112" gradientUnits="userSpaceOnUse">
-                      <stop offset="0" stop-color="#fffdf7" stop-opacity="0.88"></stop>
-                      <stop offset="1" stop-color="#d5eeea" stop-opacity="0.46"></stop>
-                    </linearGradient>
-                  </defs>
-                  <circle cx="80" cy="80" r="64" fill="url(#flowSphere)"></circle>
-                  <ellipse cx="58" cy="40" rx="22" ry="13" fill="#ffffff" opacity="0.54"></ellipse>
-                  <path d="M29 85c22-19 39 14 61-5 15-13 25-13 41-2v32c-34 20-70 20-102 2z" fill="url(#flowWater)" opacity="0.9"></path>
-                  <path d="M39 83c18-16 34 13 53-3 12-10 21-10 31-3" fill="none" stroke="#08295b" stroke-width="5" stroke-linecap="round" opacity="0.68"></path>
-                  <path d="M38 100c20-12 34 10 54-4 12-8 21-8 30-2" fill="none" stroke="#b88b43" stroke-width="4.5" stroke-linecap="round" opacity="0.82"></path>
-                  <text x="80" y="127" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="2.6" fill="#08295b">FLOW</text>
-                  <circle cx="80" cy="80" r="63" fill="none" stroke="#fffaf0" stroke-opacity="0.3" stroke-width="2"></circle>
-                </svg>
-              </span>
-            </span>
-          </a>
-          <a class="planet-orbit orbit-night" href="produkty.html#night" aria-label="Night">
-            <span class="planet-object">
-              <span class="planet-card">
-                <svg class="planet-image product-sphere product-night" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
-                  <defs>
-                    <radialGradient id="nightSphere" cx="35%" cy="27%" r="78%">
-                      <stop offset="0%" stop-color="#a3a7cd"></stop>
-                      <stop offset="42%" stop-color="#4a5781"></stop>
-                      <stop offset="74%" stop-color="#172b52"></stop>
-                      <stop offset="100%" stop-color="#031936"></stop>
-                    </radialGradient>
-                    <linearGradient id="nightMoon" x1="55" y1="44" x2="107" y2="103" gradientUnits="userSpaceOnUse">
-                      <stop offset="0" stop-color="#fff4cf"></stop>
-                      <stop offset="1" stop-color="#d8b66d"></stop>
-                    </linearGradient>
-                  </defs>
-                  <circle cx="80" cy="80" r="66" fill="url(#nightSphere)"></circle>
-                  <ellipse cx="58" cy="40" rx="22" ry="13" fill="#fffaf0" opacity="0.26"></ellipse>
-                  <path d="M89 44a31 31 0 1 0 21 55 37 37 0 1 1-21-55z" fill="url(#nightMoon)"></path>
-                  <circle cx="50" cy="55" r="2.7" fill="#fffaf0" opacity="0.88"></circle>
-                  <circle cx="111" cy="68" r="2.4" fill="#fffaf0" opacity="0.72"></circle>
-                  <path d="M46 107h69" stroke="#d8b66d" stroke-width="4" stroke-linecap="round" opacity="0.68"></path>
-                  <text x="80" y="128" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="2.6" fill="#fffaf0">NIGHT</text>
-                  <circle cx="80" cy="80" r="65" fill="none" stroke="#fffaf0" stroke-opacity="0.22" stroke-width="2"></circle>
-                </svg>
-              </span>
-            </span>
-          </a>
-        </div>
+      <div class="hero-product" aria-label="Imunelia Balance produktový vizuál">
+        <div class="product-frame"><img src="assets/imunelia-balance-product.jpg" alt="Produktový vizuál Imunelia Balance"><p class="caption">Hlavní produktová linie značky.</p></div>
       </div>
     </section>
 
-    <section id="znacka" class="approach-section">
-      <p class="section-kicker">O značce</p>
-      <h2>Prémiový biotech přístup s lidskou tváří</h2>
-      <p class="section-lead">Imunelia stojí na jednoduché myšlence: vnitřní rovnováha se nedá oddělit od kontextu. Proto propojujeme kvalitu, sledování dat a srozumitelnou komunikaci, která nepůsobí studeně ani přehnaně.</p>
-      <div class="icon-row story-row">
-        <article class="story-card">
-          <details>
-            <summary><span>◇</span><h3>Klid</h3><p>Komunikace bez tlaku, přehánění a zbytečného hluku.</p></summary>
-            <p class="story-more">Klid je způsob, jak značka mluví k člověku. Nevyvolává strach ani naléhavost, ale vytváří prostor, ve kterém se dá tělu znovu rozumět.</p>
-          </details>
-        </article>
-        <article class="story-card">
-          <details>
-            <summary><span>≈</span><h3>Rovnováha</h3><p>Důraz na dlouhodobé souvislosti místo jednorázového efektu.</p></summary>
-            <p class="story-more">Rovnováha není nehybnost. Je to schopnost systému vracet se do čitelného rytmu i po zátěži, únavě nebo období chaosu.</p>
-          </details>
-        </article>
-        <article class="story-card">
-          <details>
-            <summary><span>⌕</span><h3>Porozumění</h3><p>Data a biomarkery pomáhají číst změny v čase.</p></summary>
-            <p class="story-more">Porozumění vzniká ze souvislostí. Jedna hodnota sama o sobě nestačí, důležitý je trend, kontext a to, co se v těle opakuje.</p>
-          </details>
-        </article>
-        <article class="story-card">
-          <details>
-            <summary><span>◎</span><h3>Důvěra</h3><p>Čistý vizuální jazyk, transparentnost a odborný rámec.</p></summary>
-            <p class="story-more">Důvěra se skládá z detailů: přesné řeči, čistého designu, odborného rámce a slibů, které zůstávají uvěřitelné.</p>
-          </details>
-        </article>
+    <section class="section alt">
+      <div class="split">
+        <div><p class="section-kicker">Co je Imunelia</p><h2>Klidný biotech/wellness brand s důrazem na kontext.</h2></div>
+        <p class="lead">Imunelia propojuje klidný produktový design, střídmou vědeckou komunikaci a dlouhodobé porozumění biologickým signálům. Mluvíme srozumitelně, bez léčebných slibů a bez zjednodušených závěrů.</p>
       </div>
     </section>
 
-    <section id="veda" class="immersive-band">
-      <div>
-        <p class="section-kicker">Věda a signály</p>
-        <h2>Tělo mluví v trendech. My mu chceme lépe naslouchat.</h2>
-      </div>
-      <p>Imunitní rovnováha není jeden údaj ani jeden okamžik. Smysl dává až sledování změn, kontextu a opakovaných měření. Proto má Imunelia oddělený odborný prostor pro IL-8 a další souvislosti.</p>
-    </section>
-
-    <section class="quality-strip brand-principles">
-      <p class="section-kicker">Principy</p>
-      <h2>Čtyři opěrné body Imunelia</h2>
-      <div class="quality-row">
-        <article><span>01</span><b>Vědecká střízlivost</b><small>Jasná řeč, žádné zkratky, žádné přehnané sliby.</small></article>
-        <article><span>02</span><b>Prémiový detail</b><small>Každý kontakt se značkou má působit čistě, klidně a přesně.</small></article>
-        <article><span>03</span><b>Data v souvislostech</b><small>Laboratorní hodnoty dávají smysl hlavně jako dlouhodobý trend.</small></article>
-        <article><span>04</span><b>Lidská srozumitelnost</b><small>Biotech nemusí být chladný. Odbornost může být příjemná.</small></article>
+    <section class="section">
+      <p class="section-kicker">Balance jako základ</p>
+      <h2>Jedna hlavní linie. Čtyři jasné opěrné body.</h2>
+      <div class="grid four">
+        <article class="card"><span class="card-number">01</span><h3>Každodenní rytmus</h3><p>Produktový rámec pro pravidelnost, návrat k režimu a čitelnější denní tempo.</p></article>
+        <article class="card"><span class="card-number">02</span><h3>Regenerace</h3><p>Jazyk obnovy, odpočinku a dlouhodobé péče bez agresivních slibů.</p></article>
+        <article class="card"><span class="card-number">03</span><h3>Rovnováha</h3><p>Ne jako okamžitý efekt, ale jako proces, který dává smysl sledovat v čase.</p></article>
+        <article class="card"><span class="card-number">04</span><h3>Kvalita a kontext</h3><p>Prémiové zpracování, střídmá komunikace a respekt k souvislostem.</p></article>
       </div>
     </section>
 
-    <section class="science-cta">
-      <div>
-        <p class="section-kicker">Produktové linie</p>
-        <h2>Každý produkt má svůj vlastní rytmus a jasnou roli.</h2>
-        <p>Balance, Restart a další linie vznikají jako systém: rovnováha, návrat, ochrana, dech a noční obnova.</p>
+    <section class="section alt">
+      <p class="section-kicker">Produktové linie</p>
+      <h2>Balance je aktuální hlavní linie. Ostatní směry tvoří budoucí architekturu.</h2>
+      <div class="grid five">
+        <article class="card line-card highlight"><span class="status">Hlavní linie</span><h3>Balance</h3><p>Každodenní rytmus, rovnováha, regenerace a klidný produktový přístup.</p><a class="button primary" href="balance.html">Poznat Balance</a></article>
+        <article class="card line-card future"><span class="status">Budoucí směr</span><h3>Restart</h3><p>Návrat k režimu a postupná obnova rytmu po zátěži.</p></article>
+        <article class="card line-card future"><span class="status">Budoucí směr</span><h3>Shield</h3><p>Téma ochrany, stability a odolnosti v každodenním životě.</p></article>
+        <article class="card line-card future"><span class="status">Budoucí směr</span><h3>Flow</h3><p>Lehkost, mentální pružnost a plynulost denního režimu.</p></article>
+        <article class="card line-card future"><span class="status">Budoucí směr</span><h3>Night</h3><p>Večerní rituál, zklidnění a návrat k nočnímu rytmu.</p></article>
       </div>
-      <a class="button secondary" href="produkty.html">Otevřít produkty</a>
     </section>
 
-    <section id="kontakt" class="bottom-cta brand-close">
-      <div class="cta-mark">○</div>
-      <div>
-        <h2>Imunelia Biotech</h2>
-        <p>Prémiový prostor pro imunitní rovnováhu, data a vědecky klidnou péči o vnitřní sílu.</p>
+    <section class="section">
+      <div class="callout">
+        <p class="section-kicker">Věda jednoduše</p>
+        <h2>Tělo nefunguje podle jedné hodnoty.</h2>
+        <p>Smysl dává sledovat kontext, trendy a změny v čase. Imunelia proto komunikuje o biologických signálech opatrně, bez zjednodušených diagnóz a bez slibů rychlých výsledků.</p>
+        <div class="actions"><a class="button gold" href="veda.html">Přejít na vědu</a></div>
       </div>
-      <a class="button gold" href="mailto:info@imunelia.com">Kontakt</a>
+    </section>
+
+    <section class="section alt">
+      <p class="section-kicker">Kontakt</p>
+      <h2>Vyberte směr, který dává smysl.</h2>
+      <div class="grid three">
+        <a class="card" href="kontakt.html"><h3>Mám zájem o Balance</h3><p>Informace o hlavní produktové linii a dostupnosti.</p></a>
+        <a class="card" href="kontakt.html"><h3>Jsem odborník</h3><p>Vstup do odborné komunikace a datové vrstvy projektu.</p></a>
+        <a class="card" href="kontakt.html"><h3>Mám zájem o distribuci</h3><p>Kontakt pro obchodní spolupráci a budoucí distribuci.</p></a>
+      </div>
     </section>
   </main>
 
-  <footer class="footer"><span>© 2026 Imunelia Biotech</span><span>Zymogen-based immune balance</span></footer>
+  <footer class="footer"><div class="footer-inner"><span>© 2026 Imunelia Biotech</span><a href="odborna-sekce.html">Odborná sekce</a></div></footer>
+  <script src="assets/js/navigation.js"></script>
   <script>
     (() => {
       const slogans = [
-        'Když se tělo znovu začne slyšet, nejde o návrat k minulosti. Je to okamžik, kdy se z hluku stává zpráva a člověk poprvé pozná, co mu systém celou dobu říkal.',
-        'Možná jsme se celou dobu dívali na špatné místo. Hledali jsme jednu chybu, jedno místo a jeden důvod, ale život se často nerozpadá v bodě. Rozprostře se jako mlha.',
-        'Chaos nemá prst, kterým by ukázal na jedinou příčinu. Je jako prostor, ve kterém se ztratila souvislost, a právě proto nestačí hledat strom. Musíme pochopit vzduch.',
-        'Když se systém rozkolísá, nemusí to být konec. Může to být začátek nové orientace, kdy tělo přestane jen křičet a začne znovu posílat čitelné signály.',
-        'Když máš sevřenou pěst, nemůžeš nic přijmout. Někdy obnova nezačíná větší kontrolou, ale schopností povolit místo, kde se tělo příliš dlouho bránilo.'
+        'Klid není prázdno. Je to okamžik, kdy se z hluku začne stávat čitelný signál.',
+        'Rovnováha není jeden bod. Je to schopnost vracet se k rytmu i po období zátěže.',
+        'Porozumění začíná tam, kde přestaneme hledat jednu zkratku a začneme vnímat souvislosti.',
+        'Důvěra vzniká z přesné řeči, čistého detailu a slibů, které zůstávají uvěřitelné.',
+        'Tělo nemluví jen jednou hodnotou. Smysl se skládá z trendů, času a kontextu.'
       ];
-      const target = document.getElementById('chaos-slogan');
+      const target = document.getElementById('home-slogan');
       if (!target) return;
-
-      let index = 0;
-      let character = 0;
-      let timer = 0;
-      const pauseFor = (char) => /[.!?]/.test(char) ? 420 : /[,;]/.test(char) ? 190 : 31;
-      const holdFor = (text) => Math.max(4200, text.trim().split(/\s+/).length * 245);
-
-      const typeSlogan = (text) => {
-        window.clearTimeout(timer);
-        target.textContent = '';
-        target.classList.add('is-typing');
-        character = 0;
-
-        const tick = () => {
-          target.textContent = text.slice(0, character + 1);
-          const current = text[character] || '';
-          character += 1;
-
-          if (character < text.length) {
-            timer = window.setTimeout(tick, pauseFor(current));
-            return;
-          }
-
-          target.classList.remove('is-typing');
+      let sloganIndex = 0;
+      let charIndex = 0;
+      let timer;
+      const speed = (char) => /[.!?]/.test(char) ? 520 : /[,;]/.test(char) ? 220 : 34;
+      const hold = (text) => Math.max(4300, text.split(/\s+/).length * 260);
+      const type = () => {
+        const text = slogans[sloganIndex];
+        target.textContent = text.slice(0, charIndex + 1);
+        const char = text[charIndex] || '';
+        charIndex += 1;
+        if (charIndex < text.length) {
+          timer = window.setTimeout(type, speed(char));
+        } else {
           timer = window.setTimeout(() => {
-            index = (index + 1) % slogans.length;
-            typeSlogan(slogans[index]);
-          }, holdFor(text));
-        };
-
-        tick();
+            sloganIndex = (sloganIndex + 1) % slogans.length;
+            charIndex = 0;
+            type();
+          }, hold(text));
+        }
       };
-
-      typeSlogan(slogans[index]);
+      window.clearTimeout(timer);
+      type();
     })();
   </script>
 </body>
