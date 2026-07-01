@@ -3,142 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Produkty | Imunelia Biotech</title>
-  <meta name="description" content="Produktové linie Imunelia Biotech: Balance, Restart, Shield, Flow a Night. Prémiová péče postavená na rovnováze, obnově a čitelných signálech těla.">
+  <title>Produktová architektura | Imunelia</title>
+  <meta name="description" content="Balance je hlavní produktová linie Imunelia. Restart, Shield, Flow a Night tvoří budoucí směry produktové architektury značky.">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="products.css?v=20260630-products2">
-  <link rel="stylesheet" href="site-fixes.css?v=20260701-nav1">
+  <link rel="stylesheet" href="site-fixes.css?v=20260701-balance1">
 </head>
-<body class="products-page">
-  <header class="site-header premium-header">
-    <a class="brand lockup" href="index.html" aria-label="Imunelia Biotech domů"><img class="brand-logo" src="assets/imunelia-biotech-logo.jpg" alt="Imunelia Biotech"></a>
-    <nav class="nav" aria-label="Hlavní navigace">
-      <a href="index.html">Úvod</a>
-      <a href="produkty.html">Produkty</a>
-      <a href="index.html#znacka">O značce</a>
-      <a href="il-8.html">IL-8</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
-    <a class="header-cta" href="#kontakt">Poptat</a>
+<body>
+  <header class="site-header" data-site-header>
+    <a class="brand" href="index.html" aria-label="Imunelia domů"><img class="brand-logo" src="assets/imunelia-biotech-logo.jpg" alt="Imunelia Biotech"></a>
+    <nav id="site-nav" class="nav" aria-label="Hlavní navigace"><a href="index.html">Úvod</a><a href="balance.html">Balance</a><a class="active" href="produkty.html">Produkty</a><a href="veda.html">Věda</a><a href="o-znacce.html">O značce</a><a href="kontakt.html">Kontakt</a></nav>
+    <a class="header-cta" href="kontakt.html">Kontakt</a>
+    <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Otevřít navigaci" data-nav-toggle><span></span><span></span><span></span></button>
   </header>
 
   <main>
-    <section class="products-hero">
-      <div>
-        <p class="eyebrow">Produktový systém</p>
-        <h1>Pět linií pro návrat k vnitřnímu rytmu.</h1>
-        <p>Produkty Imunelia nevznikají jako jednotlivé krabičky bez souvislosti. Tvoří mapu: rovnováha, restart, ochrana, proudění a noční obnova. Každá linie má vlastní roli, tón i situaci, ve které dává smysl.</p>
+    <section class="page-hero">
+      <p class="eyebrow">Produktové linie</p>
+      <h1>Produktová architektura Imunelia</h1>
+      <p class="lead">Balance je hlavní produktová linie. Restart, Shield, Flow a Night tvoří budoucí směry, které rozvíjejí jazyk značky a její dlouhodobou architekturu.</p>
+    </section>
+
+    <section class="section">
+      <div class="grid five">
+        <article class="card line-card highlight" id="balance"><span class="status">Hlavní linie</span><h3>Balance</h3><p>Základní a aktuálně hlavní produktová linie Imunelia. Zaměřuje se na každodenní rytmus, rovnováhu, regeneraci a klidný produktový přístup bez přehnaných slibů.</p><a class="button primary" href="balance.html">Poznat Balance</a></article>
+        <article class="card line-card future" id="restart"><span class="status">Budoucí směr</span><h3>Restart</h3><p>Budoucí produktový směr pro období návratu k režimu, obnovy rytmu a postupného restartu po zátěži.</p></article>
+        <article class="card line-card future" id="shield"><span class="status">Budoucí směr</span><h3>Shield</h3><p>Budoucí produktový směr zaměřený na téma ochrany, stability a odolnosti v každodenním životě. Bez léčebných nebo preventivních tvrzení.</p></article>
+        <article class="card line-card future" id="flow"><span class="status">Budoucí směr</span><h3>Flow</h3><p>Budoucí produktový směr spojený s lehkostí, cirkulací energie, mentální pružností a plynulostí denního režimu. Obrazně, ne medicínsky.</p></article>
+        <article class="card line-card future" id="night"><span class="status">Budoucí směr</span><h3>Night</h3><p>Budoucí produktový směr pro večerní rituál, zklidnění a návrat k nočnímu rytmu. Bez tvrzení o řešení spánkových potíží.</p></article>
       </div>
     </section>
 
-    <section class="product-map" aria-label="Přehled produktových linií">
-      <a href="#balance"><span>01</span><b>Balance</b><small>vnitřní rovnováha</small></a>
-      <a href="#restart"><span>02</span><b>Restart</b><small>návrat energie</small></a>
-      <a href="#shield"><span>03</span><b>Shield</b><small>ochrana systému</small></a>
-      <a href="#flow"><span>04</span><b>Flow</b><small>dech a proudění</small></a>
-      <a href="#night"><span>05</span><b>Night</b><small>noční obnova</small></a>
-    </section>
-
-    <section class="product-detail-grid products-catalog">
-      <article id="balance" class="product-detail-card product-line-card balance-line">
-        <div class="product-pack concept-pack balance-pack"><span>Balance</span><b>vnitřní rovnováha systému</b><i></i></div>
-        <div>
-          <p class="section-kicker">01 / Balance</p>
-          <h2>Rovnováha jako základ celého systému.</h2>
-          <p>Balance je hlavní linie Imunelia pro každodenní stabilitu, klidnou odolnost a návrat těla k čitelnému rytmu. Komunikuje ne jako výkon, ale jako základ: když se systém ztiší, začne být znovu slyšet.</p>
-          <ul class="product-points">
-            <li>Pro dlouhodobou práci s rovnováhou a každodenní podporou.</li>
-            <li>Prémiová, čistá komunikace bez tvrdých medicínských slibů.</li>
-            <li>Vizuálně hlavní produkt značky.</li>
-          </ul>
-          <a class="button primary" href="#kontakt">Poptat Balance</a>
-        </div>
-      </article>
-
-      <article id="restart" class="product-detail-card product-line-card reverse restart-line">
-        <div class="product-pack concept-pack"><span>Restart</span><b>nový začátek systému</b><i></i></div>
-        <div>
-          <p class="section-kicker">02 / Restart</p>
-          <h2>Když tělo potřebuje znovu najít směr.</h2>
-          <p>Restart je linie pro období únavy, zahlcení a návratu po zátěži. Vychází z myšlenky, že chaos nemusí být konec, ale bod, kde se systém začne znovu organizovat.</p>
-          <ul class="product-points">
-            <li>Pro komunikaci obnovy energie a návratu k orientaci.</li>
-            <li>Silný název pro kampaňový i produktový jazyk.</li>
-            <li>Navazuje na téma chaosu, signálu a nového rytmu.</li>
-          </ul>
-          <a class="button secondary" href="#kontakt">Poptat Restart</a>
-        </div>
-      </article>
-
-      <article id="shield" class="product-detail-card product-line-card shield-line">
-        <div class="product-pack concept-pack dark-pack"><span>Shield</span><b>ochrana vnitřního prostoru</b><i></i></div>
-        <div>
-          <p class="section-kicker">03 / Shield</p>
-          <h2>Ochrana není tvrdost. Je to schopnost udržet hranici.</h2>
-          <p>Shield je návrh linie pro dny, kdy tělo potřebuje odolnost, jasnější hranice a stabilitu vůči vnějšímu tlaku. Jazyk produktu je klidný: ne boj, ale ochrana prostoru, ve kterém se může obnovit rovnováha.</p>
-          <ul class="product-points">
-            <li>Pro sezónní a zátěžovou komunikaci imunity.</li>
-            <li>Vhodné jako silnější doplněk k Balance.</li>
-            <li>Tonálně sebejisté, ale ne agresivní.</li>
-          </ul>
-          <a class="button primary" href="#kontakt">Poptat Shield</a>
-        </div>
-      </article>
-
-      <article id="flow" class="product-detail-card product-line-card reverse flow-line">
-        <div class="product-pack concept-pack light-pack"><span>Flow</span><b>dech, cirkulace, lehkost</b><i></i></div>
-        <div>
-          <p class="section-kicker">04 / Flow</p>
-          <h2>Když nestačí držet kontrolu. Je potřeba znovu proudit.</h2>
-          <p>Flow překládá myšlenku „musíš pochopit vzduch“ do produktové linie pro dech, lehkost, cirkulaci a uvolnění napětí. Je to nejvíc poetická linie systému, ale pořád drží odborný a čistý rámec.</p>
-          <ul class="product-points">
-            <li>Pro pocit lehkosti, dechu a vnitřního pohybu.</li>
-            <li>Vhodné pro vizuály s prostorem, vzduchem a jemnou modří.</li>
-            <li>Komunikačně spojuje tělo, mysl a signály.</li>
-          </ul>
-          <a class="button secondary" href="#kontakt">Poptat Flow</a>
-        </div>
-      </article>
-
-      <article id="night" class="product-detail-card product-line-card night-line">
-        <div class="product-pack concept-pack night-pack"><span>Night</span><b>obnova, když systém ztichne</b><i></i></div>
-        <div>
-          <p class="section-kicker">05 / Night</p>
-          <h2>Noční klid jako prostor pro obnovu.</h2>
-          <p>Night je linie pro večerní a regenerační komunikaci. Vychází z jednoduché pointy: tělo se často neobnovuje v tlaku, ale v okamžiku, kdy přestane držet sevřenou pěst.</p>
-          <ul class="product-points">
-            <li>Pro spánek, klid, regeneraci a večerní rituál.</li>
-            <li>Měkčí, prémiovější linie s hlubší modří.</li>
-            <li>Přirozeně uzavírá celý produktový systém.</li>
-          </ul>
-          <a class="button primary" href="#kontakt">Poptat Night</a>
-        </div>
-      </article>
-    </section>
-
-    <section class="product-positioning">
-      <div>
-        <p class="section-kicker">Jak to komunikovat</p>
-        <h2>Ne jako zázrak. Jako systém.</h2>
+    <section class="section alt">
+      <div class="split">
+        <div><p class="section-kicker">Pozice značky</p><h2>Ne hotové portfolio pěti produktů. Architektura, která má jasný střed.</h2></div>
+        <p class="lead">Balance nese veřejný produktový příběh značky. Ostatní linie zůstávají pojmenované jako budoucí směry, aby web nepůsobil jako nabídka rovnocenně dostupných produktů.</p>
       </div>
-      <p>Imunelia má působit odborně, prémiově a lidsky. Produkty proto nemluví tvrdým jazykem léčby, ale jazykem rovnováhy, trendů, signálů a vnitřního prostoru. To je silnější, uvěřitelnější a dlouhodobě značkovější.</p>
-    </section>
-
-    <section id="kontakt" class="contact product-contact">
-      <div>
-        <p class="section-kicker">Kontakt</p>
-        <h2>Chci informace k produktovým liniím.</h2>
-        <p>Napište, o kterou linii máte zájem: Balance, Restart, Shield, Flow nebo Night.</p>
-      </div>
-      <form class="contact-form">
-        <label>Jméno<input type="text" name="name" autocomplete="name" placeholder="Vaše jméno"></label>
-        <label>E-mail<input type="email" name="email" autocomplete="email" placeholder="vas@email.cz"></label>
-        <label>Zpráva<textarea name="message" rows="5" placeholder="Zajímá mě Balance / Restart / Shield / Flow / Night..."></textarea></label>
-        <button class="button primary" type="submit">Odeslat poptávku</button>
-      </form>
     </section>
   </main>
 
-  <footer class="footer"><span>© 2026 Imunelia Biotech</span><span>Balance / Restart / Shield / Flow / Night</span></footer>
+  <footer class="footer"><div class="footer-inner"><span>© 2026 Imunelia Biotech</span><a href="odborna-sekce.html">Odborná sekce</a></div></footer>
+  <script src="assets/js/navigation.js"></script>
 </body>
 </html>
