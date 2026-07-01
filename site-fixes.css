@@ -11,27 +11,26 @@ div[id] {
 .products-page .pack-title {
   z-index: 2;
   color: #b88928;
-  background: linear-gradient(180deg, #fff1bd 0%, #d8b45f 34%, #a9791e 62%, #f0d98d 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: #b88928;
   text-shadow:
-    0 1px 0 rgba(255, 255, 255, .72),
-    0 3px 4px rgba(89, 58, 12, .34),
-    0 -1px 0 rgba(91, 61, 12, .42);
-  filter: drop-shadow(0 8px 12px rgba(86, 58, 14, .18));
+    0 1px 0 rgba(255, 255, 255, .55),
+    0 2px 0 rgba(120, 82, 20, .22),
+    0 4px 8px rgba(55, 38, 12, .24);
+  filter: none;
 }
 
 .products-page .pack-title::after {
-  color: rgba(93, 62, 12, .28);
-  -webkit-text-fill-color: rgba(93, 62, 12, .28);
-  transform: translate(2px, 2px);
+  display: none;
 }
 
 .products-page .ritual-card h3,
 .products-page .ritual-detail h3 {
   color: #b88928;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .76), 0 5px 12px rgba(89, 58, 12, .18);
+  -webkit-text-fill-color: #b88928;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .65), 0 4px 10px rgba(89, 58, 12, .16);
 }
 
 @media (max-width: 760px) {
