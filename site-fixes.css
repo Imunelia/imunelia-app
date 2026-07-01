@@ -89,7 +89,7 @@ div[id] {
   }
 
   .products-page .pack-orbit::before {
-    inset-top: 8px;
+    inset: 8px 0 0;
     height: 56px;
   }
 
