@@ -3,142 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sledování IL-8 | Imunelia Biotech</title>
-  <meta name="description" content="Profesionální panel Imunelia Biotech pro přehledné sledování IL-8, klinického kontextu, grafu a kardio měření.">
+  <title>IL-8 demo panel | Imunelia odborná sekce</title>
+  <meta name="description" content="Bezpečný demo panel Imunelia pro orientační vizualizaci syntetických demo dat v oddělené odborné sekci.">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="il8.css">
-  <link rel="stylesheet" href="site-fixes.css?v=20260701-nav1">
+  <link rel="stylesheet" href="site-fixes.css?v=20260701-balance1">
 </head>
-<body class="il8-page">
-  <header class="site-header il8-header">
-    <a class="brand" href="index.html" aria-label="Imunelia Biotech domů"><img class="brand-logo" src="assets/imunelia-biotech-logo.jpg" alt="Imunelia Biotech"></a>
-    <nav class="nav" aria-label="Hlavní navigace">
-      <a href="index.html">Úvod</a>
-      <a href="#prehled">Přehled</a>
-      <a href="#data">Data</a>
-      <a href="#graf">Graf</a>
-      <a href="#kardio">Kardio</a>
-    </nav>
-    <a class="header-cta" href="#data">Pracovat s daty</a>
+<body>
+  <header class="site-header" data-site-header>
+    <a class="brand" href="index.html" aria-label="Imunelia domů"><img class="brand-logo" src="assets/imunelia-biotech-logo.jpg" alt="Imunelia Biotech"></a>
+    <nav id="site-nav" class="nav" aria-label="Hlavní navigace"><a href="index.html">Úvod</a><a href="balance.html">Balance</a><a href="produkty.html">Produkty</a><a href="veda.html">Věda</a><a href="o-znacce.html">O značce</a><a href="kontakt.html">Kontakt</a></nav>
+    <a class="header-cta" href="odborna-sekce.html">Odborná sekce</a>
+    <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Otevřít navigaci" data-nav-toggle><span></span><span></span><span></span></button>
   </header>
 
   <main>
-    <section id="prehled" class="il8-hero">
-      <div class="il8-hero-copy">
-        <p class="eyebrow">IL-8 / CXCL8 monitoring</p>
-        <h1>Přehledný odborný panel pro sledování trendu IL-8.</h1>
-        <p>Jedno místo pro laboratorní hodnoty, klinický kontext, graf vývoje a související kardio měření. Panel slouží k organizaci dat a orientačnímu sledování trendů; nenahrazuje lékařské hodnocení.</p>
-      </div>
-      <aside class="il8-summary-card" aria-label="Souhrn IL-8">
-        <span>Aktuální stav</span>
-        <strong id="summary-count">0 měření</strong>
-        <dl>
-          <div><dt>Poslední IL-8</dt><dd id="summary-last">--</dd></div>
-          <div><dt>Trend</dt><dd id="summary-trend">bez dat</dd></div>
-        </dl>
-      </aside>
-    </section>
+    <section class="page-hero"><p class="eyebrow">Syntetické demo</p><h1>IL-8 demo panel</h1><p class="lead">Toto je bezpečná ukázka rozhraní v odborné sekci. Pracuje pouze se syntetickými demo daty a neslouží k samostatné diagnostice, léčbě ani rozhodování o zdravotní péči.</p><div class="actions"><a class="button secondary" href="odborna-sekce.html">Zpět do odborné sekce</a></div></section>
 
-    <section id="data" class="il8-workspace" aria-label="Práce s daty IL-8">
-      <div class="il8-panel il8-panel-primary">
-        <div class="panel-heading">
-          <p class="section-kicker">Dataset</p>
-          <h2>PL odběry výsledky</h2>
-          <p>Načtěte připravený dataset, vyberte pacienta a panel zobrazí jeho hodnoty IL-8 v čase včetně klinického kontextu.</p>
-        </div>
-        <div class="control-row">
-          <button id="load-pl-dataset" class="button primary" type="button">Načíst dataset</button>
-          <label>Pacient<select id="patient-select"><option value="">Nejprve načtěte dataset</option></select></label>
-        </div>
-        <div id="patient-context" class="patient-context">Dataset zatím není načtený.</div>
-      </div>
+    <section class="section alt"><div class="demo-bar"><strong>Syntetická demo data</strong><span>Nevkládejte reálná pacientská ani zdravotní data. Veřejný demo panel slouží pouze k testování rozhraní.</span></div></section>
 
-      <div class="il8-panel">
-        <div class="panel-heading">
-          <p class="section-kicker">Vlastní měření</p>
-          <h2>Import nebo ruční zápis</h2>
-          <p>Vložte Excel/CSV, případně doplňte jednu hodnotu ručně. Doporučené sloupce: datum, IL-8, jednotka, laboratoř, diagnóza, poznámka.</p>
-        </div>
-        <label class="file-drop compact-drop">Soubor IL-8<input id="il8-file" type="file" accept=".xlsx,.xls,.csv,.tsv"></label>
-        <div class="manual-grid il8-manual-grid">
-          <label>Datum<input id="manual-date" type="date"></label>
-          <label>IL-8<input id="manual-value" type="text" placeholder="např. 12,4"></label>
-          <label>Jednotka<input id="manual-unit" type="text" placeholder="pg/ml"></label>
-          <button id="add-manual" class="button secondary" type="button">Přidat</button>
-        </div>
-      </div>
-
-      <div class="il8-panel il8-context-panel">
-        <div class="panel-heading">
-          <p class="section-kicker">Klinický kontext</p>
-          <h2>Diagnóza a poznámka</h2>
-          <p>Uložte pracovní závěr, symptomy, medikaci nebo okolnosti odběru. Kontext se promítne do orientační interpretace.</p>
-        </div>
-        <label>Diagnóza nebo pracovní závěr<input id="diagnosis" type="text" placeholder="např. sledování zánětlivé aktivity"></label>
-        <label>Popis stavu<textarea id="clinical-note" rows="5" placeholder="Doplňte souvislosti odběru, terapii, symptomy nebo doporučení odborníka."></textarea></label>
+    <section class="section">
+      <div class="dashboard">
+        <article class="card chart-card"><div class="split"><div><p class="section-kicker">Demo subjekt</p><h2>Orientační vizualizace</h2></div><label>Vybrat demo ID<select id="demo-subject" aria-label="Vybrat syntetické demo ID"></select></label></div><canvas id="il8-chart" width="980" height="360" aria-label="Graf syntetických demo dat"></canvas></article>
+        <aside class="card"><p class="section-kicker">Souhrn</p><dl class="stat-list"><div><dt>Počet</dt><dd id="summary-count">--</dd></div><div><dt>Poslední index</dt><dd id="summary-last">--</dd></div><div><dt>Trend</dt><dd id="summary-trend">--</dd></div></dl><p id="interpretation" class="form-note"></p></aside>
       </div>
     </section>
 
-    <section id="graf" class="il8-dashboard" aria-label="Graf a interpretace IL-8">
-      <article class="il8-panel chart-panel">
-        <div class="card-head">
-          <div>
-            <p class="section-kicker">Trend</p>
-            <h2>Vývoj IL-8 v čase</h2>
-          </div>
-          <button id="clear-il8" class="text-button" type="button">Vymazat IL-8</button>
-        </div>
-        <canvas id="il8-chart" width="1100" height="420" aria-label="Graf IL-8 v čase"></canvas>
-      </article>
-
-      <aside class="il8-panel interpretation-panel">
-        <p class="section-kicker">Vyhodnocení</p>
-        <h3>Orientační interpretace</h3>
-        <div id="interpretation" class="interpretation">Nahrajte data IL-8 nebo přidejte měření ručně.</div>
-      </aside>
-    </section>
-
-    <section class="il8-panel table-panel">
-      <div class="card-head">
-        <div>
-          <p class="section-kicker">Záznamy</p>
-          <h2>Tabulka IL-8</h2>
-        </div>
-        <button id="export-il8" class="button secondary" type="button">Export CSV</button>
-      </div>
-      <div class="table-wrap"><table id="il8-table"><thead><tr><th>Datum</th><th>IL-8</th><th>Jednotka</th><th>Laboratoř</th><th>Poznámka</th></tr></thead><tbody></tbody></table></div>
-    </section>
-
-    <section id="kardio" class="il8-dashboard cardio-dashboard" aria-label="Kardio měření">
-      <article class="il8-panel">
-        <div class="panel-heading">
-          <p class="section-kicker">Kardio měření</p>
-          <h2>Související hodnoty</h2>
-          <p>Vložte Excel nebo CSV s kardio měřeními. Doporučené sloupce: datum, tep, systolický tlak, diastolický tlak, HRV, SpO2, poznámka.</p>
-        </div>
-        <label class="file-drop compact-drop">Soubor kardio měření<input id="cardio-file" type="file" accept=".xlsx,.xls,.csv,.tsv"></label>
-      </article>
-
-      <aside class="il8-panel interpretation-panel">
-        <p class="section-kicker">Kardio souhrn</p>
-        <h3>Souvislosti k IL-8</h3>
-        <div id="cardio-summary" class="interpretation">Kardio data zatím nejsou nahraná.</div>
-        <button id="clear-cardio" class="text-button" type="button">Vymazat kardio data</button>
-      </aside>
-    </section>
-
-    <section class="il8-panel table-panel">
-      <div class="card-head"><div><p class="section-kicker">Kardio tabulka</p><h2>Poslední nahraná měření</h2></div></div>
-      <div class="table-wrap"><table id="cardio-table"><thead><tr><th>Datum</th><th>Tep</th><th>Tlak</th><th>HRV</th><th>SpO2</th><th>Poznámka</th></tr></thead><tbody></tbody></table></div>
-    </section>
-
-    <section class="il8-note">
-      <p>Upozornění: IL-8 ani kardio hodnoty nelze hodnotit izolovaně. Panel je určený pro organizaci dat a sledování trendů. Interpretaci výsledků vždy konzultujte s lékařem nebo kvalifikovaným odborníkem.</p>
-    </section>
+    <section class="section alt"><p class="section-kicker">Tabulka</p><h2>Syntetické demo záznamy</h2><div class="card table-wrap"><table id="il8-table"><thead><tr><th>Demo ID</th><th>Datum</th><th>Index</th><th>Jednotka</th><th>Označení</th></tr></thead><tbody></tbody></table></div></section>
   </main>
 
-  <footer class="footer"><span>© 2026 Imunelia Biotech</span><span>Sledování IL-8 / CXCL8</span></footer>
-  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <footer class="footer"><div class="footer-inner"><span>© 2026 Imunelia Biotech</span><a href="index.html">Veřejný web</a></div></footer>
+  <script src="assets/js/navigation.js"></script>
   <script src="assets/il8-tracker.js"></script>
 </body>
 </html>
