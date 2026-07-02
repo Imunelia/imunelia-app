@@ -114,8 +114,9 @@ div[id] {
   position: relative;
   z-index: 1;
   display: block;
-  width: min(100%, 590px);
-  height: auto;
+  width: min(100%, 590px) !important;
+  height: auto !important;
+  aspect-ratio: 1280 / 853;
   border-radius: 6px;
   object-fit: contain;
   filter: drop-shadow(18px 24px 28px rgba(8, 43, 85, .16));
@@ -203,7 +204,8 @@ div[id] {
   }
 
   .products-page .product-pack-photo {
-    width: min(100%, 360px);
+    width: min(100%, 360px) !important;
+    height: auto !important;
   }
 
   .products-page .pack-bottom {
