@@ -212,3 +212,29 @@ div[id] {
     margin-top: 6px;
   }
 }
+
+/* Navigation logo enlarged per brand request. */
+.site-header .brand-logo {
+  width: clamp(236px, 26vw, 316px);
+  height: 116px;
+}
+
+@media (max-width: 980px) {
+  .site-header {
+    gap: 10px;
+    padding-left: clamp(10px, 3vw, 18px);
+    padding-right: clamp(10px, 3vw, 18px);
+  }
+
+  .site-header .brand-logo {
+    width: clamp(188px, 56vw, 248px);
+    height: 96px;
+  }
+}
+
+@media (max-width: 390px) {
+  .site-header .brand-logo {
+    width: 182px;
+    height: 90px;
+  }
+}
