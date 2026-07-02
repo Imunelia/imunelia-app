@@ -213,11 +213,11 @@ div[id] {
   }
 }
 
-/* Navigation logo sized by requested physical height. */
+/* Navigation logo scaled to match the homepage hero capital height visually. */
 .site-header .brand-logo {
   width: auto;
-  height: 2cm;
-  max-width: 42vw;
+  height: clamp(128px, 8vw, 150px);
+  max-width: 48vw;
   object-fit: contain;
 }
 
@@ -230,7 +230,7 @@ div[id] {
 
   .site-header .brand-logo {
     width: auto;
-    height: 1cm;
-    max-width: 58vw;
+    height: clamp(58px, 13vw, 72px);
+    max-width: 62vw;
   }
 }
