@@ -1,23 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" role="img" aria-labelledby="immumalia-logo-title immumalia-logo-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" role="img" aria-labelledby="immumalia-logo-title immumalia-logo-desc">
   <title id="immumalia-logo-title">Immumalia Biotech</title>
-  <desc id="immumalia-logo-desc">Immumalia Biotech logo with circular swallow mark</desc>
+  <desc id="immumalia-logo-desc">Immumalia Biotech logo with gold swallow above a navy serif wordmark</desc>
   <defs>
-    <linearGradient id="swallow-gold" x1="184" y1="42" x2="248" y2="142" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#f4df9b"/>
-      <stop offset="0.48" stop-color="#c99d3a"/>
-      <stop offset="1" stop-color="#9b6d1a"/>
+    <linearGradient id="swallowGold" x1="438" y1="44" x2="792" y2="205" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d9ae58"/>
+      <stop offset="0.5" stop-color="#b8832b"/>
+      <stop offset="1" stop-color="#d2aa5a"/>
     </linearGradient>
   </defs>
-  <rect width="760" height="250" fill="none"/>
-  <g fill="none" fill-rule="evenodd">
-    <g transform="translate(28 18)">
-      <path d="M188 24C140 7 81 19 43 64 0 116 17 193 78 221c45 21 101 9 132-28" stroke="#082b55" stroke-width="12" stroke-linecap="round" opacity="0.98"/>
-      <path d="M70 191c35 29 98 31 141-6" stroke="#082b55" stroke-width="10" stroke-linecap="round" opacity="0.98"/>
-      <path d="M72 64c30-30 70-44 112-39" stroke="#082b55" stroke-width="8" stroke-linecap="round" opacity="0.98"/>
-      <path d="M166 36c42 5 77 28 103 69-21-12-39-16-56-10 11 18 10 44-2 78-8-33-21-55-39-66-16 8-33 23-51 45 9-24 21-42 36-55-18-9-40-12-67-10 26-21 51-38 76-51Z" fill="url(#swallow-gold)"/>
-      <path d="M214 95c16-6 34-3 55 10-18 2-36 12-55 29 5-16 5-29 0-39Z" fill="#b88928" opacity="0.65"/>
-    </g>
-    <text x="484" y="116" text-anchor="middle" fill="#082b55" font-family="Georgia, 'Times New Roman', serif" font-size="70" letter-spacing="1">Immumalia</text>
-    <text x="486" y="162" text-anchor="middle" fill="#c8a24a" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="11">BIOTECH</text>
-  </g>
+  <rect width="1200" height="430" fill="none"/>
+  <path fill="url(#swallowGold)" d="M485.6 173.2c48.4-41.2 101.1-75.4 168.8-96.8 42.8-13.5 49.8-7.1 16.9 22.5-47.7 42.8-72.4 84.1-72.7 131.6 45.9-20.6 97.9-31.4 161.5-36.4 22.2-1.7 24.7 5.6 5.3 14.5-56.8 26-103.8 53.6-143.6 86.2 42.4 10.1 85.8 25.1 131.2 45.9 17.2 7.9 14.7 15.4-4.1 12.5-74.6-11.3-139.8-25.6-196.1-45.8-37.3 18.4-72.8 43-108.7 72.8 11.9-35.9 24.5-67.2 39.9-93.3-34.9-19.2-67.6-26.4-101.8-18 26.6-32.4 57.5-51.8 97.8-53.2-14.4-14.5-38.1-22.2-73.7-19 25.3-14.5 50.8-22.5 79.3-23.5Z"/>
+  <path fill="#fffaf0" fill-opacity="0.86" d="M548.6 217.3c44.7 28.2 97.6 27.1 163.1 4.8-49.9 33.2-94.9 46.3-135.1 38.4-16.6-3.2-28.2-18.7-28-43.2Z"/>
+  <path fill="#b8832b" d="M388.9 225.6c21.8-16.8 45.6-21.1 72.4-10.3-16.7 15.2-25.5 35.2-26.4 60-12.5-20.3-27.9-36.7-46-49.7Z"/>
+  <text x="600" y="306" text-anchor="middle" fill="#082b55" font-family="Georgia, 'Times New Roman', serif" font-size="156" letter-spacing="0">Immumalia</text>
+  <text x="602" y="392" text-anchor="middle" fill="#b8832b" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700" letter-spacing="34">BIOTECH</text>
 </svg>
