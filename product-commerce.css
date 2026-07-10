@@ -1,0 +1,418 @@
+.products-page {
+  --cream: #f8f5ee;
+  --cream-deep: #ece3d4;
+  --navy: #082b55;
+  --ink: #102033;
+  --gold: #c8a24a;
+  --gold-soft: #ead7a2;
+}
+
+.products-page .ritual-hero {
+  min-height: 72vh;
+  background:
+    radial-gradient(circle at 86% 24%, rgba(200, 162, 74, .18), transparent 34%),
+    linear-gradient(135deg, #fbf8f0 0%, #efe6d7 58%, #f8f5ee 100%);
+}
+
+.products-page .ritual-hero h1,
+.products-page .ritual-intro h2,
+.products-page .ritual-detail-section h2,
+.products-page .line-picker h2,
+.products-page .product-faq h2 {
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0;
+}
+
+.products-page .ritual-intro p:not(.section-kicker),
+.products-page .line-picker p,
+.products-page .faq-grid p {
+  max-width: 760px;
+  color: rgba(16, 32, 51, .72);
+}
+
+.products-page .ritual-product-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+  width: min(1480px, 100%);
+}
+
+.products-page .ritual-card {
+  position: relative;
+  min-height: 0;
+  padding: 22px;
+  overflow: hidden;
+  border-color: rgba(200, 162, 74, .34);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .84), rgba(255, 255, 255, .64)),
+    radial-gradient(circle at 88% 10%, rgba(200, 162, 74, .20), transparent 28%);
+}
+
+.products-page .ritual-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-top: 3px solid var(--accent);
+}
+
+.products-page .product-card-logo {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 4;
+  width: 112px;
+  height: auto;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background: rgba(248, 245, 238, .88);
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(8, 43, 85, .10));
+}
+
+.products-page .product-photo-stage {
+  min-height: 230px;
+  padding-top: 28px;
+}
+
+.products-page .product-pack-photo {
+  width: min(100%, 340px) !important;
+}
+
+.products-page .pack-logo-overlay {
+  position: absolute;
+  top: 36px;
+  right: 4%;
+  z-index: 3;
+  width: clamp(130px, 11vw, 190px);
+  height: auto;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: rgba(248, 245, 238, .94);
+  box-shadow: 0 8px 18px rgba(8, 43, 85, .10), 0 0 0 1px rgba(200, 162, 74, .18);
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(8, 43, 85, .12));
+  pointer-events: none;
+}
+
+.products-page .product-symbol {
+  position: relative;
+  display: block;
+  width: 74px;
+  height: 48px;
+  margin: 10px 0 18px;
+}
+
+.products-page .product-symbol::before,
+.products-page .product-symbol::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.products-page .symbol-balance::before {
+  border: 4px solid var(--gold);
+  border-left-color: var(--navy);
+  border-radius: 50%;
+  transform: rotate(-12deg) scaleX(1.25);
+}
+
+.products-page .symbol-balance::after {
+  inset: 13px 28px;
+  border-radius: 50%;
+  background: var(--gold-soft);
+  box-shadow: 0 0 0 3px rgba(200, 162, 74, .25);
+}
+
+.products-page .symbol-restart::before {
+  inset: 8px 10px;
+  border: 5px solid var(--gold);
+  border-right-color: transparent;
+  border-radius: 50%;
+  transform: rotate(-28deg);
+}
+
+.products-page .symbol-restart::after {
+  right: 5px;
+  top: 7px;
+  left: auto;
+  width: 0;
+  height: 0;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-left: 18px solid var(--gold);
+  background: none;
+  transform: rotate(18deg);
+}
+
+.products-page .symbol-shield::before {
+  inset: 3px 16px 0;
+  border: 4px solid var(--gold);
+  border-radius: 28px 28px 34px 34px;
+  clip-path: polygon(50% 0, 100% 18%, 88% 78%, 50% 100%, 12% 78%, 0 18%);
+}
+
+.products-page .symbol-flow::before,
+.products-page .symbol-flow::after {
+  left: 3px;
+  right: 3px;
+  height: 22px;
+  border: solid var(--gold);
+  border-width: 0 0 4px 0;
+  border-radius: 50%;
+  background: none;
+}
+
+.products-page .symbol-flow::before {
+  top: 6px;
+  transform: rotate(-7deg);
+}
+
+.products-page .symbol-flow::after {
+  top: 20px;
+  opacity: .7;
+  transform: rotate(7deg);
+}
+
+.products-page .symbol-night::before {
+  inset: 2px 18px 2px 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: inset -14px 0 0 var(--cream);
+}
+
+.products-page .symbol-night::after {
+  left: 54px;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold-soft);
+  box-shadow: 12px 18px 0 -2px rgba(200, 162, 74, .70);
+}
+
+.products-page .ritual-card h3 {
+  margin-top: 0;
+  color: #b88928;
+  font-size: 1.48rem;
+  letter-spacing: .03em;
+  text-transform: none;
+}
+
+.products-page .ritual-card p {
+  min-height: 52px;
+  margin-bottom: 22px;
+  color: rgba(16, 32, 51, .74);
+}
+
+.products-page .product-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.products-page .product-actions > a,
+.products-page .checkout-button,
+.products-page .line-picker-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  width: 100%;
+  margin: 0;
+  padding: 0 18px;
+  border: 1px solid rgba(8, 43, 85, .18);
+  border-radius: 999px;
+  color: var(--navy);
+  font: 850 .76rem/1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: .08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.products-page .product-actions > a:first-child {
+  background: rgba(255, 255, 255, .52);
+}
+
+.products-page .checkout-button,
+.products-page .line-picker-actions a {
+  border-color: rgba(184, 137, 40, .52);
+  background: linear-gradient(135deg, #c8a24a 0%, #f0d890 48%, #ad7d25 100%);
+  box-shadow: 0 10px 24px rgba(8, 43, 85, .12);
+}
+
+.products-page .checkout-button[data-checkout-state="placeholder"] {
+  background: var(--navy);
+  color: #fffdf7;
+}
+
+.products-page .line-picker,
+.products-page .product-faq {
+  padding: clamp(64px, 8vw, 104px) clamp(18px, 5vw, 74px);
+  background: linear-gradient(135deg, #082b55 0%, #123966 66%, #082b55 100%);
+  color: #fffdf7;
+}
+
+.products-page .line-picker {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(320px, 1fr);
+  gap: clamp(24px, 5vw, 74px);
+  align-items: center;
+}
+
+.products-page .line-picker > div,
+.products-page .faq-heading,
+.products-page .faq-grid,
+.products-page .legal-note {
+  width: min(1180px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.products-page .line-picker h2,
+.products-page .line-picker p,
+.products-page .line-picker .section-kicker,
+.products-page .product-faq h2,
+.products-page .product-faq .section-kicker {
+  color: #fffdf7;
+}
+
+.products-page .line-picker p {
+  opacity: .78;
+}
+
+.products-page .line-picker-actions {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.products-page .ritual-detail-section {
+  background: linear-gradient(135deg, #f8f5ee 0%, #ece3d4 100%);
+}
+
+.products-page .ritual-detail-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.products-page .ritual-detail {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.products-page .ritual-detail h3 {
+  color: #b88928;
+  font-size: 1.22rem;
+  letter-spacing: .03em;
+  text-transform: none;
+}
+
+.products-page .ritual-detail p {
+  margin: 0;
+}
+
+.products-page .ritual-detail .checkout-button {
+  align-self: end;
+  margin-top: 10px;
+}
+
+.products-page .product-faq {
+  background: linear-gradient(135deg, #f7f2e8 0%, #efe4d4 100%);
+  color: var(--ink);
+}
+
+.products-page .product-faq h2,
+.products-page .product-faq .section-kicker {
+  color: var(--navy);
+}
+
+.products-page .faq-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.products-page .faq-grid article {
+  padding: 24px;
+  border: 1px solid rgba(200, 162, 74, .30);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .68);
+  box-shadow: 0 20px 54px rgba(8, 43, 85, .07);
+}
+
+.products-page .faq-grid h3 {
+  margin-top: 0;
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.08rem;
+}
+
+.products-page .faq-grid code {
+  color: var(--navy);
+  font-size: .92em;
+}
+
+.products-page .legal-note {
+  margin-top: 28px;
+  padding: 18px 22px;
+  border-left: 2px solid var(--gold);
+  background: rgba(255, 255, 255, .58);
+  color: rgba(16, 32, 51, .76);
+  font-weight: 700;
+}
+
+.products-page .checkout-button:focus-visible,
+.products-page .line-picker-actions a:focus-visible {
+  outline: 3px solid rgba(8, 43, 85, .35);
+  outline-offset: 3px;
+}
+
+@media (max-width: 1280px) {
+  .products-page .ritual-product-grid,
+  .products-page .ritual-detail-grid,
+  .products-page .faq-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .products-page .line-picker,
+  .products-page .line-picker-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .products-page .ritual-product-grid,
+  .products-page .ritual-detail-grid,
+  .products-page .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .products-page .line-picker,
+  .products-page .product-faq {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .products-page .product-card-logo {
+    width: 96px;
+  }
+
+  .products-page .product-photo-stage {
+    min-height: 250px;
+  }
+
+  .products-page .pack-logo-overlay {
+    top: 30px;
+    right: 3%;
+    width: 118px;
+    padding: 7px 10px;
+  }
+}
