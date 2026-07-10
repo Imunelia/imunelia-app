@@ -4,7 +4,8 @@
     restartCheckoutUrl: '',
     shieldCheckoutUrl: '',
     flowCheckoutUrl: '',
-    nightCheckoutUrl: ''
+    nightCheckoutUrl: '',
+    ultraCheckoutUrl: ''
   };
 
   window.ImmunaliaCheckoutConfig = checkoutConfig;
@@ -15,7 +16,8 @@
     restart: checkoutConfig.restartCheckoutUrl,
     shield: checkoutConfig.shieldCheckoutUrl,
     flow: checkoutConfig.flowCheckoutUrl,
-    night: checkoutConfig.nightCheckoutUrl
+    night: checkoutConfig.nightCheckoutUrl,
+    ultra: checkoutConfig.ultraCheckoutUrl
   };
 
   const productLabels = {
@@ -23,7 +25,8 @@
     restart: 'Restart',
     shield: 'Shield',
     flow: 'Flow',
-    night: 'Night'
+    night: 'Night',
+    ultra: 'ULTRA'
   };
 
   const resolveCheckoutUrl = (productId) => checkoutUrlByProduct[productId] || '';
@@ -39,12 +42,14 @@
     }
 
     event.preventDefault();
+    const defaultText = trigger.dataset.defaultText || trigger.textContent;
+    trigger.dataset.defaultText = defaultText;
     trigger.setAttribute('aria-live', 'polite');
     trigger.dataset.checkoutState = 'placeholder';
     trigger.textContent = `${productLabels[productId] || 'Produkt'}: checkout připravujeme`;
 
     window.setTimeout(() => {
-      trigger.textContent = 'Objednat';
+      trigger.textContent = defaultText;
       delete trigger.dataset.checkoutState;
     }, 2400);
   };

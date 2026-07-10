@@ -161,6 +161,7 @@
 .ring-three { inset: 16.5%; border-color: rgba(184,139,67,.19); }
 .ring-four { inset: 25%; border-color: rgba(8,41,91,.12); }
 .ring-five { inset: 34%; border-color: rgba(184,139,67,.13); }
+.ring-six { inset: 42%; border-color: rgba(8,41,91,.10); }
 
 .planet-orbit {
   position: absolute;
@@ -213,6 +214,7 @@
 .orbit-shield { --orbit-radius: 254px; --orbit-time: 158s; --orbit-start: 132deg; --orbit-end: 492deg; --counter-start: -132deg; --counter-end: -492deg; --planet-size: 100px; --planet-mid: #65748c; --planet-dark: #031936; }
 .orbit-flow { --orbit-radius: 166px; --orbit-time: 158s; --orbit-start: 216deg; --orbit-end: 576deg; --counter-start: -216deg; --counter-end: -576deg; --planet-size: 86px; --planet-mid: #6bb9b2; --planet-dark: #08295b; }
 .orbit-night { --orbit-radius: 220px; --orbit-time: 158s; --orbit-start: 294deg; --orbit-end: 654deg; --counter-start: -294deg; --counter-end: -654deg; --planet-size: 96px; --planet-mid: #4a5781; --planet-dark: #031936; }
+.orbit-ultra { --orbit-radius: 150px; --orbit-time: 158s; --orbit-start: 342deg; --orbit-end: 702deg; --counter-start: -342deg; --counter-end: -702deg; --planet-size: 88px; --planet-mid: #d7b56d; --planet-dark: #031936; }
 
 .story-card details { height: auto; }
 .story-card summary { position: relative; display: grid; align-content: start; padding-right: 30px; cursor: pointer; list-style: none; }
@@ -238,6 +240,7 @@
   .orbit-shield { --orbit-radius: 214px; --planet-size: 80px; }
   .orbit-flow { --orbit-radius: 136px; --planet-size: 68px; }
   .orbit-night { --orbit-radius: 184px; --planet-size: 76px; }
+  .orbit-ultra { --orbit-radius: 118px; --planet-size: 68px; }
 }
 
 @media (max-width: 540px) {
@@ -253,6 +256,7 @@
   .orbit-shield { --orbit-radius: 162px; --planet-size: 60px; }
   .orbit-flow { --orbit-radius: 102px; --planet-size: 50px; }
   .orbit-night { --orbit-radius: 140px; --planet-size: 58px; }
+  .orbit-ultra { --orbit-radius: 90px; --planet-size: 52px; }
   .principle-icon { margin-left: auto; margin-right: auto; }
 }
 
