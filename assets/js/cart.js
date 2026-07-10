@@ -7,6 +7,7 @@
     nightCheckoutUrl: ''
   };
 
+  window.ImmumaliaCheckoutConfig = checkoutConfig;
   window.ImuneliaCheckoutConfig = checkoutConfig;
 
   const checkoutUrlByProduct = {
