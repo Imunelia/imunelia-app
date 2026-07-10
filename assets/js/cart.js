@@ -1,4 +1,4 @@
-(() => {
+﻿(() => {
   const checkoutConfig = {
     balanceCheckoutUrl: '',
     restartCheckoutUrl: '',
@@ -7,7 +7,7 @@
     nightCheckoutUrl: ''
   };
 
-  window.ImmumaliaCheckoutConfig = checkoutConfig;
+  window.ImmunaliaCheckoutConfig = checkoutConfig;
   window.ImuneliaCheckoutConfig = checkoutConfig;
 
   const checkoutUrlByProduct = {

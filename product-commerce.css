@@ -1,4 +1,4 @@
-.products-page {
+﻿.products-page {
   --cream: #f8f5ee;
   --cream-deep: #ece3d4;
   --navy: #082b55;
@@ -67,22 +67,6 @@
   padding-top: 28px;
 }
 
-.products-page .product-photo-stage::before {
-  content: "";
-  position: absolute;
-  top: 22px;
-  right: 1%;
-  z-index: 3;
-  width: clamp(190px, 15vw, 270px);
-  aspect-ratio: 1200 / 430;
-  border-radius: 2px;
-  background-color: rgba(248, 245, 238, .99);
-  background-image: url("assets/imunelia-logo-nav.svg?v=20260710-swallowwordmark1");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 94% auto;
-  pointer-events: none;
-}
 
 .products-page .product-pack-photo {
   width: min(100%, 340px) !important;
@@ -396,11 +380,5 @@
 
   .products-page .product-photo-stage {
     min-height: 250px;
-  }
-
-  .products-page .product-photo-stage::before {
-    top: 22px;
-    right: 1%;
-    width: 152px;
   }
 }
