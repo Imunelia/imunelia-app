@@ -70,18 +70,17 @@
 .products-page .product-photo-stage::before {
   content: "";
   position: absolute;
-  top: 26px;
+  top: 22px;
   right: 1%;
   z-index: 3;
-  width: clamp(178px, 14vw, 252px);
-  aspect-ratio: 760 / 250;
-  border-radius: 3px;
-  background-color: rgba(248, 245, 238, .98);
-  background-image: url("assets/imunelia-logo-nav.svg?v=20260710-originalmark2");
+  width: clamp(190px, 15vw, 270px);
+  aspect-ratio: 1200 / 430;
+  border-radius: 2px;
+  background-color: rgba(248, 245, 238, .99);
+  background-image: url("assets/imunelia-logo-nav.svg?v=20260710-swallowwordmark1");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 96% auto;
-  box-shadow: 0 8px 18px rgba(8, 43, 85, .08);
+  background-size: 94% auto;
   pointer-events: none;
 }
 
@@ -400,8 +399,8 @@
   }
 
   .products-page .product-photo-stage::before {
-    top: 24px;
+    top: 22px;
     right: 1%;
-    width: 142px;
+    width: 152px;
   }
 }
