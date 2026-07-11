@@ -73,13 +73,15 @@
 }
 
 .products-page .ultra-photo-stage {
-  min-height: 360px;
-  padding-top: 12px;
+  min-height: 285px;
+  padding-top: 18px;
   perspective: none;
 }
 
 .products-page .product-pack-photo--ultra {
-  width: min(100%, 260px) !important;
+  width: auto !important;
+  height: 255px !important;
+  max-width: 100%;
   aspect-ratio: 1024 / 1280;
   border-radius: 7px;
   object-fit: contain;
@@ -88,6 +90,7 @@
 
 .products-page .product-pack-photo--ultra-large {
   width: min(100%, 460px) !important;
+  height: auto !important;
   max-height: 680px;
 }
 
@@ -352,20 +355,22 @@
 }
 
 .products-page .symbol-ultra::before {
-  inset: 4px 16px 6px;
-  border: 3px solid var(--gold);
-  border-radius: 50%;
-  transform: scaleX(1.32);
+  content: "∞";
+  inset: -11px 0 0;
+  color: var(--gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4.7rem;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 5px 8px rgba(8, 43, 85, .16);
+  border: 0;
+  border-radius: 0;
+  background: none;
+  transform: none;
 }
 
 .products-page .symbol-ultra::after {
-  left: 31px;
-  top: 7px;
-  width: 16px;
-  height: 30px;
-  background: linear-gradient(180deg, #fff3c8 0%, var(--gold) 48%, #9f7425 100%);
-  clip-path: polygon(50% 0, 100% 54%, 62% 54%, 62% 100%, 38% 100%, 38% 54%, 0 54%);
-  filter: drop-shadow(0 5px 8px rgba(8, 43, 85, .16));
+  display: none;
 }
 
 .products-page .ritual-card--ultra p strong {
@@ -855,10 +860,12 @@
   }
 
   .products-page .product-pack-photo--ultra {
-    width: min(100%, 250px) !important;
+    width: auto !important;
+    height: 250px !important;
   }
 
   .products-page .product-pack-photo--ultra-large {
     width: min(100%, 330px) !important;
+    height: auto !important;
   }
 }
