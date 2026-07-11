@@ -381,6 +381,10 @@
   background: none;
 }
 
+.products-page .ritual-card--ultra > .symbol-ultra {
+  display: none;
+}
+
 .products-page .ritual-card--ultra p strong {
   display: block;
   margin-bottom: 6px;
