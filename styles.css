@@ -32,6 +32,9 @@ button { cursor: pointer; }
 .nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 4px; height: 2px; transform: scaleX(0); transform-origin: center; background: var(--gold); transition: transform .2s ease; }
 .nav a:hover::after, .nav a.active::after { transform: scaleX(1); }
 .nav a.active { color: var(--blue); }
+.language-switch { display: inline-flex; align-items: center; gap: 4px; padding: 4px; border: 1px solid rgba(184,139,67,.32); border-radius: 999px; background: rgba(255,255,255,.76); }
+.language-switch a { display: inline-flex; align-items: center; justify-content: center; min-width: 38px; min-height: 34px; padding: 0 10px; border-radius: 999px; color: var(--blue); font-size: .7rem; font-weight: 850; letter-spacing: .09em; text-transform: uppercase; }
+.language-switch a.active { background: var(--blue); color: #fff; }
 .header-cta, .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 12px 18px; border: 1px solid var(--blue); border-radius: 6px; font-size: .76rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; text-align: center; }
 .header-cta, .button.primary { color: #fff; background: var(--blue); }
 .button.secondary { color: var(--blue); background: rgba(255,255,255,.72); }
@@ -117,8 +120,10 @@ th { color: var(--blue); font-size: .76rem; font-weight: 850; letter-spacing: .1
 .footer a { color: var(--blue); font-weight: 750; }
 
 @media (max-width: 980px) {
-  .site-header { grid-template-columns: auto 1fr auto; min-height: 78px; }
+  .site-header { grid-template-columns: auto 1fr auto auto; min-height: 78px; }
   .brand-logo { width: 124px; height: 48px; }
+  .language-switch { justify-self: end; margin-left: auto; }
+  .language-switch a { min-width: 34px; min-height: 32px; padding: 0 8px; }
   .nav-toggle { display: inline-block; justify-self: end; }
   .header-cta { display: none; }
   .nav { position: absolute; top: calc(100% + 1px); left: 14px; right: 14px; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 10px; background: rgba(255,255,255,.98); border: 1px solid var(--line); box-shadow: var(--shadow); }

@@ -1,4 +1,5 @@
 ﻿(() => {
+  const isEnglish = document.documentElement.lang === 'en';
   const checkoutConfig = {
     balanceCheckoutUrl: '',
     restartCheckoutUrl: '',
@@ -46,7 +47,9 @@
     trigger.dataset.defaultText = defaultText;
     trigger.setAttribute('aria-live', 'polite');
     trigger.dataset.checkoutState = 'placeholder';
-    trigger.textContent = `${productLabels[productId] || 'Produkt'}: checkout připravujeme`;
+    trigger.textContent = isEnglish
+      ? `${productLabels[productId] || 'Product'}: checkout coming soon`
+      : `${productLabels[productId] || 'Produkt'}: checkout připravujeme`;
 
     window.setTimeout(() => {
       trigger.textContent = defaultText;
