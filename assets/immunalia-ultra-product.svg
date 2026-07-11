@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1006 800" width="1006" height="800" role="img" aria-labelledby="title desc">
+  <title id="title">Immunalia ULTRA product packaging</title>
+  <desc id="desc">A premium horizontal dark navy and gold Immunalia ULTRA box, presented in the same three-quarter format as the other product packs.</desc>
+  <defs>
+    <linearGradient id="front" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06162f"/>
+      <stop offset=".52" stop-color="#082b55"/>
+      <stop offset="1" stop-color="#020b1b"/>
+    </linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020918"/>
+      <stop offset=".72" stop-color="#061d3e"/>
+      <stop offset="1" stop-color="#01050d"/>
+    </linearGradient>
+    <linearGradient id="top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0b3563"/>
+      <stop offset=".55" stop-color="#061d3e"/>
+      <stop offset="1" stop-color="#020a17"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2dc98"/>
+      <stop offset=".26" stop-color="#cda95a"/>
+      <stop offset=".58" stop-color="#fff0ba"/>
+      <stop offset=".8" stop-color="#a87625"/>
+      <stop offset="1" stop-color="#e2c474"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".72" cy=".34" r=".64">
+      <stop offset="0" stop-color="#d7b56d" stop-opacity=".26"/>
+      <stop offset=".48" stop-color="#d7b56d" stop-opacity=".05"/>
+      <stop offset="1" stop-color="#d7b56d" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-40%" width="170%" height="210%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="18"/>
+      <feOffset dx="18" dy="28" result="off"/>
+      <feColorMatrix in="off" type="matrix" values="0 0 0 0 0.015 0 0 0 0 0.06 0 0 0 0 0.13 0 0 0 .35 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softEmboss" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.4" flood-color="#000" flood-opacity=".45"/>
+      <feDropShadow dx="0" dy="-1" stdDeviation=".7" flood-color="#fff2bc" flood-opacity=".35"/>
+    </filter>
+    <clipPath id="frontClip"><path d="M252 180H838V548H252Z"/></clipPath>
+    <pattern id="micro" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#d7b56d" opacity=".22"/></pattern>
+  </defs>
+
+  <ellipse cx="500" cy="605" rx="340" ry="48" fill="#0a2343" opacity=".13"/>
+
+  <g filter="url(#shadow)">
+    <path d="M138 242L252 180V548L138 604Z" fill="url(#side)" stroke="#9b742e" stroke-width="2"/>
+    <path d="M138 242L252 180H838L722 239Z" fill="url(#top)" stroke="#d7b56d" stroke-opacity=".58" stroke-width="2"/>
+    <rect x="252" y="180" width="586" height="368" rx="4" fill="url(#front)" stroke="#d7b56d" stroke-width="2.2"/>
+
+    <g clip-path="url(#frontClip)">
+      <rect x="252" y="180" width="586" height="368" fill="url(#glow)"/>
+      <rect x="252" y="180" width="586" height="368" fill="url(#micro)" opacity=".5"/>
+      <g fill="none" stroke="#d7b56d" stroke-width="1.3" opacity=".26">
+        <ellipse cx="748" cy="378" rx="208" ry="160"/>
+        <ellipse cx="748" cy="378" rx="184" ry="140"/>
+        <ellipse cx="748" cy="378" rx="160" ry="120"/>
+        <ellipse cx="748" cy="378" rx="136" ry="100"/>
+        <ellipse cx="748" cy="378" rx="112" ry="81"/>
+        <ellipse cx="748" cy="378" rx="88" ry="62"/>
+      </g>
+      <path d="M522 520C641 474 700 349 838 326V548H252V535C349 550 433 554 522 520Z" fill="#020817" opacity=".55"/>
+      <path d="M250 536C387 557 469 552 558 502C676 435 736 326 842 304" fill="none" stroke="url(#gold)" stroke-width="3.2" opacity=".74"/>
+      <path d="M250 526C375 541 460 535 548 487C661 425 725 326 842 294" fill="none" stroke="#d7b56d" stroke-width="1" opacity=".36"/>
+      <rect x="252" y="180" width="586" height="9" fill="url(#gold)"/>
+      <rect x="252" y="539" width="586" height="9" fill="url(#gold)"/>
+    </g>
+
+    <g transform="translate(292 218)">
+      <g transform="translate(0 -9) scale(.85)">
+        <path d="M0 20C17 2 38 0 56 13C42 11 32 16 24 28C17 21 9 18 0 20Z" fill="#d7b56d"/>
+        <path d="M54 13C70 3 88 5 101 20C87 17 76 21 67 32C65 23 61 17 54 13Z" fill="#d7b56d"/>
+        <path d="M47 19C53 26 56 34 55 43C49 35 43 30 35 27C39 24 43 21 47 19Z" fill="#d7b56d"/>
+      </g>
+      <text x="0" y="42" fill="#f8f3e7" font-family="Georgia, 'Times New Roman', serif" font-size="34" letter-spacing=".5">Immunalia</text>
+      <text x="2" y="61" fill="#d7b56d" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="4.8">BIOTECH</text>
+    </g>
+
+    <g transform="translate(294 372)">
+      <text x="0" y="0" fill="url(#gold)" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-weight="700" letter-spacing="3" filter="url(#softEmboss)">ULTRA</text>
+      <rect x="3" y="20" width="285" height="2" fill="url(#gold)" opacity=".8"/>
+      <text x="2" y="48" fill="#fffaf0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" letter-spacing="2.1">MAXIMUM LOAD SUPPORT</text>
+      <text x="2" y="76" fill="#e7d8b5" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1.8">FOR EXCEPTIONAL PHYSICAL AND MENTAL DEMANDS</text>
+    </g>
+
+    <g transform="translate(294 500)">
+      <text x="0" y="0" fill="#e9dcc0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="600" letter-spacing="2.3">10 SUBLINGUAL TABLETS</text>
+      <text x="439" y="0" fill="#d7b56d" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="1.6">PREMIUM LINE</text>
+    </g>
+
+    <g>
+      <path d="M138 242L252 180V548L138 604Z" fill="url(#side)" fill-opacity=".2"/>
+      <path d="M161 259L224 225V536L161 567Z" fill="none" stroke="#d7b56d" stroke-opacity=".24"/>
+      <text transform="translate(188 521) rotate(-90)" fill="#d7b56d" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="3.2">IMMUNALIA ULTRA</text>
+      <circle cx="194" cy="276" r="7" fill="url(#gold)"/>
+      <path d="M176 289C187 278 200 278 211 287C202 286 195 290 190 298C185 293 181 290 176 289Z" fill="#d7b56d" opacity=".88"/>
+    </g>
+  </g>
+</svg>
