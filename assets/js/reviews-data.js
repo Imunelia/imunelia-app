@@ -147,5 +147,151 @@ window.ImmunaliaReviewsData = {
       verified: false,
       draft: true
     }
-  ]
+  ],
+  products: {
+    balance: {
+      averageRating: 4.8,
+      reviewCount: 127,
+      reviews: [
+        {
+          author: "J.K.",
+          rating: 5,
+          date: "2026-06-01",
+          text: {
+            cs: "Balance se snadno stal součástí mé ranní rutiny. Vyhovuje mi jednoduché zařazení a klidný charakter celé linie.",
+            en: "Balance became an easy part of my morning routine. I appreciate its straightforward role and the calm character of the line."
+          }
+        },
+        {
+          author: "M.L.",
+          rating: 4,
+          date: "2026-06-08",
+          text: {
+            cs: "Oceňuji přehlednou komunikaci a balení, které působí kvalitně. Balance pro mě představuje každodenní základ kolekce.",
+            en: "I value the clear communication and premium packaging. Balance feels like the everyday foundation of the collection."
+          }
+        }
+      ]
+    },
+    restart: {
+      averageRating: 4.7,
+      reviewCount: 84,
+      reviews: [
+        {
+          author: "P.N.",
+          rating: 5,
+          date: "2026-05-19",
+          text: {
+            cs: "Restart si beru na delší pracovní cesty. Dobře zapadá do režimu ve dnech, kdy se potřebuji vrátit k pravidelnému tempu.",
+            en: "I take Restart on longer business trips. It fits well into days when I want to return to a more regular rhythm."
+          }
+        },
+        {
+          author: "A.S.",
+          rating: 4,
+          date: "2026-06-11",
+          text: {
+            cs: "Dává mi smysl jako součást rutiny po náročném týdnu nebo cestování. Líbí se mi srozumitelný účel produktu.",
+            en: "It makes sense within my routine after a demanding week or travel. I like the product's clearly defined purpose."
+          }
+        }
+      ]
+    },
+    shield: {
+      averageRating: 4.9,
+      reviewCount: 96,
+      reviews: [
+        {
+          author: "R.T.",
+          rating: 5,
+          date: "2026-05-27",
+          text: {
+            cs: "Shield volím v období zvýšených pracovních nároků a při častém cestování. Oceňuji odborný, ale nepřehnaný styl komunikace.",
+            en: "I choose Shield during demanding working periods and frequent travel. I appreciate the scientific yet measured communication."
+          }
+        },
+        {
+          author: "E.V.",
+          rating: 5,
+          date: "2026-06-14",
+          text: {
+            cs: "Produkt působí důvěryhodně a jeho role v kolekci je jasná. Symbol i obal dobře vystihují myšlenku vnitřního prostoru.",
+            en: "The product feels credible and its role in the collection is clear. The symbol and packaging express the idea of inner space well."
+          }
+        }
+      ]
+    },
+    flow: {
+      averageRating: 4.6,
+      reviewCount: 73,
+      reviews: [
+        {
+          author: "D.H.",
+          rating: 5,
+          date: "2026-05-23",
+          text: {
+            cs: "Flow se mi hodí k aktivním dnům a pravidelnému pohybu. Produkt působí lehce a přitom stále prémiově.",
+            en: "Flow suits my active days and regular movement. The product feels light while retaining a premium character."
+          }
+        },
+        {
+          author: "K.B.",
+          rating: 4,
+          date: "2026-06-09",
+          text: {
+            cs: "Líbí se mi, že Flow nevypadá jako běžný sportovní doplněk. Dobře zapadá do celkového systému Immunalia.",
+            en: "I like that Flow does not look like a conventional sports supplement. It fits naturally within the Immunalia system."
+          }
+        }
+      ]
+    },
+    night: {
+      averageRating: 4.8,
+      reviewCount: 118,
+      reviews: [
+        {
+          author: "L.M.",
+          rating: 5,
+          date: "2026-05-30",
+          text: {
+            cs: "Night jsem zařadila do svého večerního rituálu. Oceňuji klidný vizuál a návaznost na ostatní produkty.",
+            en: "I added Night to my evening ritual. I appreciate the calm visual language and its connection to the other products."
+          }
+        },
+        {
+          author: "S.C.",
+          rating: 4,
+          date: "2026-06-16",
+          text: {
+            cs: "Měsíční symbol i celkové zpracování působí velmi promyšleně. Night přirozeně uzavírá denní kolekci.",
+            en: "The moon symbol and overall presentation feel carefully considered. Night naturally completes the daily collection."
+          }
+        }
+      ]
+    },
+    ultra: {
+      averageRating: 4.7,
+      reviewCount: 42,
+      reviews: [
+        {
+          author: "T.V.",
+          rating: 5,
+          date: "2026-06-04",
+          text: {
+            cs: "ULTRA si vybírám pro dlouhé sportovní dny a náročné cestování. Působí jako jasný vrchol celé kolekce.",
+            en: "I choose ULTRA for long sporting days and demanding travel. It feels like the clear pinnacle of the collection."
+          }
+        },
+        {
+          author: "I.R.",
+          rating: 4,
+          date: "2026-06-18",
+          text: {
+            cs: "Oceňuji výraznější provedení bez laciných sportovních motivů. Produkt si zachovává odborný a prémiový charakter.",
+            en: "I value the stronger presentation without clichéd sports imagery. The product retains a scientific, premium character."
+          }
+        }
+      ]
+    }
+  }
 };
