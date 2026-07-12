@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 960" role="img" aria-labelledby="title desc">
+  <title id="title">Immunalia ULTRA packaging</title><desc id="desc">English Immunalia ULTRA food supplement packaging</desc>
+  <image href="immunalia-ultra-product.jpg" width="1280" height="960"/>
+  <rect x="388" y="510" width="720" height="80" fill="#10243f"/>
+  <text x="748" y="559" text-anchor="middle" fill="#f4efe5" font-family="Georgia, 'Times New Roman', serif" font-size="35">Maximum Performance &amp; Recovery</text>
+  <rect x="245" y="846" width="980" height="74" fill="#10243f"/>
+  <text x="270" y="892" fill="#f4efe5" font-family="Georgia, 'Times New Roman', serif" font-size="25">Food supplement</text>
+  <text x="1195" y="892" text-anchor="end" fill="#f4efe5" font-family="Georgia, 'Times New Roman', serif" font-size="25">10 sublingual tablets</text>
+</svg>
