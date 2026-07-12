@@ -7,10 +7,12 @@
 .science-hero-copy h1, .collection-hero h1 { margin:12px 0 24px; font-size:clamp(3.15rem,6vw,6.7rem); line-height:.94; letter-spacing:0; }
 .science-hero-copy h1 em, .collection-hero h1 em { color:var(--en-gold); font-weight:400; }
 .science-hero-copy>p:not(.eyebrow), .collection-hero>p:not(.eyebrow) { max-width:690px; color:var(--en-text); font-size:clamp(1.05rem,1.5vw,1.24rem); line-height:1.75; }
+.science-hero-copy .hero-supporting-copy { color:var(--en-secondary); font-size:1rem; }
 .editorial-section, .product-system, .product-faq { width:min(100% - 40px,1160px); margin:0 auto; padding:clamp(74px,9vw,128px) 0; }
 .editorial-section h2, .product-system h2, .product-faq h2 { max-width:850px; margin:10px 0 24px; font-size:clamp(2.35rem,4.5vw,4.7rem); line-height:1.04; }
 .intro-band, .story-layout { display:grid; grid-template-columns:.8fr 1.2fr; gap:clamp(40px,8vw,120px); border-top:1px solid rgba(184,144,69,.35); }
 .editorial-lead, .story-layout>div:last-child p, .philosophy-band>p:last-child { color:var(--en-text); font-size:clamp(1.12rem,1.8vw,1.4rem); line-height:1.75; }
+.editorial-lead p { margin-top:0; color:var(--en-text); }
 .story-layout>div:last-child p:first-child { margin-top:0; }
 .philosophy-band { width:100%; max-width:none; padding-left:max(20px,calc((100% - 1160px)/2)); padding-right:max(20px,calc((100% - 1160px)/2)); background:var(--en-navy); }
 .philosophy-band h2 { color:#fffdf7; }
@@ -30,6 +32,7 @@
 .promise-panel p:not(.section-kicker) { padding-bottom:13px; border-bottom:1px solid rgba(184,144,69,.24); color:var(--en-text); font-weight:650; }
 .collection-preview { text-align:center; }
 .collection-preview h2 { margin-left:auto; margin-right:auto; }
+.collection-intro { max-width:780px; margin:0 auto; color:var(--en-text); font-size:1.08rem; line-height:1.75; }
 .collection-links { display:grid; grid-template-columns:repeat(3,1fr); margin:48px 0 34px; border-top:1px solid rgba(16,36,63,.16); border-left:1px solid rgba(16,36,63,.16); }
 .collection-links a { display:grid; min-height:190px; padding:24px; text-align:left; text-decoration:none; border-right:1px solid rgba(16,36,63,.16); border-bottom:1px solid rgba(16,36,63,.16); background:rgba(255,255,255,.45); }
 .collection-links span { color:var(--en-gold); font-weight:800; }
