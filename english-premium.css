@@ -1,8 +1,8 @@
 :root { --en-navy:#10243f; --en-gold:#b89045; --en-text:#394453; --en-secondary:#5d6673; --en-cream:#f8f5ee; }
-.english-site { color:var(--en-text); background:var(--en-cream); }
-.english-site p, .english-site li, .english-site details { color:var(--en-text); }
-.english-site .section-kicker, .english-site .eyebrow, .english-site .line-number { color:var(--en-gold); }
-.english-site h1, .english-site h2, .english-site h3 { color:var(--en-navy); }
+.english-site, .premium-collection-site { color:var(--en-text); background:var(--en-cream); }
+.english-site p, .english-site li, .english-site details, .premium-collection-site p, .premium-collection-site li, .premium-collection-site details { color:var(--en-text); }
+.english-site .section-kicker, .english-site .eyebrow, .english-site .line-number, .premium-collection-site .section-kicker, .premium-collection-site .eyebrow, .premium-collection-site .line-number { color:var(--en-gold); }
+.english-site h1, .english-site h2, .english-site h3, .premium-collection-site h1, .premium-collection-site h2, .premium-collection-site h3 { color:var(--en-navy); }
 .science-hero { width:min(100% - 40px,1220px); min-height:calc(100vh - 112px); margin:0 auto; display:grid; grid-template-columns:minmax(0,1.05fr) minmax(420px,.95fr); align-items:center; gap:clamp(36px,6vw,88px); padding:clamp(56px,8vw,108px) 0; }
 .science-hero-copy h1, .collection-hero h1 { margin:12px 0 24px; font-size:clamp(3.15rem,6vw,6.7rem); line-height:.94; letter-spacing:0; }
 .science-hero-copy h1 em, .collection-hero h1 em { color:var(--en-gold); font-weight:400; }
