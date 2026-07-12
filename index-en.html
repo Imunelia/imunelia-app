@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="home.css?v=20260710-ultra1">
   <link rel="stylesheet" href="site-fixes.css?v=20260702-cart1">
   <link rel="stylesheet" href="english-premium.css?v=20260712-unified1">
+  <link rel="stylesheet" href="reviews.css?v=20260712-preview1">
 </head>
 <body class="english-site english-home">
   <header class="site-header" data-site-header>
@@ -73,9 +74,17 @@
       <article class="promise-panel"><p class="section-kicker">Our Promise</p><h2>Clarity before claims.</h2><p>We will never chase headlines.</p><p>We will never make claims the science cannot support.</p><p>We will never compromise quality for convenience.</p></article>
     </section>
 
+    <!-- Draft review layout: rendered only with ?reviews-preview=1. -->
+    <section class="reviews-preview-section" hidden data-reviews-section>
+      <div class="reviews-heading"><div><p class="section-kicker">Immunalia Experiences</p><h2>Designed for everyday rituals.</h2></div><div class="reviews-summary"><strong>5.0</strong><span data-reviews-count></span></div></div>
+      <div class="reviews-grid" data-reviews-grid></div>
+    </section>
+
   </main>
 
   <footer class="footer"><div class="footer-inner"><span>&copy; 2026 Immunalia Biotech</span><a href="odborna-sekce.html">Professional section</a></div></footer>
   <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/reviews-data.js?v=20260712-preview1"></script>
+  <script src="assets/js/reviews.js?v=20260712-preview1"></script>
 </body>
 </html>

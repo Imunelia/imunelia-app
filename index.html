@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles.css?v=20260711-lang1">
   <link rel="stylesheet" href="home.css?v=20260710-ultra1">
   <link rel="stylesheet" href="site-fixes.css?v=20260702-cart1">
+  <link rel="stylesheet" href="reviews.css?v=20260712-preview1">
 </head>
 <body>
   <header class="site-header" data-site-header>
@@ -59,12 +60,20 @@
       </div>
     </section>
 
+    <!-- Draft review layout: rendered only with ?reviews-preview=1. -->
+    <section class="reviews-preview-section" hidden data-reviews-section>
+      <div class="reviews-heading"><div><p class="section-kicker">Zkušenosti s Immunalia</p><h2>Součást každodenních rituálů.</h2></div><div class="reviews-summary"><strong>5.0</strong><span data-reviews-count></span></div></div>
+      <div class="reviews-grid" data-reviews-grid></div>
+    </section>
+
     <section id="veda" class="section"><div class="callout"><p class="section-kicker">Věda a signály</p><h2>Tělo mluví v trendech. My mu chceme lépe naslouchat.</h2><p>Imunitní rovnováha není jeden údaj ani jeden okamžik. Smysl dává až sledování změn, kontextu a opakovaných signálů v čase.</p><div class="actions"><a class="button gold" href="veda.html">Věda jednoduše</a></div></div></section>
   </main>
 
   <footer class="footer"><div class="footer-inner"><span>© 2026 Immunalia Biotech</span><a href="odborna-sekce.html">Odborná sekce</a></div></footer>
   <script src="assets/js/navigation.js"></script>
   <script src="assets/js/cart.js?v=20260711-lang1"></script>
+  <script src="assets/js/reviews-data.js?v=20260712-preview1"></script>
+  <script src="assets/js/reviews.js?v=20260712-preview1"></script>
   <script>
     (() => {
       const slogans = [
