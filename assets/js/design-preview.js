@@ -66,7 +66,7 @@
     // Use the default preview when browser storage is unavailable.
   }
 
-  const requestedDesign = new URLSearchParams(window.location.search).get("design");
+  const requestedDesign = new URLSearchParams(window.location.search).get("design") || window.location.hash.slice(1);
   if (supportedDesigns.has(requestedDesign)) savedDesign = requestedDesign;
 
   setDesign(savedDesign);
