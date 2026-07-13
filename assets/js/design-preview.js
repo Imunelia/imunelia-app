@@ -66,6 +66,9 @@
     // Use the default preview when browser storage is unavailable.
   }
 
+  const requestedDesign = new URLSearchParams(window.location.search).get("design");
+  if (supportedDesigns.has(requestedDesign)) savedDesign = requestedDesign;
+
   setDesign(savedDesign);
   options.forEach((option) => {
     option.addEventListener("click", () => setDesign(option.dataset.designOption));
