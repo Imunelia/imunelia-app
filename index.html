@@ -9,10 +9,11 @@
   <link rel="stylesheet" href="home.css?v=20260710-ultra1">
   <link rel="stylesheet" href="site-fixes.css?v=20260702-cart1">
   <link rel="stylesheet" href="reviews.css?v=20260712-preview1">
+  <link rel="stylesheet" href="design-preview.css?v=20260713-preview1">
 </head>
-<body>
+<body data-home-design="classic">
   <header class="site-header" data-site-header>
-    <a class="brand" href="index.html" aria-label="Immunalia domů"><img class="brand-logo" src="assets/imunelia-logo-nav.svg?v=20260710-exactlogo1" alt="Immunalia Biotech"></a>
+    <a class="brand brand-lockup" href="index.html" aria-label="Immunalia domů"><img class="brand-logo" src="assets/imunelia-logo-nav.svg?v=20260710-exactlogo1" alt="Immunalia Biotech"><span class="brand-slogan">The Future of Immune Performance</span></a>
     <nav id="site-nav" class="nav" aria-label="Hlavní navigace">
       <a class="active" href="index.html">Úvod</a>
       <a href="produkty.html">Produkty</a>
@@ -24,6 +25,13 @@
     <a class="header-cta" href="kontakt.html">Mám zájem</a>
     <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Otevřít navigaci" data-nav-toggle><span></span><span></span><span></span></button>
   </header>
+
+  <div class="design-preview-switcher" role="group" aria-label="Náhled designu">
+    <span class="design-preview-label">Náhled</span>
+    <button class="design-preview-option is-active" type="button" data-design-option="classic" aria-pressed="true">Klasický</button>
+    <button class="design-preview-option" type="button" data-design-option="editorial" aria-pressed="false">Editorial</button>
+    <button class="design-preview-option" type="button" data-design-option="midnight" aria-pressed="false">Noční</button>
+  </div>
 
   <main>
     <section class="brand-hero">
@@ -74,6 +82,7 @@
   <script src="assets/js/cart.js?v=20260711-lang1"></script>
   <script src="assets/js/reviews-data.js?v=20260712-preview1"></script>
   <script src="assets/js/reviews.js?v=20260712-preview1"></script>
+  <script src="assets/js/design-preview.js?v=20260713-preview1"></script>
   <script>
     (() => {
       const slogans = [
