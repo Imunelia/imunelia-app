@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="site-fixes.css?v=20260702-cart1">
   <link rel="stylesheet" href="reviews.css?v=20260712-preview1">
   <link rel="stylesheet" href="design-preview.css?v=20260713-preview1">
+  <link rel="stylesheet" href="zymogen-preview.css?v=20260713-preview1">
 </head>
 <body data-home-design="classic">
   <header class="site-header" data-site-header>
@@ -31,9 +32,10 @@
     <button class="design-preview-option is-active" type="button" data-design-option="classic" aria-pressed="true">Klasický</button>
     <button class="design-preview-option" type="button" data-design-option="editorial" aria-pressed="false">Editorial</button>
     <button class="design-preview-option" type="button" data-design-option="midnight" aria-pressed="false">Noční</button>
+    <button class="design-preview-option" type="button" data-design-option="zymogen" aria-pressed="false">Zymogen</button>
   </div>
 
-  <main>
+  <main class="standard-home-content" data-standard-home>
     <section class="brand-hero">
       <div class="hero-text">
         <p class="eyebrow">Immunalia Biotech</p>
@@ -77,7 +79,56 @@
     <section id="veda" class="section"><div class="callout"><p class="section-kicker">Věda a signály</p><h2>Tělo mluví v trendech. My mu chceme lépe naslouchat.</h2><p>Imunitní rovnováha není jeden údaj ani jeden okamžik. Smysl dává až sledování změn, kontextu a opakovaných signálů v čase.</p><div class="actions"><a class="button gold" href="veda.html">Věda jednoduše</a></div></div></section>
   </main>
 
-  <footer class="footer"><div class="footer-inner"><span>© 2026 Immunalia Biotech</span><a href="odborna-sekce.html">Odborná sekce</a></div></footer>
+  <main class="zymogen-home" data-zymogen-home hidden>
+    <section class="zymogen-hero">
+      <div class="zymogen-hero-copy">
+        <p class="zymogen-overline">Imunitní rovnováha na bázi zymogenů</p>
+        <h1>Někdy tělo nepotřebuje<br>víc síly - <em>jen prostor.</em></h1>
+        <p class="zymogen-lead">Pokročilý koncept sublingvální zymogenové vědy, navržený s respektem k vlastním enzymatickým drahám těla. Tři cílené formule. Jedna denní dávka.</p>
+        <div class="zymogen-actions"><a class="button zymogen-primary" href="#zymogen-science">Naše věda</a><a class="button zymogen-secondary" href="#zymogen-formulas">Prozkoumat formule</a></div>
+      </div>
+      <div class="zymogen-mark" aria-label="Immunalia Biotech"><span>B</span><img src="assets/imunelia-logo-nav.svg?v=20260710-exactlogo1" alt="Immunalia Biotech"></div>
+      <a class="zymogen-scroll" href="#zymogen-about">Dolů</a>
+    </section>
+
+    <section class="zymogen-belief" id="zymogen-about">
+      <p>Postaveno na jediném přesvědčení: že vlastní inteligence těla, při správné podpoře, je silnější než cokoliv, co bychom k ní mohli přidat.</p>
+      <p>Naše formule jsou navržené jako součást promyšleného režimu. Zymogenový koncept, sublingvální forma a evropská přesnost v jednom klidném systému.</p>
+      <div class="zymogen-values"><article><span>Věda &amp; příroda</span><strong>V synergii</strong></article><article><span>Cílená podpora</span><strong>Pro vaše tělo</strong></article><article><span>Prémiové složení</span><strong>Kvalitní základ</strong></article><article><span>Vyvinuto s odborníky</span><strong>S odborným dohledem</strong></article></div>
+    </section>
+
+    <section class="zymogen-section" id="zymogen-formulas">
+      <p class="zymogen-overline">Naše formule</p><h2>Tři formule.<br><em>Jeden systém.</em></h2><p class="zymogen-intro">Každá formule představuje specifickou roli v systému každodenní podpory. Náhled počítá s balením 10 sublingválních tablet.</p>
+      <div class="zymogen-formula-grid">
+        <article><span>01 / Imunitní obnova</span><h3>Recovery Balance</h3><p>Pro režim po stresu, cestování nebo zvýšené zátěži a pro návrat k běžnému dennímu rytmu.</p><a href="produkty.html">Více informací <b>→</b></a></article>
+        <article><span>02 / Imunitní rovnováha</span><h3>Inflammation Balance</h3><p>Navržená pro období, kdy je důležitá vyvážená a odborně formulovaná nutriční podpora.</p><a href="produkty.html">Více informací <b>→</b></a></article>
+        <article><span>03 / Každodenní komfort</span><h3>Comfort Balance</h3><p>Pro každodenní rituál, dlouhodobou konzistenci a podporu celkové vitality.</p><a href="produkty.html">Více informací <b>→</b></a></article>
+      </div>
+    </section>
+
+    <section class="zymogen-science" id="zymogen-science">
+      <div class="zymogen-science-heading"><p class="zymogen-overline">Věda</p><h2>Váš imunitní systém již ví, co dělat.<br><em>My mu jen dáme prostor.</em></h2></div>
+      <div class="zymogen-tech-panel"><div><p class="zymogen-overline">Zymogenová technologie</p><h3>Většina doplňků přidává.<br>Immunalia pracuje s tím,<br>co již je.</h3></div><div class="zymogen-dose"><strong>1×</strong><span>Jedna tableta. Jednou denně.</span></div></div>
+      <div class="zymogen-pathway"><span>Sublingvální forma<small>Rozpouští se pod jazykem</small></span><i></i><span>Promyšlená formule<small>Složení čeká na finální dokumentaci</small></span><i></i><span>Denní rituál<small>Jedna tableta · 10 v balení</small></span></div>
+      <div class="zymogen-principles"><article><b>01</b><h3>Zymogenový koncept</h3><p>Zymogeny jsou neaktivní prekurzory enzymů. Konkrétní role ve formulích bude na produkčním webu popsána pouze podle schválené odborné dokumentace.</p></article><article><b>02</b><h3>Sublingvální podání</h3><p>Tableta je navržena k rozpuštění pod jazykem. Údaje o vstřebávání a biologické dostupnosti budou doplněny až po odborném potvrzení.</p></article><article><b>03</b><h3>Imunitní homeostáza</h3><p>Komunikujeme rovnováhu a dlouhodobý režim, nikoliv stimulaci, léčbu nebo garantovaný účinek.</p></article></div>
+      <div class="zymogen-stats"><span><strong>3</strong>Cílené formule</span><span><strong>10</strong>Tablet v balení</span><span><strong>100%</strong>Prémiový standard</span><span><strong>1</strong>Denní dávka</span></div>
+      <blockquote>Nejsofistikovanější věc, kterou můžeme udělat, je pracovat s přírodou - ne kolem ní.</blockquote>
+    </section>
+
+    <section class="zymogen-professionals">
+      <div><p class="zymogen-overline">Pro odborníky</p><h2>Podpora odborné kvality pro zdravotníky</h2><p>Kompletní produktová dokumentace, přehled složek a podklady pro odbornou komunikaci budou dostupné na vyžádání.</p></div>
+      <ul><li>Dokumentace složek a formulace</li><li>Velkoobchodní informace pro odborníky</li><li>Podklady v češtině a angličtině</li><li>Přímý kontakt s odborným týmem</li></ul>
+      <a class="button zymogen-primary" href="kontakt.html">Požádat o přístup</a>
+    </section>
+
+    <section class="zymogen-specs"><span><small>Formát</small>Sublingvální tableta</span><span><small>Balení</small>10 tablet</span><span><small>Dávkování</small>1× denně</span><span><small>Klasifikace</small>Doplněk stravy</span><span><small>Subjekt</small>Immunalia s.r.o.</span><span><small>Standardy</small>EU / CZ</span></section>
+
+    <section class="zymogen-faq" id="zymogen-faq"><p class="zymogen-overline">FAQ</p><h2>Časté otázky</h2><details><summary>Co znamená sublingvální forma?</summary><p>Tableta je určena k rozpuštění pod jazykem. Přesné použití bude vždy uvedeno na obalu produktu.</p></details><details><summary>Je tento obsah finální?</summary><p>Ne. Jde o vizuální návrh. Složení, dávkování a odborná tvrzení musí před spuštěním potvrdit produktová dokumentace.</p></details><details><summary>Kde budou produkty dostupné?</summary><p>Objednávková tlačítka budou později napojena na externí Shopify nebo Shoptet checkout.</p></details></section>
+
+    <footer class="zymogen-footer"><img src="assets/imunelia-logo-nav.svg?v=20260710-exactlogo1" alt="Immunalia Biotech"><p>Prémiové sublingvální doplňky stravy. Výroba v ČR, standardy EU.</p><p class="zymogen-legal">Doplněk stravy. Není určen k diagnostice, léčbě ani prevenci onemocnění. Nenahrazuje pestrou a vyváženou stravu ani zdravý životní styl.</p><span>© 2026 Immunalia s.r.o. Všechna práva vyhrazena.</span></footer>
+  </main>
+
+  <footer class="footer" data-standard-footer><div class="footer-inner"><span>© 2026 Immunalia Biotech</span><a href="odborna-sekce.html">Odborná sekce</a></div></footer>
   <script src="assets/js/navigation.js"></script>
   <script src="assets/js/cart.js?v=20260711-lang1"></script>
   <script src="assets/js/reviews-data.js?v=20260712-preview1"></script>
