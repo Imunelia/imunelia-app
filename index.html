@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="cs">
 <head>
   <meta charset="utf-8">
@@ -7,6 +7,7 @@
   <meta name="description" content="Immunalia Biotech propojuje prémiový produktový design, vědeckou střídmost a šest aktivních produktových linií pro vnitřní rytmus.">
   <link rel="stylesheet" href="styles.css?v=20260711-lang1">
   <link rel="stylesheet" href="home.css?v=20260710-ultra1">
+  <link rel="stylesheet" href="hero-refresh.css?v=20260716-ales1">
   <link rel="stylesheet" href="site-fixes.css?v=20260702-cart1">
   <link rel="stylesheet" href="reviews.css?v=20260712-preview1">
 </head>
@@ -34,16 +35,57 @@
         <div class="chaos-slogans" aria-live="polite" aria-label="Myšlenky o chaosu a rovnováze"><p id="chaos-slogan" class="chaos-slogan">Když se tělo znovu začne slyšet, nejde o návrat k minulosti. Je to okamžik, kdy se z hluku stává zpráva a člověk poprvé pozná, co mu systém celou dobu říkal.</p></div>
         <div class="actions"><a class="button primary" href="produkty.html">Produktové linie</a><a class="button secondary" href="kontakt.html">Kontakt</a></div>
       </div>
-      <div class="brand-visual" aria-label="Produktové linie Immunalia obíhající kolem značky">
-        <div class="brand-orbit">
-          <div class="orbit-sun" aria-label="Immunalia Biotech"><div class="sun-sphere"><img class="orbit-logo-image" src="assets/imunelia-logo-nav.svg?v=20260710-exactlogo1" alt="Immunalia Biotech"></div></div>
-          <span class="orbit-ring ring-one"></span><span class="orbit-ring ring-two"></span><span class="orbit-ring ring-three"></span><span class="orbit-ring ring-four"></span><span class="orbit-ring ring-five"></span><span class="orbit-ring ring-six"></span>
-          <a class="planet-orbit orbit-balance" href="produkty.html#balance" aria-label="Balance"><span class="planet-object"><span class="planet-card"><b>Balance</b></span></span></a>
-          <a class="planet-orbit orbit-restart" href="produkty.html#restart" aria-label="Restart"><span class="planet-object"><span class="planet-card"><b>Restart</b></span></span></a>
-          <a class="planet-orbit orbit-shield" href="produkty.html#shield" aria-label="Shield"><span class="planet-object"><span class="planet-card"><b>Shield</b></span></span></a>
-          <a class="planet-orbit orbit-flow" href="produkty.html#flow" aria-label="Flow"><span class="planet-object"><span class="planet-card"><b>Flow</b></span></span></a>
-          <a class="planet-orbit orbit-night" href="produkty.html#night" aria-label="Night"><span class="planet-object"><span class="planet-card"><b>Night</b></span></span></a>
-          <a class="planet-orbit orbit-ultra" href="produkty.html#ultra" aria-label="ULTRA"><span class="planet-object"><span class="planet-card"><b>ULTRA</b></span></span></a>
+
+      <div class="brand-visual brand-visual--system" aria-label="Šest produktových linií propojených v biologickém systému Immunalia">
+        <div class="system-stage" data-system-stage>
+          <span class="system-glow system-glow--gold"></span>
+          <span class="system-glow system-glow--blue"></span>
+          <span class="system-grain" aria-hidden="true"></span>
+
+          <svg class="signal-network" viewBox="0 0 700 700" aria-hidden="true">
+            <defs>
+              <linearGradient id="signalGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6ead0" stop-opacity=".2"/><stop offset=".48" stop-color="#c49a51" stop-opacity=".95"/><stop offset="1" stop-color="#08295b" stop-opacity=".18"/></linearGradient>
+              <linearGradient id="signalBlue" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#80d3cc" stop-opacity=".78"/><stop offset=".52" stop-color="#173f72" stop-opacity=".68"/><stop offset="1" stop-color="#f4e4c1" stop-opacity=".15"/></linearGradient>
+            </defs>
+            <path class="signal-line signal-line--one" d="M82 166 C188 58 320 116 347 303 C370 457 511 513 633 415" stroke="url(#signalGold)"/>
+            <path class="signal-line signal-line--two" d="M62 482 C167 583 318 559 347 397 C376 238 507 149 642 222" stroke="url(#signalBlue)"/>
+            <path class="signal-line signal-line--three" d="M156 86 C251 214 192 371 344 354 C500 337 466 560 573 622" stroke="url(#signalGold)"/>
+            <circle cx="82" cy="166" r="5"/><circle cx="633" cy="415" r="5"/><circle cx="62" cy="482" r="5"/><circle cx="642" cy="222" r="5"/><circle cx="156" cy="86" r="5"/><circle cx="573" cy="622" r="5"/>
+          </svg>
+
+          <div class="system-core" data-depth="1.3">
+            <span class="core-pulse" aria-hidden="true"></span>
+            <span class="core-kicker">One biological system</span>
+            <img src="assets/imunelia-logo-nav.svg?v=20260710-exactlogo1" alt="Immunalia Biotech">
+            <span class="core-statement">Šest přesných odpovědí.</span>
+          </div>
+
+          <a class="system-product system-product--flow" href="produkty.html#flow" data-depth="2.6" aria-label="Flow – energie, vitalita a výkon">
+            <span class="system-product-pack"><img src="assets/imunelia-flow-product.svg?v=20260710-exactlogo1" alt="Obal Immunalia Flow"></span>
+            <span class="system-product-copy"><b>Flow</b><small>Vitalita</small></span>
+          </a>
+          <a class="system-product system-product--night" href="produkty.html#night" data-depth="2.1" aria-label="Night – spánek, obnova a regenerace">
+            <span class="system-product-pack"><img src="assets/imunelia-night-product.svg?v=20260710-exactlogo1" alt="Obal Immunalia Night"></span>
+            <span class="system-product-copy"><b>Night</b><small>Noční obnova</small></span>
+          </a>
+          <a class="system-product system-product--shield" href="produkty.html#shield" data-depth="1.8" aria-label="Shield – pokročilá podpora imunity">
+            <span class="system-product-pack"><img src="assets/imunelia-shield-product.svg?v=20260710-exactlogo1" alt="Obal Immunalia Shield"></span>
+            <span class="system-product-copy"><b>Shield</b><small>Odolnost</small></span>
+          </a>
+          <a class="system-product system-product--balance" href="produkty.html#balance" data-depth="2.8" aria-label="Balance – každodenní rovnováha">
+            <span class="system-product-pack"><img src="assets/imunelia-balance-product.svg?v=20260710-exactlogo1" alt="Obal Immunalia Balance"></span>
+            <span class="system-product-copy"><b>Balance</b><small>Rovnováha</small></span>
+          </a>
+          <a class="system-product system-product--restart" href="produkty.html#restart" data-depth="2.3" aria-label="Restart – obnova a návrat k rytmu">
+            <span class="system-product-pack"><img src="assets/imunelia-restart-product.svg?v=20260710-exactlogo1" alt="Obal Immunalia Restart"></span>
+            <span class="system-product-copy"><b>Restart</b><small>Obnova</small></span>
+          </a>
+          <a class="system-product system-product--ultra" href="produkty.html#ultra" data-depth="3" aria-label="ULTRA – maximální výkon a obnova">
+            <span class="system-product-pack"><img src="assets/immunalia-ultra-product.jpg?v=20260711-ultraexact1" alt="Obal Immunalia ULTRA"></span>
+            <span class="system-product-copy"><b>ULTRA</b><small>Mimořádná zátěž</small></span>
+          </a>
+
+          <span class="system-caption"><i></i> Kliknutím objevte jednotlivé produktové linie</span>
         </div>
       </div>
     </section>
@@ -74,6 +116,7 @@
   <script src="assets/js/cart.js?v=20260711-lang1"></script>
   <script src="assets/js/reviews-data.js?v=20260712-preview1"></script>
   <script src="assets/js/reviews.js?v=20260712-preview1"></script>
+  <script src="assets/js/hero-system.js?v=20260716-ales1"></script>
   <script>
     (() => {
       const slogans = [
