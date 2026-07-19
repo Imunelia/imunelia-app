@@ -1,1 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900"><defs><linearGradient id="bg"><stop stop-color="#faf8fb"/><stop offset="1" stop-color="#e8deef"/></linearGradient><filter id="s"><feDropShadow dy="18" stdDeviation="20" flood-opacity=".22"/></filter><clipPath id="logoCrop"><rect x="120" y="55" width="315" height="70"/></clipPath></defs><rect width="1200" height="900" fill="#f1edf4"/><g filter="url(#s)" transform="translate(255 95)"><path d="M70 0h500l95 74v620H70z" fill="url(#bg)"/><path d="M570 0l95 74v620h-95z" fill="#6d477f"/><path d="M70 0h500l95 74H165z" fill="#fff"/><rect x="70" width="18" height="694" fill="#b99449"/><image href="imunelia-logo-nav.svg" x="112" y="35" width="335" height="120" clip-path="url(#logoCrop)" preserveAspectRatio="xMinYMid meet"/><text x="128" y="154" font-family="Arial,sans-serif" font-size="13" letter-spacing="4" fill="#8b6b34">PROFESSIONAL</text><circle cx="368" cy="306" r="93" fill="none" stroke="#6d477f" stroke-width="3"/><path d="M319 314c20-55 77-55 98 0M319 314c17 53 81 53 98 0" fill="none" stroke="#6d477f" stroke-width="5"/><path d="M340 278c12 16 43 16 56 0" fill="none" stroke="#b99449" stroke-width="4"/><text x="128" y="507" font-family="Georgia,serif" font-size="58" font-weight="700" fill="#6d477f">Flow</text><text x="128" y="553" font-family="Arial,sans-serif" font-size="18" letter-spacing="4" fill="#4e3c56">PROFESSIONAL</text><text x="128" y="593" font-family="Arial,sans-serif" font-size="14" letter-spacing="2.2" fill="#685b70">GYNAECOLOGY &amp; PELVIC SUPPORT PROGRAM</text><line x1="128" y1="624" x2="515" y2="624" stroke="#b99449"/><text x="128" y="654" font-family="Arial,sans-serif" font-size="14" fill="#554b5a">10 sublingválních tablet · odborný pilot</text><text x="128" y="680" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.5" fill="#7c7081">DEVELOPED BY IMMUNALIA BIOTECH</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Immunalia FLOW PROFESSIONAL Professional">
+  <defs>
+    <linearGradient id="scene" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7f7f6"/><stop offset=".55" stop-color="#e9eae9"/><stop offset="1" stop-color="#d7d9d8"/></linearGradient>
+    <linearGradient id="front" x1="0" y1="0" x2=".9" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".72" stop-color="#fafafa"/><stop offset="1" stop-color="#eeeeec"/></linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="1" y2=".15"><stop offset="0" stop-color="#eeeeec"/><stop offset="1" stop-color="#d4d5d2"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="170%" height="190%"><feDropShadow dx="0" dy="28" stdDeviation="23" flood-color="#12202b" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#scene)"/>
+  <ellipse cx="600" cy="805" rx="395" ry="38" fill="#20303b" opacity=".13"/>
+  <g filter="url(#shadow)">
+    <polygon points="215,132 312,78 858,101 760,155" fill="#fff"/>
+    <polygon points="215,132 312,78 312,770 215,720" fill="url(#side)"/>
+    <polygon points="760,155 858,101 858,737 760,790" fill="#633080"/>
+    <rect x="312" y="101" width="448" height="689" fill="url(#front)"/>
+    <rect x="312" y="650" width="448" height="140" fill="#633080"/>
+    <rect x="312" y="101" width="9" height="549" fill="#d3aa50"/>
+    <path d="M215 132L312 101h448l98 0-98 54H312z" fill="#fff" opacity=".58"/>
+    <g transform="translate(330 132)">
+      <path d="M118 0c24 6 38 21 48 44-30-12-51-7-70 13 5-25 11-42 22-57z" fill="#c9a14d"/>
+      <path d="M113 9c-28 0-48 12-64 34 27-7 49-3 67 14-7-18-8-33-3-48z" fill="#c9a14d"/>
+      <text x="168" y="40" font-family="Georgia,'Times New Roman',serif" font-size="48" fill="#102c57">Immunalia</text>
+      <text x="170" y="69" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="6" fill="#bd9340">BIOTECH</text>
+    </g>
+    <line x1="360" y1="235" x2="708" y2="235" stroke="#d4d4d1" stroke-width="2"/>
+    <text x="534" y="270" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" letter-spacing="7" fill="#3f4247">PROFESSIONAL</text>
+    <text x="360" y="340" font-family="Arial,sans-serif" font-size="39" font-weight="750" fill="#633080"><tspan x="360" dy="0">FLOW</tspan><tspan x="360" dy="54">PROFESSIONAL</tspan></text>
+    <text x="360" y="455" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#633080">PROFESSIONAL SUPPORT</text>
+    <text x="360" y="481" font-family="Arial,sans-serif" font-size="14.5" font-weight="600" fill="#26364a">FOR WOMEN'S HORMONAL BALANCE</text>
+    <g transform="translate(684 355)" fill="none" stroke="#633080" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M31-25c-9 23-9 42-1 59 7 16 6 34-3 54M62-28c9 21 10 42 2 61-7 17-5 35 5 53M31 23c10 8 22 11 34 7M44-8c-8 12-9 25-2 39 7 13 7 27 0 42"/></g>
+    <line x1="358" y1="522" x2="708" y2="522" stroke="#d3d4d3" stroke-width="2"/>
+    <g transform="translate(365 574)"><circle cx="0" cy="0" r="19" fill="none" stroke="#633080" stroke-width="3"/><text x="0" y="6" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#633080">B</text><text x="28" y="4" font-family="Arial,sans-serif" font-size="11.5" font-weight="700" letter-spacing=".35" fill="#26364a">BALANCE</text></g>
+    <g transform="translate(510 574)"><circle cx="0" cy="0" r="19" fill="none" stroke="#633080" stroke-width="3"/><text x="0" y="6" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#633080">C</text><text x="28" y="4" font-family="Arial,sans-serif" font-size="11.5" font-weight="700" letter-spacing=".35" fill="#26364a">COMFORT</text></g>
+    <g transform="translate(655 574)"><circle cx="0" cy="0" r="19" fill="none" stroke="#633080" stroke-width="3"/><text x="0" y="6" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#633080">W</text><text x="28" y="4" font-family="Arial,sans-serif" font-size="11.5" font-weight="700" letter-spacing=".35" fill="#26364a">WELL-BEING</text></g>
+    <text x="350" y="730" font-family="Arial,sans-serif" font-size="62" font-weight="300" fill="#fff">30</text>
+    <text x="434" y="705" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing=".8" fill="#fff">SUBLINGUAL TABLETS</text>
+    <text x="434" y="731" font-family="Arial,sans-serif" font-size="12.5" letter-spacing=".8" fill="#fff">DIETARY SUPPLEMENT</text>
+    <text x="708" y="704" text-anchor="end" font-family="Arial,sans-serif" font-size="11.5" fill="#fff">Developed by</text>
+    <text x="708" y="728" text-anchor="end" font-family="Arial,sans-serif" font-size="12.5" font-weight="700" fill="#fff">Immunalia Biotech</text>
+    <g transform="translate(246 190) rotate(90)"><text x="0" y="0" font-family="Georgia,'Times New Roman',serif" font-size="45" fill="#102c57">Immunalia</text><text x="7" y="28" font-family="Arial,sans-serif" font-size="11" letter-spacing="6" fill="#bd9340">BIOTECH</text></g>
+    <rect x="215" y="655" width="97" height="65" fill="#633080"/>
+  </g>
+</svg>
