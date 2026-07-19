@@ -15,12 +15,7 @@
     <rect x="312" y="650" width="448" height="140" fill="#1d6b37"/>
     <rect x="312" y="101" width="9" height="549" fill="#d3aa50"/>
     <path d="M215 132L312 101h448l98 0-98 54H312z" fill="#fff" opacity=".58"/>
-    <g transform="translate(330 132)">
-      <path d="M118 0c24 6 38 21 48 44-30-12-51-7-70 13 5-25 11-42 22-57z" fill="#c9a14d"/>
-      <path d="M113 9c-28 0-48 12-64 34 27-7 49-3 67 14-7-18-8-33-3-48z" fill="#c9a14d"/>
-      <text x="168" y="40" font-family="Georgia,'Times New Roman',serif" font-size="48" fill="#102c57">Immunalia</text>
-      <text x="170" y="69" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="6" fill="#bd9340">BIOTECH</text>
-    </g>
+    <image href="imunelia-logo-nav.svg" x="350" y="88" width="370" height="133" preserveAspectRatio="xMidYMid meet"/>
     <line x1="360" y1="235" x2="708" y2="235" stroke="#d4d4d1" stroke-width="2"/>
     <text x="534" y="270" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" letter-spacing="7" fill="#3f4247">PROFESSIONAL</text>
     <text x="360" y="340" font-family="Arial,sans-serif" font-size="44" font-weight="750" fill="#1d6b37"><tspan x="360" dy="0">POST-OP</tspan><tspan x="360" dy="54">RECOVER</tspan></text>
@@ -36,7 +31,7 @@
     <text x="434" y="731" font-family="Arial,sans-serif" font-size="12.5" letter-spacing=".8" fill="#fff">DIETARY SUPPLEMENT</text>
     <text x="708" y="704" text-anchor="end" font-family="Arial,sans-serif" font-size="11.5" fill="#fff">Developed by</text>
     <text x="708" y="728" text-anchor="end" font-family="Arial,sans-serif" font-size="12.5" font-weight="700" fill="#fff">Immunalia Biotech</text>
-    <g transform="translate(246 190) rotate(90)"><text x="0" y="0" font-family="Georgia,'Times New Roman',serif" font-size="45" fill="#102c57">Immunalia</text><text x="7" y="28" font-family="Arial,sans-serif" font-size="11" letter-spacing="6" fill="#bd9340">BIOTECH</text></g>
+    <g transform="translate(306 178) rotate(90)"><image href="imunelia-logo-nav.svg" x="0" y="0" width="280" height="100" preserveAspectRatio="xMidYMid meet"/></g>
     <rect x="215" y="655" width="97" height="65" fill="#1d6b37"/>
   </g>
 </svg>
