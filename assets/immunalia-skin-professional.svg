@@ -1,30 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
-  <title id="title">Immunalia Skin Professional</title>
-  <desc id="desc">Concept packaging for the Immunalia Skin Professional food supplement</desc>
+  <title id="title">Immunalia Skin Professional packaging</title>
+  <desc id="desc">Premium three-dimensional packaging concept aligned with the Immunalia Professional product family</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#efe7df"/><stop offset="1" stop-color="#d7c5b8"/></linearGradient>
-    <linearGradient id="box" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fcfaf7"/><stop offset="1" stop-color="#e9dfd6"/></linearGradient>
-    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="28" stdDeviation="24" flood-color="#3f2e28" flood-opacity=".22"/></filter>
+    <linearGradient id="scene" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2eee9"/>
+      <stop offset=".55" stop-color="#e7ddd6"/>
+      <stop offset="1" stop-color="#d7c7bf"/>
+    </linearGradient>
+    <linearGradient id="front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffdf9"/>
+      <stop offset=".62" stop-color="#f4eee8"/>
+      <stop offset="1" stop-color="#e9ddd5"/>
+    </linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d7c3bc"/>
+      <stop offset="1" stop-color="#b8958d"/>
+    </linearGradient>
+    <linearGradient id="top" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf6"/>
+      <stop offset="1" stop-color="#eadbd4"/>
+    </linearGradient>
+    <linearGradient id="skinBand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8f5f67"/>
+      <stop offset=".52" stop-color="#c99195"/>
+      <stop offset="1" stop-color="#e5bbb4"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%">
+      <feDropShadow dx="0" dy="30" stdDeviation="28" flood-color="#3f2d2b" flood-opacity=".24"/>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
   </defs>
-  <rect width="1200" height="900" rx="46" fill="url(#bg)"/>
-  <ellipse cx="598" cy="765" rx="300" ry="54" fill="#806d65" opacity=".18"/>
+
+  <rect width="1200" height="900" rx="44" fill="url(#scene)"/>
+  <circle cx="225" cy="185" r="118" fill="#f8f4ef" opacity=".58" filter="url(#soft)"/>
+  <circle cx="1010" cy="690" r="150" fill="#bc8a8e" opacity=".16" filter="url(#soft)"/>
+  <ellipse cx="605" cy="770" rx="315" ry="58" fill="#5c4341" opacity=".17" filter="url(#soft)"/>
+
   <g filter="url(#shadow)">
-    <path d="M360 155h420l84 68v480l-84 58H360z" fill="url(#box)"/>
-    <path d="M780 155l84 68v480l-84 58z" fill="#d8c6bb"/>
-    <path d="M360 155h420l84 68H444z" fill="#f8f3ee"/>
+    <path d="M345 150h438l92 72v482l-92 62H345z" fill="url(#front)"/>
+    <path d="M783 150l92 72v482l-92 62z" fill="url(#side)"/>
+    <path d="M345 150h438l92 72H437z" fill="url(#top)"/>
   </g>
-  <g font-family="Arial, Helvetica, sans-serif" fill="#22201f">
-    <text x="420" y="258" font-size="34" letter-spacing="8">IMMUNALIA</text>
-    <text x="420" y="301" font-size="18" letter-spacing="5">BIOTECH</text>
-    <line x1="420" y1="344" x2="726" y2="344" stroke="#a98978" stroke-width="3"/>
-    <text x="420" y="458" font-size="76" font-weight="600" letter-spacing="3">SKIN</text>
-    <text x="420" y="503" font-size="22" letter-spacing="6" fill="#8f6f61">PROFESSIONAL</text>
-    <text x="420" y="570" font-size="21">Targeted support for skin balance</text>
-    <text x="420" y="605" font-size="21">and professional care routines.</text>
-    <text x="420" y="685" font-size="18" letter-spacing="2">10 TABLETS · FOOD SUPPLEMENT</text>
+
+  <path d="M345 538h438v228H345z" fill="url(#skinBand)" opacity=".98"/>
+  <path d="M783 538l92 25v141l-92 62z" fill="#9c6a72"/>
+  <path d="M345 538h438l92 25h-438z" fill="#d5a5a6"/>
+
+  <g font-family="Arial, Helvetica, sans-serif" fill="#242020">
+    <text x="405" y="252" font-size="34" font-weight="600" letter-spacing="8">IMMUNALIA</text>
+    <text x="406" y="291" font-size="16" letter-spacing="5">BIOTECH</text>
+    <line x1="405" y1="330" x2="720" y2="330" stroke="#b48687" stroke-width="3"/>
+    <text x="405" y="444" font-size="78" font-weight="700" letter-spacing="3">SKIN</text>
+    <text x="408" y="491" font-size="20" letter-spacing="6" fill="#8e6268">PROFESSIONAL</text>
+    <text x="405" y="594" font-size="18" letter-spacing="3" fill="#fffaf8">DERMATOLOGY SUPPORT</text>
+    <text x="405" y="646" font-size="22" fill="#fffdfb">Professional skin-balance programme</text>
+    <text x="405" y="684" font-size="22" fill="#fffdfb">for specialist-led care routines.</text>
+    <text x="405" y="731" font-size="16" letter-spacing="2" fill="#fffdfb">10 TABLETS · FOOD SUPPLEMENT</text>
   </g>
-  <g transform="translate(695 390)" fill="none" stroke="#a98978" stroke-width="5">
-    <path d="M0 118c74-70 125-70 198 0-72 75-126 75-198 0Z"/>
-    <path d="M99 48c22 38 22 102 0 141"/>
+
+  <g transform="translate(650 360)" fill="none" stroke="#b98588" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 88c55-53 102-53 158 0-56 56-103 56-158 0Z"/>
+    <path d="M79 35c18 31 18 75 0 106"/>
+    <path d="M30 88c28-16 69-16 98 0" opacity=".7"/>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif" fill="#fff7f4" opacity=".86">
+    <text x="810" y="284" font-size="14" letter-spacing="3" transform="rotate(90 810 284)">IMMUNALIA PROFESSIONAL</text>
   </g>
 </svg>
