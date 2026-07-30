@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Immunalia Skin Micro</title>
+  <desc id="desc">Compact Immunalia Skin Micro packaging concept</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5eee9"/><stop offset="1" stop-color="#e1d3ca"/></linearGradient>
+    <linearGradient id="front" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffdfb"/><stop offset="1" stop-color="#eee5df"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="28" stdDeviation="24" flood-color="#4b382f" flood-opacity=".22"/></filter>
+  </defs>
+  <rect width="1200" height="900" rx="46" fill="url(#bg)"/>
+  <ellipse cx="590" cy="760" rx="285" ry="48" fill="#806d65" opacity=".16"/>
+  <g filter="url(#shadow)">
+    <path d="M390 205h330l70 54v390l-70 48H390z" fill="url(#front)"/>
+    <path d="M720 205l70 54v390l-70 48z" fill="#d7c5ba"/>
+    <path d="M390 205h330l70 54H460z" fill="#faf5f1"/>
+  </g>
+  <g fill="#211f1e" font-family="Arial,Helvetica,sans-serif">
+    <text x="445" y="300" font-size="30" letter-spacing="7">IMMUNALIA</text>
+    <text x="445" y="338" font-size="15" letter-spacing="4">BIOTECH</text>
+    <line x1="445" y1="372" x2="680" y2="372" stroke="#ad8a78" stroke-width="3"/>
+    <text x="445" y="470" font-size="62" font-weight="600" letter-spacing="3">SKIN</text>
+    <text x="445" y="515" font-size="21" letter-spacing="6" fill="#8f6f61">MICRO</text>
+    <text x="445" y="574" font-size="18">Compact professional format</text>
+    <text x="445" y="610" font-size="18">for handbag and travel use.</text>
+    <text x="445" y="661" font-size="16" letter-spacing="2">10 TABLETS · FOOD SUPPLEMENT</text>
+  </g>
+  <g transform="translate(685 395)" fill="none" stroke="#ad8a78" stroke-width="5">
+    <path d="M0 106c62-58 108-58 170 0-61 64-108 64-170 0Z"/>
+    <path d="M85 48c18 33 18 88 0 122"/>
+  </g>
+</svg>
