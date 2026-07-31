@@ -13,7 +13,7 @@
   <style>
     .skin-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:56px;align-items:center;max-width:1240px;margin:0 auto;padding:84px 24px 72px}
     .skin-pack{display:flex;align-items:center;justify-content:center;overflow:visible;background:linear-gradient(180deg,#f7f7f5,#ececea);border-radius:28px;padding:36px}
-    .skin-pack img{display:block;width:100%;max-width:520px;height:auto;object-fit:contain;filter:none;transform:none}
+    .skin-approved-object{display:block;width:100%;max-width:520px;aspect-ratio:4/5;border:0;background:transparent}
     .skin-copy h1{font-size:clamp(3.2rem,7vw,6.8rem);line-height:.9;margin:18px 0}
     .skin-copy h1 span{display:block;font-size:.24em;letter-spacing:.18em;text-transform:uppercase;margin-top:18px}
     .skin-lead{font-size:1.3rem;line-height:1.5;max-width:620px}
@@ -21,7 +21,7 @@
     .skin-points li{padding:16px 0;border-top:1px solid rgba(42,38,36,.14)}
     .skin-note{font-size:.9rem;line-height:1.55;opacity:.72}
     .skin-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-    @media(max-width:860px){.skin-hero{grid-template-columns:1fr;padding-top:48px}.skin-copy h1{font-size:4rem}.skin-pack{padding:20px}.skin-pack img{max-width:340px}}
+    @media(max-width:860px){.skin-hero{grid-template-columns:1fr;padding-top:48px}.skin-copy h1{font-size:4rem}.skin-pack{padding:20px}.skin-approved-object{max-width:340px}}
   </style>
 </head>
 <body class="professional-page">
@@ -33,7 +33,7 @@
   </header>
   <main>
     <section class="skin-hero">
-      <div class="skin-pack"><img src="assets/skin-professional-approved.svg?v=20260731-approved-final" alt="Skin Professional" loading="eager"></div>
+      <div class="skin-pack"><object class="skin-approved-object" data="assets/skin-professional-approved-loader.svg?v=20260731-loader-final" type="image/svg+xml" aria-label="Skin Professional">Skin Professional</object></div>
       <div class="skin-copy">
         <span class="pro-badge">Immunalia Biotech · Professional</span>
         <p class="eyebrow">Dermatologie · Estetická medicína</p>
