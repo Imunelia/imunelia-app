@@ -1,0 +1,76 @@
+name: Finalize Skin asset
+
+on:
+  push:
+    branches: [draft]
+    paths:
+      - '.github/workflows/finalize-skin-asset.yml'
+      - 'assets/skin-professional-approved.b64.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout draft
+        uses: actions/checkout@v4
+        with:
+          ref: draft
+          fetch-depth: 0
+
+      - name: Decode and validate approved image
+        shell: bash
+        run: |
+          set -euo pipefail
+          base64 --decode assets/skin-professional-approved.b64.txt > assets/skin-professional-approved-final.jpg
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('assets/skin-professional-approved-final.jpg')
+          data = p.read_bytes()
+          assert len(data) > 10000, f'JPEG too small: {len(data)} bytes'
+          assert data[:2] == b'\xff\xd8', 'Missing JPEG SOI marker'
+          assert data[-2:] == b'\xff\xd9', 'Missing JPEG EOI marker'
+          print(f'Validated JPEG: {len(data)} bytes')
+          PY
+
+      - name: Replace inline image with normal asset path
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          replacement = '<img src="assets/skin-professional-approved-final.jpg?v=20260731-final" alt="Skin Professional" loading="eager">'
+          pattern = re.compile(r'<img\s+src="data:image/jpeg;base64,[^"]+"\s+alt="Skin Professional"\s+loading="eager">')
+
+          for filename in ('professional.html', 'professional-skin.html'):
+              path = Path(filename)
+              text = path.read_text(encoding='utf-8')
+              updated, count = pattern.subn(replacement, text)
+              if count != 1:
+                  raise SystemExit(f'{filename}: expected exactly one inline Skin image, found {count}')
+              if 'data:image/jpeg;base64,' in updated:
+                  raise SystemExit(f'{filename}: inline Base64 remains')
+              if 'Skin Professional + Micro' in updated or '>Micro<' in updated:
+                  raise SystemExit(f'{filename}: Micro remains')
+              path.write_text(updated, encoding='utf-8')
+              print(f'Updated {filename}')
+          PY
+
+      - name: Commit finalized asset and HTML
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/skin-professional-approved-final.jpg professional.html professional-skin.html
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+            exit 0
+          fi
+          git commit -m 'Finalize approved Skin Professional image asset'
+          git push origin HEAD:draft
