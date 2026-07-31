@@ -23,7 +23,7 @@
   </header>
   <main>
     <section class="skin-hero">
-      <div class="skin-pack"><img src="assets/skin-products-valid-20260731.jpg?v=20260731-valid4" alt="Immunalia Skin Professional a Skin Micro" loading="eager"></div>
+      <div class="skin-pack"><img data-skin-image alt="Immunalia Skin Professional a Skin Micro" loading="eager"></div>
       <div class="skin-copy">
         <span class="pro-badge">Immunalia Biotech · Professional</span>
         <p class="eyebrow">Dermatologie · Estetická medicína</p>
@@ -41,5 +41,6 @@
     </section>
   </main>
   <script src="assets/js/navigation.js"></script>
+  <script>fetch('assets/skin-products-fixed-360.jpg.txt?v=20260731-b64-1').then(function(r){if(!r.ok)throw new Error('Skin image');return r.text()}).then(function(b64){document.querySelectorAll('[data-skin-image]').forEach(function(img){img.src='data:image/jpeg;base64,'+b64.trim()})}).catch(function(){document.querySelectorAll('[data-skin-image]').forEach(function(img){img.alt='Obrázek Skin se nepodařilo načíst'})});</script>
 </body>
 </html>
