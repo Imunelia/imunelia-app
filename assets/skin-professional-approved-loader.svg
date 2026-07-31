@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="525" viewBox="0 0 420 525" role="img" aria-label="Skin Professional">
+  <rect width="420" height="525" fill="#f4f4f1"/>
+  <image id="skinImage" width="420" height="525" preserveAspectRatio="xMidYMid meet"/>
+  <text id="status" x="210" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#17386e">Načítání Skin Professional…</text>
+  <script><![CDATA[
+    (async function () {
+      const image = document.getElementById('skinImage');
+      const status = document.getElementById('status');
+      try {
+        const response = await fetch('skin-professional-approved.b64.txt?v=20260731-final-source', {cache: 'no-store'});
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const base64 = (await response.text()).replace(/\s+/g, '');
+        if (!base64.startsWith('/9j/') || base64.length < 10000 || !base64.endsWith('/9k=')) {
+          throw new Error('Invalid JPEG Base64 payload');
+        }
+        image.setAttribute('href', 'data:image/jpeg;base64,' + base64);
+        status.setAttribute('display', 'none');
+      } catch (error) {
+        status.textContent = 'Skin Professional';
+        console.error(error);
+      }
+    }());
+  ]]></script>
+</svg>
