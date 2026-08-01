@@ -1,1 +1,55 @@
-<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dental Recover | Extrakce osmiček</title><link rel="stylesheet" href="styles.css?v=20260719"><link rel="stylesheet" href="professional.css?v=20260719"><link rel="stylesheet" href="professional-portal.css?v=20260719-proposal2"></head><body class="professional-page"><main class="study-shell"><a class="specialist-back" href="professional.html">← Zpět na odborné větve</a><section class="study-head"><div><span class="pro-badge">Stomatologie · pracovní protokol</span><p class="eyebrow">Dental Recover</p><h1>Extrakce třetího moláru</h1><p>Strukturovaný záznam výkonu, aplikace, bolesti, otoku, trismu, medikace a fotodokumentace.</p></div><img src="https://cdn.jsdelivr.net/gh/Imunelia/imunelia-app@draft/assets/professional-dental-recover-10.jpg?v=20260721-cdn1" alt="Obal Dental Recover Professional, 10 tablet"></section><form class="study-form" data-study-form="dental-extraction"><section class="form-section"><h2>Pacient a výkon</h2><div class="form-grid three"><div class="field"><label>Kód pacienta</label><input name="patient_code" required></div><div class="field"><label>Datum výkonu</label><input type="date" name="procedure_date" required></div><div class="field"><label>Pracoviště</label><input name="site"></div><div class="field"><label>Věk</label><input type="number" name="age"></div><div class="field"><label>Pohlaví</label><select name="sex"><option></option><option>žena</option><option>muž</option><option>jiné</option></select></div><div class="field"><label>Zub</label><select name="tooth"><option>18</option><option>28</option><option>38</option><option>48</option></select></div><div class="field full"><label>Typ a náročnost extrakce</label><textarea name="procedure"></textarea></div></div></section><section class="form-section"><h2>Aplikace a standardní péče</h2><div class="form-grid"><div class="field"><label>Čas aplikace před výkonem</label><input type="time" name="dose_pre"></div><div class="field"><label>Čas aplikace po výkonu</label><input type="time" name="dose_post"></div><div class="field"><label>Počet tablet</label><input type="number" name="tablets"></div><div class="field"><label>Analgetika / antibiotika</label><input name="medication"></div></div></section><section class="form-section"><h2>Hodnocení</h2><div class="form-grid three"><div class="field"><label>Bolest před výkonem 0–10</label><input type="number" min="0" max="10" name="pain_baseline"></div><div class="field"><label>Bolest 2 h 0–10</label><input type="number" min="0" max="10" name="pain_2h"></div><div class="field"><label>Bolest 24 h 0–10</label><input type="number" min="0" max="10" name="pain_24h"></div><div class="field"><label>Otok 24 h 0–3</label><input type="number" min="0" max="3" name="swelling_24h"></div><div class="field"><label>Otevření úst před výkonem (mm)</label><input type="number" name="mouth_baseline"></div><div class="field"><label>Otevření úst 24 h (mm)</label><input type="number" name="mouth_24h"></div><div class="field"><label>Krvácení 0–3</label><input type="number" min="0" max="3" name="bleeding"></div><div class="field"><label>Počet dávek analgetik 24 h</label><input type="number" name="analgesics_24h"></div><div class="field"><label>Nežádoucí reakce</label><input name="adverse"></div></div></section><section class="form-section"><h2>Dokumentace</h2><div class="upload-box"><div class="field"><label>Fotografie a přílohy</label><input type="file" name="attachments" multiple accept="image/*,.pdf,.csv,.xlsx"></div></div><div class="field full"><label>Poznámka lékaře</label><textarea name="doctor_note"></textarea></div></section><div class="data-note">V draftu se data neodesílají na server. Tlačítko vytvoří lokální JSON záznam; přiložené soubory zůstanou v zařízení a jsou pouze uvedeny názvem.</div><div class="form-actions"><button class="button primary" type="submit">Exportovat záznam</button><button class="button secondary" type="button" data-print-form>Vytisknout</button></div><div class="status-box" data-form-status></div></form></main><script src="assets/js/professional-form.js"></script></body></html>
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dental Recover | Immunalia Professional</title>
+  <meta name="description" content="Dental Recover Professional pro stomatologické výkony a následné odborné sledování.">
+  <link rel="stylesheet" href="styles.css?v=20260801-prodetail1">
+  <link rel="stylesheet" href="site-fixes.css?v=20260801-prodetail1">
+  <link rel="stylesheet" href="professional.css?v=20260801-prodetail1">
+  <link rel="stylesheet" href="professional-portal.css?v=20260801-prodetail1">
+  <style>
+    .pro-detail{max-width:1240px;margin:0 auto;padding:66px 24px 90px}
+    .pro-detail-hero{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:62px;align-items:center}
+    .pro-detail-pack{display:flex;align-items:center;justify-content:center;min-height:610px;padding:32px;border-radius:32px;overflow:hidden;background:linear-gradient(160deg,#fbfbf9,#ecece8);border:1px solid rgba(12,45,86,.1);box-shadow:0 20px 56px rgba(10,35,67,.1)}
+    .pro-detail-pack img{display:block;width:100%;height:auto;max-width:560px;max-height:560px;object-fit:contain}
+    .pro-detail-copy h1{font-size:clamp(3.2rem,6vw,6.2rem);line-height:.94;margin:18px 0;color:#0b376d}
+    .pro-detail-copy .lead{font-size:1.2rem;line-height:1.62;color:#4f5b61}
+    .pro-detail-card{margin-top:56px;padding:32px;border-radius:26px;background:#fff;border:1px solid rgba(12,45,86,.1);box-shadow:0 14px 38px rgba(10,35,67,.07)}
+    .pro-detail-card h2{margin-top:0;color:#0b376d}
+    .pro-detail-card p{line-height:1.65}
+    .pro-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    @media(max-width:900px){.pro-detail{padding-top:42px}.pro-detail-hero{grid-template-columns:1fr;gap:34px}.pro-detail-pack{min-height:auto}.pro-detail-pack img{max-width:520px}}
+    @media(max-width:560px){.pro-detail{padding:30px 16px 64px}.pro-detail-pack{padding:16px;border-radius:24px}.pro-detail-copy h1{font-size:3.25rem}.pro-actions{display:grid}.pro-actions .button{width:100%;text-align:center}}
+  </style>
+</head>
+<body class="professional-page">
+  <header class="site-header" data-site-header>
+    <a class="brand" href="index.html" aria-label="Immunalia domů"><img class="brand-logo" src="assets/imunelia-logo-nav.svg" alt="Immunalia"></a>
+    <nav id="site-nav" class="nav" aria-label="Hlavní navigace">
+      <a href="index.html">Úvod</a><a href="produkty.html">Produkty</a><a class="active" href="professional.html">Professional</a><a href="veda.html">Věda</a><a href="o-znacce.html">O značce</a><a href="kontakt.html">Kontakt</a>
+    </nav>
+    <a class="header-cta" href="kontakt.html">Kontakt</a>
+    <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Otevřít navigaci" data-nav-toggle><span></span><span></span><span></span></button>
+  </header>
+  <main class="pro-detail">
+    <section class="pro-detail-hero">
+      <div class="pro-detail-pack"><img src="assets/professional-dental-approved-20260721.jpg?v=20260801-hq1" alt="Dental Recover Professional" loading="eager"></div>
+      <div class="pro-detail-copy">
+        <span class="pro-badge">Stomatologie · pracovní protokol</span>
+        <p class="eyebrow">Dental Recover</p>
+        <h1>Extrakce třetího moláru</h1>
+        <p class="lead">Strukturovaný záznam výkonu, aplikace, bolesti, otoku, trismu, medikace a fotodokumentace.</p>
+        <div class="pro-actions"><a class="button primary" href="kontakt.html">Požádat o odborné informace</a><a class="button secondary" href="professional.html">Zpět na Professional</a></div>
+      </div>
+    </section>
+    <section class="pro-detail-card">
+      <h2>Pracovní protokol</h2>
+      <p>Pro odborné pracoviště je připraven strukturovaný záznam výkonu, dávkování, bolesti, otoku, krvácení, medikace a následné kontroly. Formulář slouží pouze jako pracovní podklad a neodesílá data bez výslovného nastavení systému.</p>
+      <div class="pro-actions"><a class="button secondary" href="professional-dental-study.html">Otevřít záznam výkonu</a></div>
+    </section>
+  </main>
+  <script src="assets/js/navigation.js"></script>
+</body>
+</html>
