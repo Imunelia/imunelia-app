@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Partnerský účet | Immunalia Professional</title>
+  <meta name="description" content="Žádost specialisty o partnerský účet Immunalia Professional.">
+  <link rel="stylesheet" href="styles.css?v=20260802-pro15">
+  <link rel="stylesheet" href="site-fixes.css?v=20260802-pro15">
+  <link rel="stylesheet" href="professional-v2.css?v=20260802-pro15">
+</head>
+<body class="professional-page professional-v2">
+  <header class="site-header" data-site-header>
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/imunelia-logo-nav.svg" alt="Immunalia"></a>
+    <nav id="site-nav" class="nav"><a href="index.html">Úvod</a><a href="produkty.html">Produkty</a><a class="active" href="professional.html">Professional</a><a href="veda.html">Věda</a><a href="o-znacce.html">O značce</a><a href="kontakt.html">Kontakt</a></nav>
+    <a class="header-cta" href="professional-login.html">Přihlášení</a>
+    <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Otevřít navigaci" data-nav-toggle><span></span><span></span><span></span></button>
+  </header>
+  <main class="pro-login-shell">
+    <section class="pro-login-copy"><span class="pro-tag">Ambulantní specialisté</span><h1>Partnerský program</h1><p>Zapojené pracoviště získá přístup k vybraným Professional produktům, odborným materiálům, opakovaným objednávkám a partnerským obchodním podmínkám.</p><p>Každému pracovišti budou aktivovány produktové linie odpovídající jeho odbornosti. Přehled celé řady zůstane viditelný.</p></section>
+    <section class="pro-login-card"><h1>Žádost o účet</h1><form class="pro-form" id="partner-form"><label for="partner-name">Jméno a příjmení</label><input id="partner-name" required><label for="partner-specialty">Odbornost</label><input id="partner-specialty" required><label for="partner-workplace">Pracoviště</label><input id="partner-workplace" required><label for="partner-city">Město</label><input id="partner-city" required><label for="partner-email">Pracovní e-mail</label><input id="partner-email" type="email" required><label for="partner-phone">Telefon</label><input id="partner-phone"><label for="partner-products">Produktové linie</label><select id="partner-products" multiple size="8"></select><button class="pro-btn primary" type="submit">Odeslat žádost</button><div class="pro-status" id="partner-status">Žádost byla připravena. Produkční odesílání bude aktivováno po napojení formuláře na CRM.</div></form></section>
+  </main>
+  <script src="assets/js/professional-data.js?v=20260802-pro15"></script>
+  <script>const s=document.getElementById('partner-products');(window.IMMUNALIA_PRO_PRODUCTS||[]).forEach(x=>{const o=document.createElement('option');o.value=x.slug;o.textContent=x.name;s.appendChild(o)});document.getElementById('partner-form').addEventListener('submit',e=>{e.preventDefault();document.getElementById('partner-status').style.display='block'});</script>
+  <script src="assets/js/navigation.js"></script>
+</body>
+</html>
