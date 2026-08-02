@@ -1,14 +1,25 @@
 (function(){
   const params=new URLSearchParams(location.search);
   const slug=params.get('product')||'dental';
-  const product=(window.IMMUNALIA_PRO_PRODUCTS||[]).find(p=>p.slug===slug)||window.IMMUNALIA_PRO_PRODUCTS?.[0];
+  const products=window.IMMUNALIA_PRO_PRODUCTS||[];
+  const product=products.find(p=>p.slug===slug)||products[0];
   const root=document.querySelector('[data-pro-detail]');
   if(!root||!product)return;
+
+  if(!document.getElementById('pro-sprite-style')){
+    const style=document.createElement('style');
+    style.id='pro-sprite-style';
+    style.textContent=`.pro-sprite{width:min(100%,245px);aspect-ratio:4/5;background-image:url('assets/pro-products/professional-products-sprite.jpg?v=20260802-created');background-repeat:no-repeat;background-size:500% 300%;background-position:var(--pro-x) var(--pro-y);border-radius:6px;box-shadow:0 24px 32px rgba(0,0,0,.13);background-color:#fff}.pro-detail-stage .pro-sprite{width:min(72%,360px)}@media(max-width:560px){.pro-detail-stage .pro-sprite{width:min(80%,300px)}}`;
+    document.head.appendChild(style);
+  }
+
+  const i=Math.max(0,products.indexOf(product));
+  const x=(i%5)*25;
+  const y=Math.floor(i/5)*50;
   document.title=`${product.name} | Immunalia Professional`;
-  const title=product.name.replace(' Professional','<br>Professional').replace(' Recover','<br>Recover').replace(' Repair','<br>Repair');
   root.innerHTML=`
     <section class="pro-detail-hero">
-      <div class="pro-detail-stage"><div class="pro-box" aria-hidden="true"><div class="pro-box-side">Immunalia</div><div class="pro-box-brand">Immunalia</div><div class="pro-box-biotech">BIOTECH</div><div class="pro-box-prof">PROFESSIONAL</div><div class="pro-box-main"><div><div class="pro-box-title">${title}</div><div class="pro-box-copy">Professional support<br>for comfort &amp; recovery</div></div><div class="pro-box-icon">${product.icon}</div></div><div class="pro-box-count">10</div></div></div>
+      <div class="pro-detail-stage"><div class="pro-sprite" style="--pro-x:${x}%;--pro-y:${y}%" role="img" aria-label="${product.name}"></div></div>
       <div class="pro-detail-copy"><span class="label">${product.label}</span><h1>${product.name}</h1><p class="lead">${product.lead}</p><div class="pro-actions"><a class="pro-btn primary" href="professional-contact.html?product=${encodeURIComponent(product.slug)}">Najít zapojené pracoviště</a><a class="pro-btn secondary" href="professional.html">Zpět na přehled</a></div><div class="pro-disclaimer">Doplněk stravy. Produkt nenahrazuje diagnostiku, předepsanou léčbu ani pravidelné kontroly u lékaře. Konkrétní způsob použití a vhodnost zařazení posuzuje zapojený specialista.</div></div>
     </section>
     <section class="pro-detail-panels">
