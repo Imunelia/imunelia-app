@@ -1,0 +1,1 @@
+window.IMMUNALIA_PRO_SPRITE='data:image/webp;base64,'+(window.IMMUNALIA_PRO_SPRITE_PARTS||[]).join('');
