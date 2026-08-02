@@ -29,12 +29,43 @@
 
   const fileName = window.location.pathname.split('/').pop() || 'index.html';
 
+  const injectHomeLifeFeature = () => {
+    if (document.querySelector('.home-life-feature')) return;
+    const hero = document.querySelector('.brand-hero');
+    if (!hero) return;
+
+    const section = document.createElement('section');
+    section.className = 'home-life-feature';
+    section.setAttribute('aria-label', 'Aktivní život a společná cesta');
+    section.innerHTML = `
+      <div class="home-life-feature__intro">
+        <div>
+          <p class="section-kicker">Život v pohybu</p>
+          <h2>Rovnováha není klid bez pohybu. Je to schopnost pokračovat.</h2>
+        </div>
+        <p>Každý den přináší jiný rytmus — výkon, odpočinek, blízkost i prostor pro sebe. Immunalia vzniká pro život, který se skutečně žije.</p>
+      </div>
+      <div class="home-life-feature__grid">
+        <article class="home-life-feature__card">
+          <img src="assets/photos/home-coastal-couple.jpg?v=20260802-final1" alt="Dvojice na pobřežní stezce při zlaté hodině" width="480" height="270" loading="lazy" decoding="async">
+          <div class="home-life-feature__caption"><strong>Společná cesta má vlastní rytmus.</strong><span>Pohyb, blízkost a energie pro chvíle, které mají skutečný význam.</span></div>
+        </article>
+        <article class="home-life-feature__card home-life-feature__card--secondary">
+          <img src="assets/photos/home-coastal-group.jpg?v=20260802-final1" alt="Aktivní lidé na pobřežní stezce při západu slunce" width="480" height="270" loading="lazy" decoding="async">
+          <div class="home-life-feature__caption"><strong>Žít naplno. Bez zbytečného hluku.</strong><span>Prémiový přístup pro aktivní každodennost.</span></div>
+        </article>
+      </div>`;
+
+    hero.insertAdjacentElement('afterend', section);
+  };
+
   if (fileName === 'index.html') {
-    loadStylesheet('home-visual-fixes', 'home-visual-fixes.css?v=20260802-icons1');
+    loadStylesheet('home-visual-fixes', 'home-visual-fixes.css?v=20260802-homephotos1');
+    injectHomeLifeFeature();
   }
 
   const applyGeneratedProductPhotos = async () => {
-    loadStylesheet('product-image-fixes', 'product-image-fixes.css?v=20260802-emotional3');
+    loadStylesheet('product-image-fixes', 'product-image-fixes.css?v=20260802-finalphotos1');
 
     try {
       await loadScript('product-photo-sprite-1', 'assets/js/product-lifestyle-sprite-part01.js?v=20260802-emotional3');
@@ -86,16 +117,11 @@
       };
 
       const photoTargets = [
-        { selector: '.lifestyle-performance', column: 0, position: 'center 46%', size: 'cover' },
-        { selector: '.lifestyle-recovery', column: 1, position: 'center 42%', size: 'cover' },
         { selector: '.lifestyle-family', column: 2, position: 'center 47%', size: 'cover' },
-
         { selector: '#balance', column: 2, position: '52% 44%', size: '165%' },
         { selector: '#restart', column: 1, position: '48% 39%', size: '150%' },
         { selector: '#shield', column: 2, position: '82% 47%', size: '180%' },
-        { selector: '#flow', column: 0, position: '26% 47%', size: '155%' },
-        { selector: '#night', column: 1, position: '70% 48%', size: '172%' },
-        { selector: '#ultra', column: 0, position: '73% 46%', size: '176%' }
+        { selector: '#flow', column: 0, position: '26% 47%', size: '155%' }
       ];
 
       photoTargets.forEach(({ selector, column, position, size }) => {
