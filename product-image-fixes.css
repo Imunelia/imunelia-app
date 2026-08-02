@@ -1,0 +1,34 @@
+.lifestyle-performance{
+  background-image:linear-gradient(180deg,transparent,rgba(5,19,39,.13)),url("https://images.unsplash.com/photo-1720798198232-97d58cc4fc93?auto=format&fit=crop&crop=faces&w=1100&h=1375&q=88")!important;
+  background-position:center 44%!important;
+}
+
+#balance .product-card-copy::before{
+  background-image:linear-gradient(180deg,rgba(8,24,52,.01),rgba(8,24,52,.16)),url("https://images.unsplash.com/photo-1767082090589-d2692073a32a?auto=format&fit=crop&crop=faces&w=1500&h=1125&q=88")!important;
+  background-position:center 34%!important;
+}
+
+#restart .product-card-copy::before{
+  background-image:linear-gradient(180deg,rgba(8,24,52,.02),rgba(8,24,52,.2)),url("https://images.unsplash.com/photo-1766955105736-2dfa66f46fbc?auto=format&fit=crop&w=1500&h=1125&q=88")!important;
+  background-position:center 54%!important;
+}
+
+#shield .product-card-copy::before{
+  background-image:linear-gradient(180deg,rgba(8,24,52,.01),rgba(8,24,52,.17)),url("https://images.unsplash.com/photo-1679500649263-e1be61dc15c8?auto=format&fit=crop&crop=faces&w=1500&h=1125&q=88")!important;
+  background-position:center 46%!important;
+}
+
+#flow .product-card-copy::before{
+  background-image:linear-gradient(180deg,rgba(8,24,52,.01),rgba(8,24,52,.18)),url("https://images.unsplash.com/photo-1760892799952-5715a2b4c562?auto=format&fit=crop&crop=faces&w=1500&h=1125&q=88")!important;
+  background-position:center 48%!important;
+}
+
+#night .product-card-copy::before{
+  background-image:linear-gradient(180deg,rgba(8,24,52,.02),rgba(8,24,52,.2)),url("https://images.unsplash.com/photo-1688383454437-c3c6805a8ec0?auto=format&fit=crop&crop=faces&w=1500&h=1125&q=88")!important;
+  background-position:center 48%!important;
+}
+
+#ultra .product-card-copy::before{
+  background-image:linear-gradient(180deg,rgba(5,16,35,.02),rgba(5,16,35,.26)),url("https://images.unsplash.com/photo-1720799358876-c21687344d54?auto=format&fit=crop&crop=faces&w=1500&h=1125&q=90")!important;
+  background-position:center 52%!important;
+}
