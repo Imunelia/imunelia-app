@@ -30,6 +30,35 @@
   const fileName = window.location.pathname.split('/').pop() || 'index.html';
   const isEnglish = fileName.endsWith('-en.html');
   const isHomepage = fileName === 'index.html' || fileName === 'index-en.html';
+  const embeddedPhotoCache = new Map();
+
+  const loadEmbeddedPhoto = async (svgUrl) => {
+    if (embeddedPhotoCache.has(svgUrl)) return embeddedPhotoCache.get(svgUrl);
+    const promise = fetch(svgUrl, { cache: 'force-cache' })
+      .then(response => {
+        if (!response.ok) throw new Error(`Photo request failed: ${response.status}`);
+        return response.text();
+      })
+      .then(svgText => {
+        const match = svgText.match(/data:image\/(?:jpeg|jpg);base64,[A-Za-z0-9+/=]+/);
+        if (!match) throw new Error('Embedded JPEG data was not found.');
+        return match[0];
+      });
+    embeddedPhotoCache.set(svgUrl, promise);
+    return promise;
+  };
+
+  const setBackgroundFromEmbeddedPhoto = async (element, svgUrl) => {
+    if (!element) return;
+    try {
+      const dataUrl = await loadEmbeddedPhoto(svgUrl);
+      element.style.backgroundImage = `url("${dataUrl}")`;
+      element.classList.add('is-photo-ready');
+    } catch (error) {
+      console.warn('Embedded photo could not be rendered.', error);
+      element.classList.add('is-photo-error');
+    }
+  };
 
   const injectHomeLifeFeature = () => {
     if (document.querySelector('.home-life-feature')) return;
@@ -41,7 +70,7 @@
       kicker: 'Life in motion',
       title: 'Balance is not stillness. It is the ability to keep moving.',
       intro: 'Every day has a different rhythm — performance, recovery, closeness and space for yourself. Immunalia is created for life as it is actually lived.',
-      firstAlt: 'A couple hiking a coastal trail at golden hour',
+      firstAlt: 'A group hiking a coastal trail at golden hour',
       firstTitle: 'Every shared journey has its own rhythm.',
       firstText: 'Movement, closeness and energy for moments that truly matter.',
       secondAlt: 'Professional athletes in demanding endurance and strength disciplines',
@@ -52,7 +81,7 @@
       kicker: 'Život v pohybu',
       title: 'Rovnováha není klid bez pohybu. Je to schopnost pokračovat.',
       intro: 'Každý den přináší jiný rytmus — výkon, odpočinek, blízkost i prostor pro sebe. Immunalia vzniká pro život, který se skutečně žije.',
-      firstAlt: 'Dvojice na pobřežní stezce při zlaté hodině',
+      firstAlt: 'Skupina na pobřežní stezce při zlaté hodině',
       firstTitle: 'Společná cesta má vlastní rytmus.',
       firstText: 'Pohyb, blízkost a energie pro chvíle, které mají skutečný význam.',
       secondAlt: 'Profesionální sportovci při náročných vytrvalostních a silových výkonech',
@@ -70,24 +99,59 @@
       </div>
       <div class="home-life-feature__grid">
         <article class="home-life-feature__card">
-          <img src="assets/photos/home-coastal-hike-v2.svg?v=20260802-valid3" alt="${copy.firstAlt}" width="640" height="360" loading="lazy" decoding="async">
+          <div class="home-life-feature__media" data-home-photo="hike" role="img" aria-label="${copy.firstAlt}"></div>
           <div class="home-life-feature__caption"><strong>${copy.firstTitle}</strong><span>${copy.firstText}</span></div>
         </article>
         <article class="home-life-feature__card home-life-feature__card--secondary">
-          <img src="assets/photos/ultra-multisport-v2.svg?v=20260802-valid3" alt="${copy.secondAlt}" width="720" height="405" loading="lazy" decoding="async">
+          <div class="home-life-feature__media" data-home-photo="ultra" role="img" aria-label="${copy.secondAlt}"></div>
           <div class="home-life-feature__caption"><strong>${copy.secondTitle}</strong><span>${copy.secondText}</span></div>
         </article>
       </div>`;
     hero.insertAdjacentElement('afterend', section);
+
+    setBackgroundFromEmbeddedPhoto(
+      section.querySelector('[data-home-photo="hike"]'),
+      'assets/photos/home-coastal-hike-v2.svg?v=20260802-iosfix1'
+    );
+    setBackgroundFromEmbeddedPhoto(
+      section.querySelector('[data-home-photo="ultra"]'),
+      'assets/photos/ultra-multisport-v2.svg?v=20260802-iosfix1'
+    );
   };
 
   if (isHomepage) {
-    loadStylesheet('home-visual-fixes', 'home-visual-fixes.css?v=20260802-bilingual-final');
+    loadStylesheet('home-visual-fixes', 'home-visual-fixes.css?v=20260802-iosfix1');
     injectHomeLifeFeature();
   }
 
+  const applyDirectProductPhotos = async () => {
+    const ultraPhotoUrl = 'assets/photos/ultra-multisport-v2.svg?v=20260802-iosfix1';
+    const nightPhotoUrl = 'assets/photos/night-evening-v2.svg?v=20260802-iosfix1';
+
+    const apply = async (selector, svgUrl) => {
+      const element = document.querySelector(selector);
+      if (!element) return;
+      try {
+        const dataUrl = await loadEmbeddedPhoto(svgUrl);
+        element.style.setProperty('--direct-product-photo', `url("${dataUrl}")`);
+        element.classList.add('has-direct-photo');
+      } catch (error) {
+        console.warn(`Photo for ${selector} could not be rendered.`, error);
+      }
+    };
+
+    await Promise.all([
+      apply('.lifestyle-performance', ultraPhotoUrl),
+      apply('#ultra', ultraPhotoUrl),
+      apply('.lifestyle-recovery', nightPhotoUrl),
+      apply('#night', nightPhotoUrl)
+    ]);
+  };
+
   const applyGeneratedProductPhotos = async () => {
-    loadStylesheet('product-image-fixes', 'product-image-fixes.css?v=20260802-valid-final');
+    loadStylesheet('product-image-fixes', 'product-image-fixes.css?v=20260802-iosfix1');
+    applyDirectProductPhotos();
+
     try {
       await loadScript('product-photo-sprite-1', 'assets/js/product-lifestyle-sprite-part01.js?v=20260802-emotional3');
       await loadScript('product-photo-sprite-2', 'assets/js/product-lifestyle-sprite-part02.js?v=20260802-emotional3');
