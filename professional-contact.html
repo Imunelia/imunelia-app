@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kontakt Professional | Immunalia</title>
+  <meta name="description" content="Kontakt na zapojené pracoviště Immunalia Professional.">
+  <link rel="stylesheet" href="styles.css?v=20260802-pro15">
+  <link rel="stylesheet" href="site-fixes.css?v=20260802-pro15">
+  <link rel="stylesheet" href="professional-v2.css?v=20260802-pro15">
+</head>
+<body class="professional-page professional-v2">
+  <header class="site-header" data-site-header>
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/imunelia-logo-nav.svg" alt="Immunalia"></a>
+    <nav id="site-nav" class="nav"><a href="index.html">Úvod</a><a href="produkty.html">Produkty</a><a class="active" href="professional.html">Professional</a><a href="veda.html">Věda</a><a href="o-znacce.html">O značce</a><a href="kontakt.html">Kontakt</a></nav>
+    <a class="header-cta" href="professional-login.html">Professional zóna</a>
+    <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Otevřít navigaci" data-nav-toggle><span></span><span></span><span></span></button>
+  </header>
+  <main class="pro-login-shell">
+    <section class="pro-login-copy"><span class="pro-tag">Dostupné pouze přes specialisty</span><h1>Najít zapojené pracoviště</h1><p>Vyberte produktovou linii a město. Immunalia vás propojí s odpovídajícím odborným pracovištěm nebo vás zařadí mezi zájemce v daném regionu.</p><p>Professional produkty nejsou určeny k přímému maloobchodnímu prodeji.</p></section>
+    <section class="pro-login-card"><h1>Žádost o kontakt</h1><form class="pro-form" id="pro-contact-form"><label for="name">Jméno a příjmení</label><input id="name" name="name" required><label for="email">E-mail</label><input id="email" name="email" type="email" required><label for="city">Město</label><input id="city" name="city" required><label for="product">Produktová linie</label><select id="product" name="product"></select><label for="message">Poznámka</label><textarea id="message" name="message" rows="4"></textarea><button class="pro-btn primary" type="submit">Odeslat žádost</button><div class="pro-status" id="pro-contact-status">Děkujeme. Žádost byla připravena k odeslání. Produkční odesílání bude aktivováno po napojení formuláře na CRM.</div></form></section>
+  </main>
+  <script src="assets/js/professional-data.js?v=20260802-pro15"></script>
+  <script>const p=new URLSearchParams(location.search).get('product');const s=document.getElementById('product');(window.IMMUNALIA_PRO_PRODUCTS||[]).forEach(x=>{const o=document.createElement('option');o.value=x.slug;o.textContent=x.name;if(x.slug===p)o.selected=true;s.appendChild(o)});document.getElementById('pro-contact-form').addEventListener('submit',e=>{e.preventDefault();document.getElementById('pro-contact-status').style.display='block'});</script>
+  <script src="assets/js/navigation.js"></script>
+</body>
+</html>
