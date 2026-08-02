@@ -4,66 +4,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Immunalia Professional</title>
-  <meta name="description" content="Profesionální produkty Immunalia pro ambulantní specialisty.">
-  <link rel="stylesheet" href="styles.css?v=20260801-links1">
-  <link rel="stylesheet" href="site-fixes.css?v=20260801-links1">
-  <link rel="stylesheet" href="professional.css?v=20260801-links1">
-  <link rel="stylesheet" href="professional-portal.css?v=20260801-links1">
-  <style>
-    .portal-hero{max-width:1240px;margin:0 auto;padding:72px 24px 44px}
-    .professional-products{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:22px!important;max-width:1240px;margin:0 auto;padding:0 24px 88px}
-    .professional-product-card{display:flex!important;flex-direction:column;min-width:0;overflow:hidden;border-radius:26px;background:#fff;border:1px solid rgba(12,45,86,.12);box-shadow:0 16px 42px rgba(10,35,67,.08);text-decoration:none;color:inherit;transition:transform .22s ease,box-shadow .22s ease}
-    .professional-product-card:hover{transform:translateY(-4px);box-shadow:0 22px 52px rgba(10,35,67,.14)}
-    .professional-packshot{display:flex!important;align-items:center!important;justify-content:center!important;aspect-ratio:1/1.05;padding:22px!important;background:linear-gradient(180deg,#fafaf8,#efefec)!important}
-    .professional-packshot img{display:block!important;width:100%!important;height:100%!important;max-width:360px!important;object-fit:contain!important;filter:none!important;transform:none!important}
-    .professional-product-copy{display:flex;flex:1;flex-direction:column;padding:25px 24px 27px}
-    .professional-product-copy small{min-height:2.4em;color:#b4883b;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-    .professional-product-copy h2{margin:10px 0 13px;color:#0b376d;font-size:clamp(1.55rem,2vw,2.05rem)}
-    .professional-product-copy p{margin:0 0 22px;line-height:1.6;color:#4f5b61}
-    .professional-product-link{margin-top:auto;color:#0b376d;font-weight:700}
-    @media(max-width:1100px){.professional-products{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
-    @media(max-width:680px){.portal-hero{padding-top:46px}.professional-products{grid-template-columns:1fr!important;padding:0 16px 64px}.professional-packshot{aspect-ratio:1.18/1}.professional-product-copy{padding:22px 20px 24px}.professional-product-copy small{min-height:0}}
-  </style>
+  <meta name="description" content="Patnáct specializovaných produktových linií Immunalia Professional dostupných prostřednictvím ambulantních specialistů.">
+  <link rel="stylesheet" href="styles.css?v=20260802-pro15">
+  <link rel="stylesheet" href="site-fixes.css?v=20260802-pro15">
+  <link rel="stylesheet" href="professional-v2.css?v=20260802-pro15">
 </head>
-<body class="professional-page">
+<body class="professional-page professional-v2">
   <header class="site-header" data-site-header>
     <a class="brand" href="index.html" aria-label="Immunalia domů"><img class="brand-logo" src="assets/imunelia-logo-nav.svg" alt="Immunalia"></a>
-    <nav id="site-nav" class="nav" aria-label="Hlavní navigace">
-      <a href="index.html">Úvod</a>
-      <a href="produkty.html">Produkty</a>
-      <a class="active" href="professional.html">Professional</a>
-      <a href="veda.html">Věda</a>
-      <a href="o-znacce.html">O značce</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-    <a class="header-cta" href="kontakt.html">Kontakt</a>
+    <nav id="site-nav" class="nav" aria-label="Hlavní navigace"><a href="index.html">Úvod</a><a href="produkty.html">Produkty</a><a class="active" href="professional.html">Professional</a><a href="veda.html">Věda</a><a href="o-znacce.html">O značce</a><a href="kontakt.html">Kontakt</a></nav>
+    <a class="header-cta" href="professional-login.html">Professional zóna</a>
     <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Otevřít navigaci" data-nav-toggle><span></span><span></span><span></span></button>
   </header>
+
+  <div class="pro-topbar" aria-label="Filtr produktových linií"><div class="pro-topbar-inner">
+    <button class="pro-filter is-active" data-pro-filter="all">Všech 15 produktů</button>
+    <button class="pro-filter" data-pro-filter="dental">Stomatologie</button>
+    <button class="pro-filter" data-pro-filter="chirurgie">Chirurgie</button>
+    <button class="pro-filter" data-pro-filter="gynekologie">Gynekologie</button>
+    <button class="pro-filter" data-pro-filter="dermatologie">Dermatologie</button>
+    <button class="pro-filter" data-pro-filter="gastroenterologie">Gastroenterologie</button>
+    <button class="pro-filter" data-pro-filter="oftalmologie">Oftalmologie</button>
+    <button class="pro-filter" data-pro-filter="neurologie">Neurologie</button>
+    <button class="pro-filter" data-pro-filter="revmatologie">Revmatologie</button>
+    <button class="pro-filter" data-pro-filter="urologie">Urologie</button>
+    <button class="pro-filter" data-pro-filter="pneumologie">Pneumologie</button>
+  </div></div>
+
   <main>
-    <section class="portal-hero">
-      <span class="pro-badge">Immunalia Biotech · Professional</span>
-      <p class="eyebrow">Produkty pro odbornou praxi</p>
-      <h1>Čtyři cílené linie.<br><em>Jeden profesionální standard.</em></h1>
-    </section>
-    <section class="professional-products" aria-label="Produkty Immunalia Professional">
-      <a class="professional-product-card dental" href="professional-dental.html">
-        <div class="professional-packshot"><img src="assets/professional-dental-approved-20260721.jpg" alt="Dental Recover"></div>
-        <div class="professional-product-copy"><small>Stomatologie</small><h2>Dental Recover</h2><p>Profesionální podpora pro stomatologické výkony, extrakce, implantace a následnou regeneraci.</p><span class="professional-product-link">Otevřít odbornou sekci</span></div>
-      </a>
-      <a class="professional-product-card postop" href="professional-postop.html">
-        <div class="professional-packshot"><img src="assets/professional-postop-approved-20260721.jpg" alt="Post-Op Recover"></div>
-        <div class="professional-product-copy"><small>Chirurgie · Urologie · Dermatologie</small><h2>Post‑Op Recover</h2><p>Profesionální podpora pooperační obnovy, sledování bolesti, otoku, hojení a návratu k běžné aktivitě.</p><span class="professional-product-link">Otevřít odbornou sekci</span></div>
-      </a>
-      <a class="professional-product-card flow" href="professional-gyne.html">
-        <div class="professional-packshot"><img src="assets/professional-flow-approved-20260721.jpg" alt="Flow Professional"></div>
-        <div class="professional-product-copy"><small>Gynekologie</small><h2>Flow Professional</h2><p>Profesionální podpora ženské rovnováhy, komfortu a sledování gynekologického programu.</p><span class="professional-product-link">Otevřít odbornou sekci</span></div>
-      </a>
-      <a class="professional-product-card skin-family" href="professional-skin.html">
-        <div class="professional-packshot"><img src="assets/skin-professional-approved-20260801.jpg?v=3" alt="Skin Professional" loading="eager"></div>
-        <div class="professional-product-copy"><small>Dermatologie · Estetická medicína</small><h2>Skin Professional</h2><p>Základní profesionální balení po 10 sublingválních tabletách pro dermatology a ambulantní specialisty.</p><span class="professional-product-link">Otevřít odbornou sekci</span></div>
-      </a>
-    </section>
+    <section class="pro-hero"><p class="eyebrow">Immunalia Biotech · Professional</p><h1>Patnáct odborných linií.<br>Jeden profesionální standard.</h1><p>Specializovaná produktová řada dostupná výhradně prostřednictvím zapojených ambulantních specialistů. Každá linie má vlastní odborné zaměření, distribuční režim a návaznost na konkrétní typ pracoviště.</p></section>
+
+    <section class="pro-access-note"><div><strong>Professional produkty nejsou prodávány v běžném e-shopu.</strong><p>První i opakované objednávky probíhají prostřednictvím zapojeného specialisty nebo odborného pracoviště.</p></div><div class="pro-actions"><a class="pro-btn primary" href="professional-contact.html">Najít pracoviště</a><a class="pro-btn secondary" href="professional-partner.html">Pro specialisty</a></div></section>
+
+    <section class="pro-grid" data-pro-grid aria-label="Produkty Immunalia Professional"></section>
   </main>
+
+  <script src="assets/js/professional-data.js?v=20260802-pro15"></script>
+  <script src="assets/js/professional-catalog.js?v=20260802-pro15"></script>
   <script src="assets/js/navigation.js"></script>
 </body>
 </html>
