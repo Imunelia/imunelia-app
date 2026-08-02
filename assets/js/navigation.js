@@ -1,226 +1,60 @@
 (() => {
-  const loadStylesheet = (id, href) => {
-    if (document.getElementById(id)) return;
-    const link = document.createElement('link');
-    link.id = id;
-    link.rel = 'stylesheet';
-    link.href = href;
-    document.head.appendChild(link);
+  const loadStylesheet=(id,href)=>{if(document.getElementById(id))return;const l=document.createElement('link');l.id=id;l.rel='stylesheet';l.href=href;document.head.appendChild(l)};
+  const loadScript=(id,src)=>new Promise((resolve,reject)=>{const old=document.getElementById(id);if(old){if(old.dataset.loaded==='true')resolve();else old.addEventListener('load',resolve,{once:true});return}const s=document.createElement('script');s.id=id;s.src=src;s.async=false;s.addEventListener('load',()=>{s.dataset.loaded='true';resolve()},{once:true});s.addEventListener('error',reject,{once:true});document.head.appendChild(s)});
+  const fileName=location.pathname.split('/').pop()||'index.html';
+  const isEnglish=fileName.endsWith('-en.html');
+  const isHomepage=fileName==='index.html'||fileName==='index-en.html';
+  const isProducts=document.body.classList.contains('products-page');
+  const embeddedPhotoCache=new Map();
+
+  const loadEmbeddedPhoto=svgUrl=>{
+    if(embeddedPhotoCache.has(svgUrl))return embeddedPhotoCache.get(svgUrl);
+    const p=fetch(svgUrl,{cache:'force-cache'}).then(r=>{if(!r.ok)throw new Error(String(r.status));return r.text()}).then(t=>{const m=t.match(/data:image\/(?:jpeg|jpg);base64,[A-Za-z0-9+/=]+/);if(!m)throw new Error('JPEG not found');return m[0]});
+    embeddedPhotoCache.set(svgUrl,p);return p;
   };
 
-  const loadScript = (id, src) => new Promise((resolve, reject) => {
-    const existing = document.getElementById(id);
-    if (existing) {
-      if (existing.dataset.loaded === 'true') resolve();
-      else existing.addEventListener('load', resolve, { once: true });
-      return;
-    }
-    const script = document.createElement('script');
-    script.id = id;
-    script.src = src;
-    script.async = false;
-    script.addEventListener('load', () => {
-      script.dataset.loaded = 'true';
-      resolve();
-    }, { once: true });
-    script.addEventListener('error', reject, { once: true });
-    document.head.appendChild(script);
-  });
-
-  const fileName = window.location.pathname.split('/').pop() || 'index.html';
-  const isEnglish = fileName.endsWith('-en.html');
-  const isHomepage = fileName === 'index.html' || fileName === 'index-en.html';
-  const embeddedPhotoCache = new Map();
-
-  const loadEmbeddedPhoto = async (svgUrl) => {
-    if (embeddedPhotoCache.has(svgUrl)) return embeddedPhotoCache.get(svgUrl);
-    const promise = fetch(svgUrl, { cache: 'force-cache' })
-      .then(response => {
-        if (!response.ok) throw new Error(`Photo request failed: ${response.status}`);
-        return response.text();
-      })
-      .then(svgText => {
-        const match = svgText.match(/data:image\/(?:jpeg|jpg);base64,[A-Za-z0-9+/=]+/);
-        if (!match) throw new Error('Embedded JPEG data was not found.');
-        return match[0];
-      });
-    embeddedPhotoCache.set(svgUrl, promise);
-    return promise;
+  const setCardPhoto=(selector,dataUrl,position='center 48%')=>{
+    const el=document.querySelector(selector);if(!el||!dataUrl)return;
+    el.style.setProperty('--direct-product-photo',`url("${dataUrl}")`);
+    el.style.setProperty('--direct-photo-position',position);
+    el.classList.add('has-direct-photo');
   };
 
-  const setBackgroundFromEmbeddedPhoto = async (element, svgUrl) => {
-    if (!element) return;
-    try {
-      const dataUrl = await loadEmbeddedPhoto(svgUrl);
-      element.style.backgroundImage = `url("${dataUrl}")`;
-      element.classList.add('is-photo-ready');
-    } catch (error) {
-      console.warn('Embedded photo could not be rendered.', error);
-      element.classList.add('is-photo-error');
-    }
-  };
-
-  const injectHomeLifeFeature = () => {
-    if (document.querySelector('.home-life-feature')) return;
-    const hero = document.querySelector('.brand-hero');
-    if (!hero) return;
-
-    const copy = isEnglish ? {
-      aria: 'Active life and a shared journey',
-      kicker: 'Life in motion',
-      title: 'Balance is not stillness. It is the ability to keep moving.',
-      intro: 'Every day has a different rhythm — performance, recovery, closeness and space for yourself. Immunalia is created for life as it is actually lived.',
-      firstAlt: 'A group hiking a coastal trail at golden hour',
-      firstTitle: 'Every shared journey has its own rhythm.',
-      firstText: 'Movement, closeness and energy for moments that truly matter.',
-      secondAlt: 'Professional athletes in demanding endurance and strength disciplines',
-      secondTitle: 'Live fully. Without unnecessary noise.',
-      secondText: 'A premium approach to an active everyday life.'
-    } : {
-      aria: 'Aktivní život a společná cesta',
-      kicker: 'Život v pohybu',
-      title: 'Rovnováha není klid bez pohybu. Je to schopnost pokračovat.',
-      intro: 'Každý den přináší jiný rytmus — výkon, odpočinek, blízkost i prostor pro sebe. Immunalia vzniká pro život, který se skutečně žije.',
-      firstAlt: 'Skupina na pobřežní stezce při zlaté hodině',
-      firstTitle: 'Společná cesta má vlastní rytmus.',
-      firstText: 'Pohyb, blízkost a energie pro chvíle, které mají skutečný význam.',
-      secondAlt: 'Profesionální sportovci při náročných vytrvalostních a silových výkonech',
-      secondTitle: 'Žít naplno. Bez zbytečného hluku.',
-      secondText: 'Prémiový přístup pro aktivní každodennost.'
+  const injectHomeLifeFeature=async()=>{
+    if(document.querySelector('.home-life-feature'))return;
+    const hero=document.querySelector('.brand-hero');if(!hero)return;
+    const copy=isEnglish?{
+      aria:'Active life and a shared journey',kicker:'Life in motion',title:'Balance is not stillness. It is the ability to keep moving.',intro:'Every day has a different rhythm — performance, recovery, closeness and space for yourself. Immunalia is created for life as it is actually lived.',firstAlt:'A family together in warm golden-hour light',firstTitle:'Every shared journey has its own rhythm.',firstText:'Closeness, energy and everyday moments that truly matter.',secondAlt:'Professional athletes in demanding endurance and strength disciplines',secondTitle:'Live fully. Without unnecessary noise.',secondText:'A premium approach to an active everyday life.'
+    }:{
+      aria:'Aktivní život a společná cesta',kicker:'Život v pohybu',title:'Rovnováha není klid bez pohybu. Je to schopnost pokračovat.',intro:'Každý den přináší jiný rytmus — výkon, odpočinek, blízkost i prostor pro sebe. Immunalia vzniká pro život, který se skutečně žije.',firstAlt:'Rodina společně v teplém světle zlaté hodiny',firstTitle:'Společná cesta má vlastní rytmus.',firstText:'Blízkost, energie a každodenní chvíle, které mají skutečný význam.',secondAlt:'Profesionální sportovci při náročných vytrvalostních a silových výkonech',secondTitle:'Žít naplno. Bez zbytečného hluku.',secondText:'Prémiový přístup pro aktivní každodennost.'
     };
-
-    const section = document.createElement('section');
-    section.className = 'home-life-feature';
-    section.setAttribute('aria-label', copy.aria);
-    section.innerHTML = `
-      <div class="home-life-feature__intro">
-        <div><p class="section-kicker">${copy.kicker}</p><h2>${copy.title}</h2></div>
-        <p>${copy.intro}</p>
-      </div>
-      <div class="home-life-feature__grid">
-        <article class="home-life-feature__card">
-          <div class="home-life-feature__media" data-home-photo="hike" role="img" aria-label="${copy.firstAlt}"></div>
-          <div class="home-life-feature__caption"><strong>${copy.firstTitle}</strong><span>${copy.firstText}</span></div>
-        </article>
-        <article class="home-life-feature__card home-life-feature__card--secondary">
-          <div class="home-life-feature__media" data-home-photo="ultra" role="img" aria-label="${copy.secondAlt}"></div>
-          <div class="home-life-feature__caption"><strong>${copy.secondTitle}</strong><span>${copy.secondText}</span></div>
-        </article>
-      </div>`;
-    hero.insertAdjacentElement('afterend', section);
-
-    setBackgroundFromEmbeddedPhoto(
-      section.querySelector('[data-home-photo="hike"]'),
-      'assets/photos/home-coastal-hike-v2.svg?v=20260802-iosfix1'
-    );
-    setBackgroundFromEmbeddedPhoto(
-      section.querySelector('[data-home-photo="ultra"]'),
-      'assets/photos/ultra-multisport-v2.svg?v=20260802-iosfix1'
-    );
+    const section=document.createElement('section');section.className='home-life-feature';section.setAttribute('aria-label',copy.aria);section.innerHTML=`<div class="home-life-feature__intro"><div><p class="section-kicker">${copy.kicker}</p><h2>${copy.title}</h2></div><p>${copy.intro}</p></div><div class="home-life-feature__grid"><article class="home-life-feature__card"><div class="home-life-feature__media" data-home-photo="family" role="img" aria-label="${copy.firstAlt}"></div><div class="home-life-feature__caption"><strong>${copy.firstTitle}</strong><span>${copy.firstText}</span></div></article><article class="home-life-feature__card home-life-feature__card--secondary"><div class="home-life-feature__media" data-home-photo="ultra" role="img" aria-label="${copy.secondAlt}"></div><div class="home-life-feature__caption"><strong>${copy.secondTitle}</strong><span>${copy.secondText}</span></div></article></div>`;
+    hero.insertAdjacentElement('afterend',section);
+    await loadScript('family-golden-hour-photo','assets/js/family-golden-hour-photo.js?v=20260802-final5');
+    const family=section.querySelector('[data-home-photo="family"]');if(family&&window.IMMUNALIA_FAMILY_PHOTO){family.style.backgroundImage=`url("${window.IMMUNALIA_FAMILY_PHOTO}")`;family.classList.add('is-photo-ready')}
+    try{const ultra=await loadEmbeddedPhoto('assets/photos/ultra-multisport-v2.svg?v=20260802-final5');const el=section.querySelector('[data-home-photo="ultra"]');if(el){el.style.backgroundImage=`url("${ultra}")`;el.classList.add('is-photo-ready')}}catch(e){console.warn('ULTRA homepage photo failed',e)}
   };
 
-  if (isHomepage) {
-    loadStylesheet('home-visual-fixes', 'home-visual-fixes.css?v=20260802-iosfix1');
-    injectHomeLifeFeature();
-  }
-
-  const applyDirectProductPhotos = async () => {
-    const ultraPhotoUrl = 'assets/photos/ultra-multisport-v2.svg?v=20260802-iosfix1';
-    const nightPhotoUrl = 'assets/photos/night-evening-v2.svg?v=20260802-iosfix1';
-
-    const apply = async (selector, svgUrl) => {
-      const element = document.querySelector(selector);
-      if (!element) return;
-      try {
-        const dataUrl = await loadEmbeddedPhoto(svgUrl);
-        element.style.setProperty('--direct-product-photo', `url("${dataUrl}")`);
-        element.classList.add('has-direct-photo');
-      } catch (error) {
-        console.warn(`Photo for ${selector} could not be rendered.`, error);
-      }
-    };
-
+  const applyProductPhotos=async()=>{
+    loadStylesheet('product-image-fixes','product-image-fixes.css?v=20260802-final5');
     await Promise.all([
-      apply('.lifestyle-performance', ultraPhotoUrl),
-      apply('#ultra', ultraPhotoUrl),
-      apply('.lifestyle-recovery', nightPhotoUrl),
-      apply('#night', nightPhotoUrl)
-    ]);
+      loadScript('family-golden-hour-photo','assets/js/family-golden-hour-photo.js?v=20260802-final5'),
+      loadScript('night-premium-evening-photo','assets/js/night-premium-evening-photo.js?v=20260802-final5')
+    ]).catch(e=>console.warn('Premium photos failed',e));
+    if(window.IMMUNALIA_FAMILY_PHOTO)setCardPhoto('.lifestyle-family',window.IMMUNALIA_FAMILY_PHOTO,'center 45%');
+    if(window.IMMUNALIA_NIGHT_PHOTO){setCardPhoto('.lifestyle-recovery',window.IMMUNALIA_NIGHT_PHOTO,'center 48%');setCardPhoto('#night',window.IMMUNALIA_NIGHT_PHOTO,'center 48%')}
+    try{const ultra=await loadEmbeddedPhoto('assets/photos/ultra-multisport-v2.svg?v=20260802-final5');setCardPhoto('.lifestyle-performance',ultra,'center 47%');setCardPhoto('#ultra',ultra,'center 48%')}catch(e){console.warn('ULTRA product photo failed',e)}
+    try{
+      await loadScript('product-photo-sprite-1','assets/js/product-lifestyle-sprite-part01.js?v=20260802-emotional3');
+      await loadScript('product-photo-sprite-2','assets/js/product-lifestyle-sprite-part02.js?v=20260802-emotional3');
+      await loadScript('product-photo-sprite-3','assets/js/product-lifestyle-sprite-part03.js?v=20260802-emotional3');
+      await loadScript('product-photo-sprite-build','assets/js/product-lifestyle-sprite-build.js?v=20260802-emotional3');
+      const src=window.IMMUNALIA_PRODUCT_PHOTO_SPRITE;if(!src)return;const img=new Image();img.onload=()=>{const w=Math.round(img.naturalWidth/3),h=img.naturalHeight,cache=[];const crop=c=>{if(cache[c])return cache[c];const cv=document.createElement('canvas');cv.width=w;cv.height=h;const x=cv.getContext('2d');x.drawImage(img,c*w,0,w,h,0,0,w,h);return cache[c]=`url("${cv.toDataURL('image/jpeg',.9)}")`};[{s:'#balance',c:2,p:'52% 44%',z:'165%'},{s:'#restart',c:1,p:'48% 39%',z:'150%'},{s:'#shield',c:2,p:'82% 47%',z:'180%'},{s:'#flow',c:0,p:'26% 47%',z:'155%'}].forEach(o=>{const el=document.querySelector(o.s);if(!el)return;el.style.setProperty('--generated-product-photo',crop(o.c));el.style.setProperty('--generated-photo-position',o.p);el.style.setProperty('--generated-photo-size',o.z);el.classList.add('has-generated-photo')})};img.src=src;
+    }catch(e){console.warn('Supplementary photography failed',e)}
   };
 
-  const applyGeneratedProductPhotos = async () => {
-    loadStylesheet('product-image-fixes', 'product-image-fixes.css?v=20260802-iosfix1');
-    applyDirectProductPhotos();
+  if(isHomepage){loadStylesheet('home-visual-fixes','home-visual-fixes.css?v=20260802-final5');injectHomeLifeFeature()}
+  if(isProducts)applyProductPhotos();
 
-    try {
-      await loadScript('product-photo-sprite-1', 'assets/js/product-lifestyle-sprite-part01.js?v=20260802-emotional3');
-      await loadScript('product-photo-sprite-2', 'assets/js/product-lifestyle-sprite-part02.js?v=20260802-emotional3');
-      await loadScript('product-photo-sprite-3', 'assets/js/product-lifestyle-sprite-part03.js?v=20260802-emotional3');
-      await loadScript('product-photo-sprite-build', 'assets/js/product-lifestyle-sprite-build.js?v=20260802-emotional3');
-    } catch (error) {
-      console.warn('Supplementary product photography could not be loaded.', error);
-      return;
-    }
-
-    const spriteSource = window.IMMUNALIA_PRODUCT_PHOTO_SPRITE;
-    if (!spriteSource) return;
-    const sprite = new Image();
-    sprite.decoding = 'async';
-    sprite.onload = () => {
-      const cellWidth = Math.round(sprite.naturalWidth / 3);
-      const cellHeight = sprite.naturalHeight;
-      const cache = new Map();
-      const crop = (column) => {
-        if (cache.has(column)) return cache.get(column);
-        const canvas = document.createElement('canvas');
-        canvas.width = cellWidth;
-        canvas.height = cellHeight;
-        const context = canvas.getContext('2d', { alpha: false });
-        if (!context) return '';
-        context.drawImage(sprite, column * cellWidth, 0, cellWidth, cellHeight, 0, 0, cellWidth, cellHeight);
-        let dataUrl = canvas.toDataURL('image/webp', 0.9);
-        if (!dataUrl.startsWith('data:image/webp')) dataUrl = canvas.toDataURL('image/jpeg', 0.9);
-        const cssUrl = `url("${dataUrl}")`;
-        cache.set(column, cssUrl);
-        return cssUrl;
-      };
-      [
-        { selector: '.lifestyle-family', column: 2, position: 'center 47%', size: 'cover' },
-        { selector: '#balance', column: 2, position: '52% 44%', size: '165%' },
-        { selector: '#restart', column: 1, position: '48% 39%', size: '150%' },
-        { selector: '#shield', column: 2, position: '82% 47%', size: '180%' },
-        { selector: '#flow', column: 0, position: '26% 47%', size: '155%' }
-      ].forEach(({ selector, column, position, size }) => {
-        const element = document.querySelector(selector);
-        if (!element) return;
-        element.style.setProperty('--generated-product-photo', crop(column));
-        element.style.setProperty('--generated-photo-position', position);
-        element.style.setProperty('--generated-photo-size', size);
-        element.classList.add('has-generated-photo');
-      });
-    };
-    sprite.src = spriteSource;
-  };
-
-  if (document.body.classList.contains('products-page')) applyGeneratedProductPhotos();
-
-  const header = document.querySelector('[data-site-header]');
-  const toggle = document.querySelector('[data-nav-toggle]');
-  const nav = document.getElementById('site-nav');
-  if (!header || !toggle || !nav) return;
-
-  const closeMenu = () => {
-    header.classList.remove('is-open');
-    toggle.setAttribute('aria-expanded', 'false');
-  };
-  toggle.addEventListener('click', () => {
-    const isOpen = header.classList.toggle('is-open');
-    toggle.setAttribute('aria-expanded', String(isOpen));
-  });
-  nav.addEventListener('click', (event) => {
-    if (event.target instanceof HTMLAnchorElement) closeMenu();
-  });
-  window.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeMenu();
-  });
+  const header=document.querySelector('[data-site-header]'),toggle=document.querySelector('[data-nav-toggle]'),nav=document.getElementById('site-nav');if(!header||!toggle||!nav)return;const close=()=>{header.classList.remove('is-open');toggle.setAttribute('aria-expanded','false')};toggle.addEventListener('click',()=>{const open=header.classList.toggle('is-open');toggle.setAttribute('aria-expanded',String(open))});nav.addEventListener('click',e=>{if(e.target instanceof HTMLAnchorElement)close()});addEventListener('keydown',e=>{if(e.key==='Escape')close()});
 })();
