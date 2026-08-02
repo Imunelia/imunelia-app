@@ -1,0 +1,29 @@
+.story-card .principle-icon{
+  font-size:0;
+}
+
+.story-card .principle-icon::before{
+  content:"";
+  display:block;
+  width:24px;
+  height:24px;
+  background:currentColor;
+  -webkit-mask:var(--principle-pictogram) center/contain no-repeat;
+  mask:var(--principle-pictogram) center/contain no-repeat;
+}
+
+.story-card:nth-child(1) .principle-icon{
+  --principle-pictogram:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PHBhdGggZD0iTTMgNy41YzIuNS0yIDQuNS0yIDcgMHM0LjUgMiA3IDAgMy41LTEuNyA0IDAiLz48cGF0aCBkPSJNMyAxMi41YzIuNS0yIDQuNS0yIDcgMHM0LjUgMiA3IDAgMy41LTEuNyA0IDAiLz48cGF0aCBkPSJNNSAxNy41YzItMS40IDMuOC0xLjQgNS44IDBzMy44IDEuNCA1LjggMCIvPjwvc3ZnPg==");
+}
+
+.story-card:nth-child(2) .principle-icon{
+  --principle-pictogram:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTEyIDN2MTYiLz48cGF0aCBkPSJNNiA2aDEyIi8+PHBhdGggZD0iTTggNiA0LjUgMTJoN0w4IDZaIi8+PHBhdGggZD0ibTE2IDYtMy41IDZoN0wxNiA2WiIvPjxwYXRoIGQ9Ik03IDIxaDEwIi8+PC9zdmc+");
+}
+
+.story-card:nth-child(3) .principle-icon{
+  --principle-pictogram:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iNiIgY3k9IjciIHI9IjIuMiIvPjxjaXJjbGUgY3g9IjE4IiBjeT0iNyIgcj0iMi4yIi8+PGNpcmNsZSBjeD0iMTIiIGN5PSIxNyIgcj0iMi4yIi8+PHBhdGggZD0iTTggOC4yIDEwLjcgMTQuOE0xNiA4LjJsLTIuNyA2LjZNOC4yIDdoNy42Ii8+PC9zdmc+");
+}
+
+.story-card:nth-child(4) .principle-icon{
+  --principle-pictogram:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTEyIDMgMTkgNnY1LjJjMCA0LjQtMi44IDcuNy03IDkuOC00LjItMi4xLTctNS40LTctOS44VjZsNy0zWiIvPjxwYXRoIGQ9Im04LjcgMTIgMi4xIDIuMSA0LjYtNC42Ii8+PC9zdmc+");
+}
