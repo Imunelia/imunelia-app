@@ -1,0 +1,1 @@
+Image assets are stored as binary blobs and referenced by the product and homepage styles.
