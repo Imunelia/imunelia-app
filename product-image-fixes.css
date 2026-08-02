@@ -1,12 +1,12 @@
 .product-lifestyle-card.has-generated-photo{
   background-image:linear-gradient(180deg,rgba(5,19,39,.02) 18%,rgba(5,19,39,.18) 58%,rgba(5,19,39,.84) 100%),var(--generated-product-photo)!important;
-  background-size:cover!important;
+  background-size:var(--generated-photo-size,cover)!important;
   background-position:var(--generated-photo-position,center)!important;
 }
 
 .premium-product-card.has-generated-photo .product-card-copy::before{
   background-image:linear-gradient(180deg,rgba(8,24,52,.01),rgba(8,24,52,.18)),var(--generated-product-photo)!important;
-  background-size:cover!important;
+  background-size:var(--generated-photo-size,cover)!important;
   background-position:var(--generated-photo-position,center)!important;
 }
 
