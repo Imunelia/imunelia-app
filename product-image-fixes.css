@@ -11,25 +11,25 @@
 }
 
 .lifestyle-performance{
-  background-image:linear-gradient(180deg,rgba(5,19,39,.02) 18%,rgba(5,19,39,.17) 55%,rgba(5,19,39,.84) 100%),url("assets/photos/ultra-multisport.webp?v=20260802-final1")!important;
+  background-image:linear-gradient(180deg,rgba(5,19,39,.02) 18%,rgba(5,19,39,.18) 58%,rgba(5,19,39,.84) 100%),url("assets/photos/ultra-multisport-v2.svg?v=20260802-valid3")!important;
+  background-size:cover!important;
+  background-position:center 47%!important;
+}
+
+.lifestyle-recovery{
+  background-image:linear-gradient(180deg,rgba(5,19,39,.02) 18%,rgba(5,19,39,.18) 58%,rgba(5,19,39,.84) 100%),url("assets/photos/night-evening-v2.svg?v=20260802-valid3")!important;
   background-size:cover!important;
   background-position:center 48%!important;
 }
 
-.lifestyle-recovery{
-  background-image:linear-gradient(180deg,rgba(5,19,39,.02) 18%,rgba(5,19,39,.16) 56%,rgba(5,19,39,.84) 100%),url("assets/photos/night-evening.webp?v=20260802-final1")!important;
+#ultra .product-card-copy::before{
+  background-image:linear-gradient(180deg,rgba(5,16,35,.01),rgba(5,16,35,.24)),url("assets/photos/ultra-multisport-v2.svg?v=20260802-valid3")!important;
   background-size:cover!important;
-  background-position:center 46%!important;
+  background-position:center 48%!important;
 }
 
 #night .product-card-copy::before{
-  background-image:linear-gradient(180deg,rgba(8,24,52,.01),rgba(8,24,52,.18)),url("assets/photos/night-evening.webp?v=20260802-final1")!important;
-  background-size:cover!important;
-  background-position:center 46%!important;
-}
-
-#ultra .product-card-copy::before{
-  background-image:linear-gradient(180deg,rgba(5,16,35,.01),rgba(5,16,35,.24)),url("assets/photos/ultra-multisport.webp?v=20260802-final1")!important;
+  background-image:linear-gradient(180deg,rgba(8,24,52,.01),rgba(8,24,52,.22)),url("assets/photos/night-evening-v2.svg?v=20260802-valid3")!important;
   background-size:cover!important;
   background-position:center 48%!important;
 }
