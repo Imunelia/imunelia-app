@@ -1,40 +1,45 @@
 (() => {
   const stage=document.querySelector('[data-system-stage]');
   if(stage&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    const depthItems=[...stage.querySelectorAll('[data-depth]')];
-    const applyPointer=(x,y)=>{stage.style.setProperty('--stage-rx',`${(-y*1.5).toFixed(2)}deg`);stage.style.setProperty('--stage-ry',`${(x*1.5).toFixed(2)}deg`);stage.style.setProperty('--network-x',`${(x*8).toFixed(2)}px`);stage.style.setProperty('--network-y',`${(y*8).toFixed(2)}px`);depthItems.forEach(item=>{const depth=Number(item.dataset.depth||1);item.style.setProperty('--offset-x',`${(x*depth*3.4).toFixed(2)}px`);item.style.setProperty('--offset-y',`${(y*depth*3.4).toFixed(2)}px`)})};
-    stage.addEventListener('pointermove',event=>{const rect=stage.getBoundingClientRect();applyPointer(((event.clientX-rect.left)/rect.width-.5)*2,((event.clientY-rect.top)/rect.height-.5)*2)},{passive:true});
-    stage.addEventListener('pointerleave',()=>applyPointer(0,0),{passive:true});
+    const items=[...stage.querySelectorAll('[data-depth]')];
+    const move=(x,y)=>{stage.style.setProperty('--stage-rx',`${(-y*1.5).toFixed(2)}deg`);stage.style.setProperty('--stage-ry',`${(x*1.5).toFixed(2)}deg`);items.forEach(item=>{const d=Number(item.dataset.depth||1);item.style.setProperty('--offset-x',`${(x*d*3.4).toFixed(2)}px`);item.style.setProperty('--offset-y',`${(y*d*3.4).toFixed(2)}px`)})};
+    stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect();move(((e.clientX-r.left)/r.width-.5)*2,((e.clientY-r.top)/r.height-.5)*2)},{passive:true});
+    stage.addEventListener('pointerleave',()=>move(0,0),{passive:true});
   }
 
-  const homepage=document.querySelector('.brand-hero');
-  if(!homepage)return;
-  if(!document.getElementById('homepage-commercial-style')){const stylesheet=document.createElement('link');stylesheet.id='homepage-commercial-style';stylesheet.rel='stylesheet';stylesheet.href='homepage-commercial.css?v=20260802-router2';document.head.appendChild(stylesheet)}
+  const hero=document.querySelector('.brand-hero');
+  if(!hero)return;
+  const load=(id,src)=>new Promise((resolve,reject)=>{const old=document.getElementById(id);if(old){resolve();return}const s=document.createElement('script');s.id=id;s.src=src;s.onload=resolve;s.onerror=reject;document.head.appendChild(s)});
+  if(!document.getElementById('homepage-commercial-style')){const l=document.createElement('link');l.id='homepage-commercial-style';l.rel='stylesheet';l.href='homepage-commercial.css?v=20260803-story1';document.head.appendChild(l)}
+  document.querySelectorAll('.home-products-overview,.home-life-feature,.home-category-router,.home-story').forEach(el=>el.remove());
 
-  document.querySelectorAll('.home-products-overview,.home-life-feature,.home-category-router').forEach(el=>el.remove());
+  const en=document.documentElement.lang==='en'||location.pathname.endsWith('index-en.html');
+  const copy=en?{
+    kicker:'A day with Immunalia',title:'Stories begin with everyday care.',intro:'One day brings different needs — energy, performance, resilience, recovery and time for the people closest to us.',cta:'View suitable products',all:'View all products',
+    items:[
+      ['energy','Morning begins in motion.','Energy for a rhythm you set yourself.','produkty-en.html#flow'],
+      ['performance','When the day asks for more.','For demanding activity, focus and exceptional physical load.','produkty-en.html#ultra'],
+      ['immunity','Care begins on ordinary days.','An everyday foundation for natural resilience.','produkty-en.html#shield'],
+      ['recovery','Evening belongs to recovery.','Calm, slowing down and space for the next day.','produkty-en.html#night'],
+      ['family','What matters most is shared.','Everyday care for the whole family.','produkty-en.html#balance']
+    ]
+  }:{
+    kicker:'Jeden den s Immunalia',title:'Příběhy začínají každodenní péčí.',intro:'Jeden den přináší různé potřeby — energii, výkon, odolnost, regeneraci i čas pro ty nejbližší.',cta:'Zobrazit vhodné produkty',all:'Zobrazit všechny produkty',
+    items:[
+      ['energy','Ráno začíná pohybem.','Energie pro rytmus, který si určujete sami.','produkty.html#flow'],
+      ['performance','Když je potřeba víc.','Pro náročnou aktivitu, soustředění a mimořádnou fyzickou zátěž.','produkty.html#ultra'],
+      ['immunity','Péče začíná v běžných dnech.','Každodenní základ pro přirozenou odolnost.','produkty.html#shield'],
+      ['recovery','Večer patří obnově.','Klid, zpomalení a prostor pro další den.','produkty.html#night'],
+      ['family','To důležité sdílíme.','Každodenní péče pro celou rodinu.','produkty.html#balance']
+    ]
+  };
 
-  const isEnglish=document.documentElement.lang==='en'||location.pathname.endsWith('index-en.html');
-  const heroText=homepage.querySelector('.hero-text');
-  const mainParagraph=heroText?[...heroText.children].find(element=>element.tagName==='P'&&!element.classList.contains('eyebrow')):null;
-  if(mainParagraph){mainParagraph.classList.add('hero-commercial-intro');mainParagraph.textContent=isEnglish?'Premium food supplements for immunity, energy, performance, recovery and everyday family care. Start with the area that best matches your current rhythm.':'Prémiové doplňky stravy pro imunitu, energii, výkon, regeneraci a každodenní péči o celou rodinu. Začněte oblastí, která nejlépe odpovídá vašemu současnému rytmu.'}
+  const section=document.createElement('section');section.className='home-story';section.setAttribute('aria-label',copy.title);section.innerHTML=`<div class="home-story__intro"><p class="section-kicker">${copy.kicker}</p><h2>${copy.title}</h2><p>${copy.intro}</p></div><div class="home-story__sequence">${copy.items.map((item,index)=>`<a class="home-story__panel home-story__panel--${item[0]}" href="${item[3]}"><span class="home-story__shade"></span><span class="home-story__number">0${index+1}</span><span class="home-story__copy"><strong>${item[1]}</strong><span>${item[2]}</span><em>${copy.cta} →</em></span></a>`).join('')}</div><div class="home-story__actions"><a class="button primary" href="${en?'produkty-en.html':'produkty.html'}">${copy.all}</a></div>`;
+  hero.insertAdjacentElement('afterend',section);
 
-  const routes=isEnglish?[
-    {slug:'immunity',title:'Immunity',text:'Everyday care focused on natural resilience.',href:'produkty-en.html#shield'},
-    {slug:'energy',title:'Energy',text:'Vitality and momentum for active days.',href:'produkty-en.html#flow'},
-    {slug:'performance',title:'Performance',text:'Support for demanding activity and exceptional physical load.',href:'produkty-en.html#ultra'},
-    {slug:'recovery',title:'Recovery',text:'Space for rest, evening calm and return to rhythm.',href:'produkty-en.html#night'},
-    {slug:'family',title:'For the whole family',text:'Everyday care for different ages and daily routines.',href:'produkty-en.html#balance'}
-  ]:[
-    {slug:'immunity',title:'Imunita',text:'Každodenní péče zaměřená na přirozenou odolnost.',href:'produkty.html#shield'},
-    {slug:'energy',title:'Energie',text:'Vitalita a tempo pro aktivní dny.',href:'produkty.html#flow'},
-    {slug:'performance',title:'Výkon',text:'Podpora pro náročnou aktivitu a mimořádnou fyzickou zátěž.',href:'produkty.html#ultra'},
-    {slug:'recovery',title:'Regenerace',text:'Prostor pro odpočinek, večerní klid a návrat k rytmu.',href:'produkty.html#night'},
-    {slug:'family',title:'Pro celou rodinu',text:'Každodenní péče pro různé věkové skupiny a životní režimy.',href:'produkty.html#balance'}
-  ];
-
-  const section=document.createElement('section');
-  section.className='home-category-router';
-  section.setAttribute('aria-label',isEnglish?'Choose by everyday need':'Vyberte podle každodenní potřeby');
-  section.innerHTML=`<div class="home-router-heading"><p class="section-kicker">${isEnglish?'Choose by your rhythm':'Vyberte podle svého rytmu'}</p><h2>${isEnglish?'Stories begin with everyday care.':'Příběhy začínají každodenní péčí.'}</h2><p>${isEnglish?'Five clear branches. The complete product range remains in the Products section.':'Pět základních větví. Kompletní nabídka a jednotlivé produktové řady zůstávají přehledně v záložce Produkty.'}</p></div><div class="home-router-grid">${routes.map(route=>`<a class="home-router-card home-router-card--${route.slug}" href="${route.href}"><span class="home-router-overlay"></span><span class="home-router-copy"><small>${isEnglish?'Explore':'Objevte'}</small><strong>${route.title}</strong><span>${route.text}</span><em>${isEnglish?'View suitable products →':'Zobrazit vhodné produkty →'}</em></span></a>`).join('')}</div><div class="home-router-actions"><a class="button primary" href="${isEnglish?'produkty-en.html':'produkty.html'}">${isEnglish?'View all products':'Zobrazit všechny produkty'}</a></div>`;
-  homepage.insertAdjacentElement('afterend',section);
+  Promise.all([load('family-story-data','assets/js/family-golden-hour-photo.js?v=20260803-story1'),load('recovery-story-data','assets/js/night-premium-evening-photo.js?v=20260803-story1')]).then(()=>{
+    const family=section.querySelector('.home-story__panel--family');const recovery=section.querySelector('.home-story__panel--recovery');
+    if(family&&window.IMMUNALIA_FAMILY_PHOTO)family.style.backgroundImage=`url("${window.IMMUNALIA_FAMILY_PHOTO}")`;
+    if(recovery&&window.IMMUNALIA_NIGHT_PHOTO)recovery.style.backgroundImage=`url("${window.IMMUNALIA_NIGHT_PHOTO}")`;
+  }).catch(()=>{});
 })();
