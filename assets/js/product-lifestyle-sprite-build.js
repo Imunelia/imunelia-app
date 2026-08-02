@@ -1,0 +1,1 @@
+window.IMMUNALIA_PRODUCT_PHOTO_SPRITE='data:image/webp;base64,'+(window.IMMUNALIA_LIFESTYLE_SPRITE_PARTS||[]).join('');
