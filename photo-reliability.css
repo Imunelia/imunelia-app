@@ -1,0 +1,85 @@
+/* Stable photographic layer for Czech and English pages. No runtime image decoding. */
+
+:root{
+  --photo-family:url("https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&crop=faces&w=1800&q=88");
+  --photo-immunity:url("https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&crop=faces&w=1800&q=88");
+  --photo-energy:url("https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&crop=faces&w=1800&q=88");
+  --photo-flow:url("https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&crop=faces&w=1800&q=88");
+  --photo-restart:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=88");
+  --photo-night:url("https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=1800&q=90");
+  --photo-run:url("https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&crop=faces&w=1200&q=90");
+  --photo-cycle:url("https://images.unsplash.com/photo-1541625602330-2277a4c46182?auto=format&fit=crop&crop=faces&w=1200&q=90");
+  --photo-swim:url("https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&crop=faces&w=1200&q=90");
+}
+
+/* Homepage photographic cards. */
+body .home-life-feature [data-home-photo="family"]{
+  background-color:#b68d69!important;
+  background-image:linear-gradient(180deg,rgba(7,24,45,.02),rgba(7,24,45,.22)),var(--photo-family)!important;
+  background-size:cover!important;
+  background-position:center 44%!important;
+  background-repeat:no-repeat!important;
+}
+body .home-life-feature [data-home-photo="ultra"]{
+  background-color:#102b47!important;
+  background-image:linear-gradient(180deg,rgba(7,24,45,.02),rgba(7,24,45,.25)),var(--photo-run)!important;
+  background-size:cover!important;
+  background-position:center 48%!important;
+  background-repeat:no-repeat!important;
+}
+
+/* Five lifestyle cards. These selectors override any broken inline variables/classes. */
+body.products-page .product-lifestyle-card.lifestyle-immunity{
+  background-color:#18354f!important;
+  background-image:linear-gradient(180deg,rgba(5,19,39,.01) 20%,rgba(5,19,39,.18) 58%,rgba(5,19,39,.84) 100%),var(--photo-immunity)!important;
+  background-size:cover!important;background-position:center 42%!important;background-repeat:no-repeat!important;
+}
+body.products-page .product-lifestyle-card.lifestyle-energy{
+  background-color:#8a6a5f!important;
+  background-image:linear-gradient(180deg,rgba(5,19,39,.01) 20%,rgba(5,19,39,.18) 58%,rgba(5,19,39,.84) 100%),var(--photo-energy)!important;
+  background-size:cover!important;background-position:center 35%!important;background-repeat:no-repeat!important;
+}
+body.products-page .product-lifestyle-card.lifestyle-performance{
+  background-color:#102b47!important;
+  background-image:linear-gradient(180deg,rgba(5,19,39,.01) 18%,rgba(5,19,39,.22) 58%,rgba(5,19,39,.88) 100%),var(--photo-run)!important;
+  background-size:cover!important;background-position:center 47%!important;background-repeat:no-repeat!important;
+}
+body.products-page .product-lifestyle-card.lifestyle-recovery{
+  background-color:#182943!important;
+  background-image:linear-gradient(180deg,rgba(5,19,39,.01) 18%,rgba(5,19,39,.20) 58%,rgba(5,19,39,.86) 100%),var(--photo-night)!important;
+  background-size:cover!important;background-position:center 52%!important;background-repeat:no-repeat!important;
+}
+body.products-page .product-lifestyle-card.lifestyle-family{
+  background-color:#725f52!important;
+  background-image:linear-gradient(180deg,rgba(5,19,39,.01) 18%,rgba(5,19,39,.20) 58%,rgba(5,19,39,.86) 100%),var(--photo-family)!important;
+  background-size:cover!important;background-position:center 44%!important;background-repeat:no-repeat!important;
+}
+
+/* Product editorial photographs. */
+body.products-page #balance.premium-product-card .product-card-copy::before{
+  background-color:#725f52!important;background-image:linear-gradient(180deg,rgba(8,24,52,.01),rgba(8,24,52,.18)),var(--photo-family)!important;background-size:cover!important;background-position:center 44%!important;background-repeat:no-repeat!important;
+}
+body.products-page #restart.premium-product-card .product-card-copy::before{
+  background-color:#a98773!important;background-image:linear-gradient(180deg,rgba(8,24,52,.01),rgba(8,24,52,.17)),var(--photo-restart)!important;background-size:cover!important;background-position:center 50%!important;background-repeat:no-repeat!important;
+}
+body.products-page #shield.premium-product-card .product-card-copy::before{
+  background-color:#18354f!important;background-image:linear-gradient(180deg,rgba(8,24,52,.01),rgba(8,24,52,.18)),var(--photo-immunity)!important;background-size:cover!important;background-position:center 42%!important;background-repeat:no-repeat!important;
+}
+body.products-page #flow.premium-product-card .product-card-copy::before{
+  background-color:#173b5b!important;background-image:linear-gradient(180deg,rgba(8,24,52,.01),rgba(8,24,52,.20)),var(--photo-flow)!important;background-size:cover!important;background-position:center 48%!important;background-repeat:no-repeat!important;
+}
+body.products-page #night.premium-product-card .product-card-copy::before{
+  background-color:#182943!important;background-image:linear-gradient(180deg,rgba(8,24,52,.01),rgba(8,24,52,.22)),var(--photo-night)!important;background-size:cover!important;background-position:center 52%!important;background-repeat:no-repeat!important;
+}
+body.products-page #ultra.premium-product-card .product-card-copy::before{
+  background-color:#0c2745!important;
+  background-image:linear-gradient(180deg,rgba(5,16,35,.02),rgba(5,16,35,.30)),var(--photo-run),var(--photo-cycle),var(--photo-swim)!important;
+  background-size:100% 100%,34% 100%,34% 100%,34% 100%!important;
+  background-position:center,left center,center center,right center!important;
+  background-repeat:no-repeat!important;
+}
+
+/* Prevent blank photo areas while an external image is still downloading. */
+.home-life-feature__media,.product-lifestyle-card,.premium-product-card .product-card-copy::before{
+  background-color:#102b47;
+}
