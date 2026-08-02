@@ -1,34 +1,44 @@
-.lifestyle-performance{
-  background-image:linear-gradient(180deg,transparent,rgba(5,19,39,.13)),url("https://images.unsplash.com/photo-1720798198232-97d58cc4fc93?auto=format&fit=crop&crop=faces&w=1100&h=1375&q=88")!important;
-  background-position:center 44%!important;
+.product-lifestyle-card.has-generated-photo{
+  background-image:linear-gradient(180deg,rgba(5,19,39,.02) 18%,rgba(5,19,39,.18) 58%,rgba(5,19,39,.84) 100%),var(--generated-product-photo)!important;
+  background-size:cover!important;
+  background-position:var(--generated-photo-position,center)!important;
 }
 
-#balance .product-card-copy::before{
-  background-image:linear-gradient(180deg,rgba(8,24,52,.01),rgba(8,24,52,.16)),url("https://images.unsplash.com/photo-1767082090589-d2692073a32a?auto=format&fit=crop&crop=faces&w=1500&h=1125&q=88")!important;
-  background-position:center 34%!important;
+.premium-product-card.has-generated-photo .product-card-copy::before{
+  background-image:linear-gradient(180deg,rgba(8,24,52,.01),rgba(8,24,52,.18)),var(--generated-product-photo)!important;
+  background-size:cover!important;
+  background-position:var(--generated-photo-position,center)!important;
 }
 
-#restart .product-card-copy::before{
-  background-image:linear-gradient(180deg,rgba(8,24,52,.02),rgba(8,24,52,.2)),url("https://images.unsplash.com/photo-1766955105736-2dfa66f46fbc?auto=format&fit=crop&w=1500&h=1125&q=88")!important;
-  background-position:center 54%!important;
+#ultra.has-generated-photo .product-card-copy::before{
+  background-image:linear-gradient(180deg,rgba(5,16,35,.01),rgba(5,16,35,.24)),var(--generated-product-photo)!important;
 }
 
-#shield .product-card-copy::before{
-  background-image:linear-gradient(180deg,rgba(8,24,52,.01),rgba(8,24,52,.17)),url("https://images.unsplash.com/photo-1679500649263-e1be61dc15c8?auto=format&fit=crop&crop=faces&w=1500&h=1125&q=88")!important;
-  background-position:center 46%!important;
+.premium-product-card .product-card-copy>h2{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
 }
 
-#flow .product-card-copy::before{
-  background-image:linear-gradient(180deg,rgba(8,24,52,.01),rgba(8,24,52,.18)),url("https://images.unsplash.com/photo-1760892799952-5715a2b4c562?auto=format&fit=crop&crop=faces&w=1500&h=1125&q=88")!important;
-  background-position:center 48%!important;
+.premium-product-card .product-card-copy>.product-subheading{
+  margin-top:8px;
+  font-size:clamp(1.28rem,1.7vw,1.7rem);
+  line-height:1.25;
+  color:#08295b;
+  font-weight:650;
 }
 
-#night .product-card-copy::before{
-  background-image:linear-gradient(180deg,rgba(8,24,52,.02),rgba(8,24,52,.2)),url("https://images.unsplash.com/photo-1688383454437-c3c6805a8ec0?auto=format&fit=crop&crop=faces&w=1500&h=1125&q=88")!important;
-  background-position:center 48%!important;
+.premium-product-card .product-card-copy::before{
+  transition:transform .45s ease,filter .45s ease;
 }
 
-#ultra .product-card-copy::before{
-  background-image:linear-gradient(180deg,rgba(5,16,35,.02),rgba(5,16,35,.26)),url("https://images.unsplash.com/photo-1720799358876-c21687344d54?auto=format&fit=crop&crop=faces&w=1500&h=1125&q=90")!important;
-  background-position:center 52%!important;
+.premium-product-card:hover .product-card-copy::before{
+  transform:scale(1.012);
+  filter:saturate(1.03) contrast(1.015);
 }
