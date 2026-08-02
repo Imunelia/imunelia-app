@@ -28,141 +28,134 @@
   });
 
   const fileName = window.location.pathname.split('/').pop() || 'index.html';
+  const isEnglish = fileName.endsWith('-en.html');
+  const isHomepage = fileName === 'index.html' || fileName === 'index-en.html';
 
   const injectHomeLifeFeature = () => {
     if (document.querySelector('.home-life-feature')) return;
     const hero = document.querySelector('.brand-hero');
     if (!hero) return;
 
+    const copy = isEnglish ? {
+      aria: 'Active life and a shared journey',
+      kicker: 'Life in motion',
+      title: 'Balance is not stillness. It is the ability to keep moving.',
+      intro: 'Every day has a different rhythm — performance, recovery, closeness and space for yourself. Immunalia is created for life as it is actually lived.',
+      firstAlt: 'A couple hiking a coastal trail at golden hour',
+      firstTitle: 'Every shared journey has its own rhythm.',
+      firstText: 'Movement, closeness and energy for moments that truly matter.',
+      secondAlt: 'Professional athletes in demanding endurance and strength disciplines',
+      secondTitle: 'Live fully. Without unnecessary noise.',
+      secondText: 'A premium approach to an active everyday life.'
+    } : {
+      aria: 'Aktivní život a společná cesta',
+      kicker: 'Život v pohybu',
+      title: 'Rovnováha není klid bez pohybu. Je to schopnost pokračovat.',
+      intro: 'Každý den přináší jiný rytmus — výkon, odpočinek, blízkost i prostor pro sebe. Immunalia vzniká pro život, který se skutečně žije.',
+      firstAlt: 'Dvojice na pobřežní stezce při zlaté hodině',
+      firstTitle: 'Společná cesta má vlastní rytmus.',
+      firstText: 'Pohyb, blízkost a energie pro chvíle, které mají skutečný význam.',
+      secondAlt: 'Profesionální sportovci při náročných vytrvalostních a silových výkonech',
+      secondTitle: 'Žít naplno. Bez zbytečného hluku.',
+      secondText: 'Prémiový přístup pro aktivní každodennost.'
+    };
+
     const section = document.createElement('section');
     section.className = 'home-life-feature';
-    section.setAttribute('aria-label', 'Aktivní život a společná cesta');
+    section.setAttribute('aria-label', copy.aria);
     section.innerHTML = `
       <div class="home-life-feature__intro">
-        <div>
-          <p class="section-kicker">Život v pohybu</p>
-          <h2>Rovnováha není klid bez pohybu. Je to schopnost pokračovat.</h2>
-        </div>
-        <p>Každý den přináší jiný rytmus — výkon, odpočinek, blízkost i prostor pro sebe. Immunalia vzniká pro život, který se skutečně žije.</p>
+        <div><p class="section-kicker">${copy.kicker}</p><h2>${copy.title}</h2></div>
+        <p>${copy.intro}</p>
       </div>
       <div class="home-life-feature__grid">
         <article class="home-life-feature__card">
-          <img src="assets/photos/home-coastal-couple.jpg?v=20260802-final1" alt="Dvojice na pobřežní stezce při zlaté hodině" width="480" height="270" loading="lazy" decoding="async">
-          <div class="home-life-feature__caption"><strong>Společná cesta má vlastní rytmus.</strong><span>Pohyb, blízkost a energie pro chvíle, které mají skutečný význam.</span></div>
+          <img src="assets/photos/home-coastal-hike-v2.svg?v=20260802-valid3" alt="${copy.firstAlt}" width="640" height="360" loading="lazy" decoding="async">
+          <div class="home-life-feature__caption"><strong>${copy.firstTitle}</strong><span>${copy.firstText}</span></div>
         </article>
         <article class="home-life-feature__card home-life-feature__card--secondary">
-          <img src="assets/photos/home-coastal-group.jpg?v=20260802-final1" alt="Aktivní lidé na pobřežní stezce při západu slunce" width="480" height="270" loading="lazy" decoding="async">
-          <div class="home-life-feature__caption"><strong>Žít naplno. Bez zbytečného hluku.</strong><span>Prémiový přístup pro aktivní každodennost.</span></div>
+          <img src="assets/photos/ultra-multisport-v2.svg?v=20260802-valid3" alt="${copy.secondAlt}" width="720" height="405" loading="lazy" decoding="async">
+          <div class="home-life-feature__caption"><strong>${copy.secondTitle}</strong><span>${copy.secondText}</span></div>
         </article>
       </div>`;
-
     hero.insertAdjacentElement('afterend', section);
   };
 
-  if (fileName === 'index.html') {
-    loadStylesheet('home-visual-fixes', 'home-visual-fixes.css?v=20260802-homephotos1');
+  if (isHomepage) {
+    loadStylesheet('home-visual-fixes', 'home-visual-fixes.css?v=20260802-bilingual-final');
     injectHomeLifeFeature();
   }
 
   const applyGeneratedProductPhotos = async () => {
-    loadStylesheet('product-image-fixes', 'product-image-fixes.css?v=20260802-finalphotos1');
-
+    loadStylesheet('product-image-fixes', 'product-image-fixes.css?v=20260802-valid-final');
     try {
       await loadScript('product-photo-sprite-1', 'assets/js/product-lifestyle-sprite-part01.js?v=20260802-emotional3');
       await loadScript('product-photo-sprite-2', 'assets/js/product-lifestyle-sprite-part02.js?v=20260802-emotional3');
       await loadScript('product-photo-sprite-3', 'assets/js/product-lifestyle-sprite-part03.js?v=20260802-emotional3');
       await loadScript('product-photo-sprite-build', 'assets/js/product-lifestyle-sprite-build.js?v=20260802-emotional3');
     } catch (error) {
-      console.warn('Product photography could not be loaded.', error);
+      console.warn('Supplementary product photography could not be loaded.', error);
       return;
     }
 
     const spriteSource = window.IMMUNALIA_PRODUCT_PHOTO_SPRITE;
     if (!spriteSource) return;
-
     const sprite = new Image();
     sprite.decoding = 'async';
     sprite.onload = () => {
       const cellWidth = Math.round(sprite.naturalWidth / 3);
       const cellHeight = sprite.naturalHeight;
       const cache = new Map();
-
       const crop = (column) => {
         if (cache.has(column)) return cache.get(column);
-
         const canvas = document.createElement('canvas');
         canvas.width = cellWidth;
         canvas.height = cellHeight;
         const context = canvas.getContext('2d', { alpha: false });
         if (!context) return '';
-        context.drawImage(
-          sprite,
-          column * cellWidth,
-          0,
-          cellWidth,
-          cellHeight,
-          0,
-          0,
-          cellWidth,
-          cellHeight
-        );
-
-        let dataUrl = canvas.toDataURL('image/webp', 0.92);
-        if (!dataUrl.startsWith('data:image/webp')) {
-          dataUrl = canvas.toDataURL('image/jpeg', 0.92);
-        }
+        context.drawImage(sprite, column * cellWidth, 0, cellWidth, cellHeight, 0, 0, cellWidth, cellHeight);
+        let dataUrl = canvas.toDataURL('image/webp', 0.9);
+        if (!dataUrl.startsWith('data:image/webp')) dataUrl = canvas.toDataURL('image/jpeg', 0.9);
         const cssUrl = `url("${dataUrl}")`;
         cache.set(column, cssUrl);
         return cssUrl;
       };
-
-      const photoTargets = [
+      [
         { selector: '.lifestyle-family', column: 2, position: 'center 47%', size: 'cover' },
         { selector: '#balance', column: 2, position: '52% 44%', size: '165%' },
         { selector: '#restart', column: 1, position: '48% 39%', size: '150%' },
         { selector: '#shield', column: 2, position: '82% 47%', size: '180%' },
         { selector: '#flow', column: 0, position: '26% 47%', size: '155%' }
-      ];
-
-      photoTargets.forEach(({ selector, column, position, size }) => {
+      ].forEach(({ selector, column, position, size }) => {
         const element = document.querySelector(selector);
         if (!element) return;
-        const photo = crop(column);
-        if (!photo) return;
-        element.style.setProperty('--generated-product-photo', photo);
+        element.style.setProperty('--generated-product-photo', crop(column));
         element.style.setProperty('--generated-photo-position', position);
         element.style.setProperty('--generated-photo-size', size);
         element.classList.add('has-generated-photo');
       });
     };
-    sprite.onerror = () => console.warn('Generated product photography sprite is invalid.');
     sprite.src = spriteSource;
   };
 
-  if (document.body.classList.contains('products-page')) {
-    applyGeneratedProductPhotos();
-  }
+  if (document.body.classList.contains('products-page')) applyGeneratedProductPhotos();
 
   const header = document.querySelector('[data-site-header]');
   const toggle = document.querySelector('[data-nav-toggle]');
   const nav = document.getElementById('site-nav');
-
   if (!header || !toggle || !nav) return;
 
   const closeMenu = () => {
     header.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
   };
-
   toggle.addEventListener('click', () => {
     const isOpen = header.classList.toggle('is-open');
     toggle.setAttribute('aria-expanded', String(isOpen));
   });
-
   nav.addEventListener('click', (event) => {
     if (event.target instanceof HTMLAnchorElement) closeMenu();
   });
-
   window.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') closeMenu();
   });
