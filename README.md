@@ -32,3 +32,23 @@ Pokud byl původní soubor s reálnými daty někdy commitnutý do historie repo
 ## Komunikační pravidla
 
 Veřejná produktová komunikace Immunalia nepoužívá léčebné sliby, diagnózy ani tvrzení o konkrétních účincích na laboratorní hodnoty. Preferovaný jazyk: rovnováha, rytmus, dlouhodobost, kontext, kvalita, regenerace, každodenní péče, biologické signály a odborná střídmost.
+
+## Úpravy přes GitHub ve Windows 11
+
+Pro běžné změny textů na publikovaných stránkách není nutné používat Codex ani lokální vývojové prostředí ve Windows 11. Stránky lze upravovat přímo v GitHubu přes webový prohlížeč:
+
+1. Otevřete repozitář `imunelia/imunelia-app` na GitHubu.
+2. Vyberte soubor, který odpovídá veřejné stránce. Například produkt Restart na adrese `produkty.html#restart` se upravuje v souboru `produkty.html`.
+3. Klikněte na ikonu tužky **Edit this file**.
+4. Upravte požadovaný text nebo odkaz.
+5. Dole v části **Commit changes** napište krátký popis změny.
+6. Pokud upravujete přímo větev `main`, GitHub Pages změnu po commitu automaticky znovu publikuje. Pokud GitHub nabídne vytvoření nové větve, vytvořte Pull Request a po kontrole ho slučte do `main`.
+7. Počkejte několik minut a ověřte změnu na `https://imunelia.github.io/imunelia-app/`.
+
+Pro produkt Restart jsou nejdůležitější části v `produkty.html`:
+
+- karta produktu u kotvy `id="restart"`,
+- detail produktu u kotvy `id="detail-restart"`,
+- objednávkový odkaz s `data-product="restart"`, pokud se doplňuje externí checkout.
+
+Při úpravách přes GitHub neměňte soubory s laboratorními, pacientskými ani jinými neveřejnými daty. Veřejný web na GitHub Pages smí obsahovat pouze bezpečný marketingový obsah a syntetická demo data.
