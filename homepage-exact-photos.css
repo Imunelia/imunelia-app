@@ -1,0 +1,21 @@
+/* Approved five-photo story for the exact homepage. */
+.exact-category--energy .exact-category__photo {
+  background-image: url("assets/photos/home-story-energy.jpg?v=20260804-story-photos1") !important;
+  background-position: center 46%;
+}
+
+.exact-category--performance .exact-category__photo {
+  background-image: url("assets/photos/home-story-performance.jpg?v=20260804-story-photos1") !important;
+  background-position: center 45%;
+}
+
+.exact-category--resilience .exact-category__photo {
+  background-image: url("assets/photos/home-story-immunity.jpg?v=20260804-story-photos1") !important;
+  background-position: center 46%;
+}
+
+.exact-category--recovery .exact-category__photo,
+.exact-category--family .exact-category__photo {
+  background-image: none !important;
+  background-color: #f2eee6;
+}
