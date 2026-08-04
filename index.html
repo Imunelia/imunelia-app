@@ -5,67 +5,51 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Immunalia | Daily a Professional</title>
   <meta name="description" content="Immunalia propojuje dvě samostatné divize: Daily doplňky stravy pro každodenní péči a Professional odbornou platformu pro ambulantní specialisty a lékárny.">
-  <link rel="stylesheet" href="site-rebuild-v1.css?v=20260804-two-divisions">
+  <link rel="stylesheet" href="site-rebuild-v1.css?v=20260804-photo-fix3">
   <style>
-    .division-hero{min-height:calc(100vh - 84px);display:grid;grid-template-columns:1fr 1fr}.division{position:relative;display:flex;align-items:flex-end;min-height:720px;padding:clamp(32px,6vw,88px);overflow:hidden;text-decoration:none}.division:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,20,18,.08),rgba(8,18,17,.82));z-index:1}.division:after{content:"";position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .7s ease;z-index:0}.division:hover:after{transform:scale(1.035)}.division--daily:after{background-image:url('assets/photos/home-coastal-group.jpg?v=20260804-two-divisions')}.division--professional:after{background-image:linear-gradient(rgba(9,24,24,.18),rgba(9,24,24,.18)),url('assets/photos/home-story-immunity.jpg?v=20260804-two-divisions')}.division-content{position:relative;z-index:2;max-width:620px;color:#fff}.division-label{display:inline-block;margin-bottom:18px;padding:8px 13px;border:1px solid rgba(255,255,255,.55);border-radius:99px;font-size:12px;letter-spacing:.16em;text-transform:uppercase}.division h1,.division h2{margin:0 0 20px;color:#fff;font-size:clamp(44px,5.3vw,82px);line-height:.98}.division p{max-width:580px;margin:0 0 28px;font-size:clamp(17px,1.5vw,22px);line-height:1.55;color:rgba(255,255,255,.9)}.division-button{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;background:#fff;color:#17332d;border-radius:99px;font-weight:700}.division-note{display:block;margin-top:18px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.72)}.brand-system{padding:82px max(24px,6vw);background:#f4f0e8}.brand-system-inner{max-width:1220px;margin:auto}.brand-system h2{font-size:clamp(34px,4vw,60px);margin:0 0 22px}.brand-system>div>p{max-width:820px;font-size:19px;line-height:1.65}.system-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:42px}.system-card{padding:30px;background:#fff;border-radius:18px}.system-card h3{margin:0 0 12px;font-size:23px}.system-card p{margin:0;line-height:1.6}.legal-strip{padding:26px max(24px,6vw);background:#17332d;color:#fff;font-size:14px;line-height:1.6}.legal-strip div{max-width:1220px;margin:auto}.rb-header-cta{white-space:nowrap}@media(max-width:900px){.division-hero{grid-template-columns:1fr}.division{min-height:620px}.system-grid{grid-template-columns:1fr}.rb-header-cta{display:none}}
+    .division-hero{min-height:calc(100vh - 84px);display:grid;grid-template-columns:1fr 1fr}
+    .division{position:relative;display:flex;align-items:flex-end;min-height:720px;padding:clamp(32px,6vw,88px);overflow:hidden;text-decoration:none;background:#17332d}
+    .division-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;background:#17332d}
+    .division--daily .division-image{object-position:center 48%}
+    .division--professional .division-image{object-position:center 42%}
+    .division-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,20,18,.10) 0%,rgba(8,18,17,.36) 48%,rgba(8,18,17,.90) 100%)}
+    .division-content{position:relative;z-index:2;max-width:620px;color:#fff}
+    .division-label{display:inline-block;margin-bottom:18px;padding:8px 13px;border:1px solid rgba(255,255,255,.55);border-radius:99px;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+    .division h1,.division h2{margin:0 0 20px;color:#fff;font-size:clamp(44px,5.3vw,82px);line-height:.98}
+    .division p{max-width:580px;margin:0 0 28px;font-size:clamp(17px,1.5vw,22px);line-height:1.55;color:rgba(255,255,255,.92)}
+    .division-button{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;background:#fff;color:#17332d;border-radius:99px;font-weight:700}
+    .division-note{display:block;margin-top:18px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.78)}
+    .brand-system{padding:82px max(24px,6vw);background:#f4f0e8}.brand-system-inner{max-width:1220px;margin:auto}.brand-system h2{font-size:clamp(34px,4vw,60px);margin:0 0 22px}.brand-system>div>p{max-width:820px;font-size:19px;line-height:1.65}.system-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:42px}.system-card{padding:30px;background:#fff;border-radius:18px}.system-card h3{margin:0 0 12px;font-size:23px}.system-card p{margin:0;line-height:1.6}.legal-strip{padding:26px max(24px,6vw);background:#17332d;color:#fff;font-size:14px;line-height:1.6}.legal-strip div{max-width:1220px;margin:auto}.rb-header-cta{white-space:nowrap}
+    @media(max-width:900px){.division-hero{grid-template-columns:1fr}.division{min-height:640px;padding:38px 30px}.division-image{object-position:center}.division--daily .division-image{object-position:center 48%}.division--professional .division-image{object-position:center 45%}.system-grid{grid-template-columns:1fr}.rb-header-cta{display:none}}
   </style>
 </head>
 <body class="rb-home">
   <header class="rb-header" data-site-header>
     <a class="rb-brand" href="index.html" aria-label="Immunalia domů"><img src="assets/imunelia-logo-nav.svg?v=20260710-exactlogo1" alt="Immunalia Biotech"></a>
     <nav class="rb-nav" id="site-nav" aria-label="Hlavní navigace">
-      <a class="active" href="index.html">Úvod</a>
-      <a href="produkty.html">Daily</a>
-      <a href="professional.html">Professional</a>
-      <a href="veda.html">Věda a kvalita</a>
-      <a href="o-znacce.html">Společnost</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a class="active" href="index.html">Úvod</a><a href="produkty.html">Daily</a><a href="professional.html">Professional</a><a href="veda.html">Věda a kvalita</a><a href="o-znacce.html">Společnost</a><a href="kontakt.html">Kontakt</a>
     </nav>
     <div class="rb-language" aria-label="Přepínač jazyka"><a class="active" href="index.html" lang="cs">CZ</a><a href="index-en.html" lang="en">EN</a></div>
     <a class="rb-header-cta" href="professional.html">Pro odborníky</a>
     <button class="rb-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Otevřít navigaci" data-nav-toggle><span></span><span></span><span></span></button>
   </header>
-
   <main>
     <section class="division-hero" aria-label="Dvě divize Immunalia">
       <a class="division division--daily" href="produkty.html">
-        <div class="division-content">
-          <span class="division-label">Immunalia Daily</span>
-          <h1>Každodenní péče.</h1>
-          <p>Doplňky stravy pro energii, rovnováhu, odolnost, výkon a regeneraci. Dostupné pro přímý nákup prostřednictvím e-shopu a vybraných partnerů.</p>
-          <span class="division-button">Vstoupit do Daily <span aria-hidden="true">→</span></span>
-          <small class="division-note">Daily produkty jsou doplňky stravy. Nejsou léčivými přípravky a nenahrazují pestrou stravu ani lékařskou péči.</small>
-        </div>
+        <img class="division-image" src="assets/photos/home-coastal-group.jpg?v=20260804-photo-fix3" alt="Aktivní rodina u moře" width="1600" height="900" loading="eager" fetchpriority="high">
+        <span class="division-overlay" aria-hidden="true"></span>
+        <div class="division-content"><span class="division-label">Immunalia Daily</span><h1>Každodenní péče.</h1><p>Doplňky stravy pro energii, rovnováhu, odolnost, výkon a regeneraci. Dostupné pro přímý nákup prostřednictvím e-shopu a vybraných partnerů.</p><span class="division-button">Vstoupit do Daily <span aria-hidden="true">→</span></span><small class="division-note">Daily produkty jsou doplňky stravy. Nejsou léčivými přípravky a nenahrazují pestrou stravu ani lékařskou péči.</small></div>
       </a>
-
       <a class="division division--professional" href="professional.html">
-        <div class="division-content">
-          <span class="division-label">Immunalia Professional</span>
-          <h2>Odborná péče.</h2>
-          <p>Specializované programy připravované pro spolupráci ambulantního specialisty, pacienta a lékárny. Bez běžného e-shopu a bez volného spotřebitelského prodeje.</p>
-          <span class="division-button">Vstoupit do Professional <span aria-hidden="true">→</span></span>
-          <small class="division-note">Konkrétní výdej na lékařský předpis a příprava v lékárně budou použity pouze u programů, pro které bude zaveden odpovídající zákonný a farmaceutický režim.</small>
-        </div>
+        <img class="division-image" src="assets/photos/home-story-immunity.jpg?v=20260804-photo-fix3" alt="Odborná spolupráce zdravotnických pracovníků" width="1448" height="1086" loading="eager" fetchpriority="high">
+        <span class="division-overlay" aria-hidden="true"></span>
+        <div class="division-content"><span class="division-label">Immunalia Professional</span><h2>Odborná péče.</h2><p>Specializované programy připravované pro spolupráci ambulantního specialisty, pacienta a lékárny. Bez běžného e-shopu a bez volného spotřebitelského prodeje.</p><span class="division-button">Vstoupit do Professional <span aria-hidden="true">→</span></span><small class="division-note">Konkrétní výdej na lékařský předpis a příprava v lékárně budou použity pouze u programů, pro které bude zaveden odpovídající zákonný a farmaceutický režim.</small></div>
       </a>
     </section>
-
-    <section class="brand-system">
-      <div class="brand-system-inner">
-        <p class="rb-kicker">Jedna biotechnologická platforma · dva oddělené režimy</p>
-        <h2>Objem v Daily. Odborná hodnota v Professional.</h2>
-        <p>Obě divize sdílejí důraz na vývoj, kvalitu surovin a přesný výrobní postup. Liší se však cílovou skupinou, regulací, způsobem komunikace i distribuční cestou.</p>
-        <div class="system-grid">
-          <article class="system-card"><h3>Daily</h3><p>Spotřebitelská řada doplňků stravy. Veřejná komunikace, přímý prodej, opakované nákupy a škálovatelná distribuce.</p></article>
-          <article class="system-card"><h3>Professional</h3><p>Odborné programy bez veřejných cen a tlačítek „Koupit“. Přístup přes spolupracující specialisty, lékárny a Professional zónu.</p></article>
-          <article class="system-card"><h3>Science</h3><p>Společný výzkumný základ, standardizace, dokumentace kvality, patentové portfolio a systematické vyhodnocování zkušeností.</p></article>
-        </div>
-      </div>
-    </section>
-
+    <section class="brand-system"><div class="brand-system-inner"><p class="rb-kicker">Jedna biotechnologická platforma · dva oddělené režimy</p><h2>Objem v Daily. Odborná hodnota v Professional.</h2><p>Obě divize sdílejí důraz na vývoj, kvalitu surovin a přesný výrobní postup. Liší se však cílovou skupinou, regulací, způsobem komunikace i distribuční cestou.</p><div class="system-grid"><article class="system-card"><h3>Daily</h3><p>Spotřebitelská řada doplňků stravy. Veřejná komunikace, přímý prodej, opakované nákupy a škálovatelná distribuce.</p></article><article class="system-card"><h3>Professional</h3><p>Odborné programy bez veřejných cen a tlačítek „Koupit“. Přístup přes spolupracující specialisty, lékárny a Professional zónu.</p></article><article class="system-card"><h3>Science</h3><p>Společný výzkumný základ, standardizace, dokumentace kvality, patentové portfolio a systematické vyhodnocování zkušeností.</p></article></div></div></section>
     <section class="legal-strip"><div>Immunalia Daily a Immunalia Professional jsou na webu záměrně odděleny. Informace o doplňcích stravy nesmějí být vykládány jako léčebná tvrzení. Professional programy budou poskytovány pouze v režimu odpovídajícím jejich skutečné právní klasifikaci a zavedené odborné dokumentaci.</div></section>
   </main>
-
   <footer class="rb-footer"><div class="rb-footer-inner"><span>© 2026 Immunalia Biotech</span><a href="professional.html">Professional</a></div></footer>
-  <script src="assets/js/navigation.js?v=20260804-two-divisions"></script>
+  <script src="assets/js/navigation.js?v=20260804-photo-fix3"></script>
 </body>
 </html>
