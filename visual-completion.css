@@ -1,0 +1,91 @@
+/* Global visual completion layer for the draft site. All images are local repository assets. */
+:root{--vc-navy:#08295b;--vc-gold:#bd9146;--vc-ivory:#faf7f0}
+
+/* Reliable image rendering */
+img{background-color:#eee9df}
+img[data-vc-fallback="true"]{object-fit:cover!important;object-position:center!important}
+
+/* Give editorial pages a photographic opening even when their legacy template has none. */
+body:not(.rb-home):not(.rb-products) main>section:first-of-type,
+body.professional-page main>section:first-of-type{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+}
+body:not(.rb-home):not(.rb-products) main>section:first-of-type::before,
+body.professional-page main>section:first-of-type::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background-image:url('assets/photos/home-story-immunity.jpg?v=20260804-visual2');
+  background-size:cover;
+  background-position:center 44%;
+  opacity:.20;
+}
+body:not(.rb-home):not(.rb-products) main>section:first-of-type::after,
+body.professional-page main>section:first-of-type::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.88) 52%,rgba(255,255,255,.55) 100%);
+}
+
+/* Professional: clinical visual language and images throughout the page. */
+body.professional-page .pro-hero:first-of-type::before{
+  background-image:url('assets/photos/home-story-performance.jpg?v=20260804-visual2');
+  background-position:center 38%;
+  opacity:.28;
+}
+body.professional-page .pro-detail-panels .pro-panel{
+  position:relative;
+  overflow:hidden;
+  min-height:260px;
+  background:#fff;
+}
+body.professional-page .pro-detail-panels .pro-panel::before{
+  content:"";
+  display:block;
+  width:calc(100% + 40px);
+  height:150px;
+  margin:-1px -20px 24px;
+  background-size:cover;
+  background-position:center;
+}
+body.professional-page .pro-detail-panels .pro-panel:nth-child(4n+1)::before{background-image:url('assets/photos/home-story-immunity.jpg?v=20260804-visual2')}
+body.professional-page .pro-detail-panels .pro-panel:nth-child(4n+2)::before{background-image:url('assets/photos/home-story-energy.jpg?v=20260804-visual2')}
+body.professional-page .pro-detail-panels .pro-panel:nth-child(4n+3)::before{background-image:url('assets/photos/home-coastal-group.jpg?v=20260804-visual2')}
+body.professional-page .pro-detail-panels .pro-panel:nth-child(4n+4)::before{background-image:url('assets/photos/home-story-performance.jpg?v=20260804-visual2')}
+
+/* Professional cards always get a complete visual area, even before a packshot is available. */
+body.professional-page .pro-card,
+body.professional-page [data-pro-grid] article{overflow:hidden;background:#fff}
+body.professional-page .pro-card img,
+body.professional-page [data-pro-grid] article img{display:block;width:100%;min-height:220px;max-height:330px;object-fit:contain;background:linear-gradient(145deg,#fff,#f1ece3)}
+body.professional-page .pro-card:has(img[src=""]),
+body.professional-page [data-pro-grid] article:has(img[src=""]){background-image:url('assets/photos/home-story-immunity.jpg?v=20260804-visual2');background-size:cover;background-position:center}
+
+/* Daily/product visual consistency. */
+.rb-product-life{min-height:190px;background:#e9e3d9}
+.rb-product-life img{width:100%;height:100%;object-fit:cover}
+.rb-product-card:nth-child(6n+1) .rb-product-life img{object-position:center 46%}
+.rb-product-card:nth-child(6n+2) .rb-product-life img{object-position:center 42%}
+.rb-product-card:nth-child(6n+3) .rb-product-life img{object-position:center 36%}
+.rb-product-card:nth-child(6n+4) .rb-product-life img{object-position:center 50%}
+.rb-product-card:nth-child(6n+5) .rb-product-life img{object-position:center 48%}
+.rb-product-card:nth-child(6n+6) .rb-product-life img{object-position:center 40%}
+
+/* Generic editorial grids receive visual headers rather than empty white cards. */
+main article:not(.rb-product-card):not(.pro-card) img{width:100%;height:auto}
+main article .visual-placeholder,
+main article:empty{
+  min-height:220px;
+  background:url('assets/photos/home-story-energy.jpg?v=20260804-visual2') center/cover no-repeat;
+}
+
+@media(max-width:760px){
+  body:not(.rb-home):not(.rb-products) main>section:first-of-type::after,
+  body.professional-page main>section:first-of-type::after{background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(255,255,255,.82))}
+  body.professional-page .pro-detail-panels .pro-panel::before{height:125px}
+}
