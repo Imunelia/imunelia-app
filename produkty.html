@@ -3,181 +3,87 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Produkty Immunalia | Šest produktových linií</title>
-  <meta name="description" content="Přehled produktových linií Immunalia Balance, Restart, Shield, Flow, Night a ULTRA.">
-  <link rel="stylesheet" href="site-rebuild-v1.css?v=20260804-rebuild1">
+  <title>Immunalia Daily | Doplňky stravy pro každodenní péči</title>
+  <meta name="description" content="Immunalia Daily: šest doplňků stravy pro každodenní rovnováhu, energii, odolnost, regeneraci a výkon.">
+  <link rel="stylesheet" href="site-rebuild-v1.css?v=20260804-daily-rebuild4">
+  <style>
+    .daily-hero{padding:clamp(64px,9vw,118px) 24px;text-align:center;background:linear-gradient(180deg,#fff,#faf7f0)}
+    .daily-hero h1{max-width:980px;margin:0 auto;color:#08295b;font:400 clamp(3rem,7vw,6.6rem)/.96 Georgia,serif;letter-spacing:-.045em}
+    .daily-hero p{max-width:760px;margin:26px auto 0;color:#687482;font-size:clamp(1.05rem,1.8vw,1.35rem)}
+    .daily-note{max-width:980px;margin:28px auto 0;padding:16px 20px;border:1px solid #e7ddcf;border-radius:14px;background:#fff;color:#687482;font-size:.92rem}
+    .daily-products{width:min(1240px,calc(100% - 32px));margin:0 auto;padding:70px 0 100px;display:grid;gap:34px}
+    .daily-card{display:grid;grid-template-columns:minmax(320px,.92fr) minmax(0,1.08fr);overflow:hidden;border:1px solid #e7ddcf;border-radius:28px;background:#fff;box-shadow:0 18px 52px rgba(3,25,54,.08)}
+    .daily-media{display:grid;grid-template-rows:auto auto;background:linear-gradient(145deg,#fff,#f3eee5)}
+    .daily-pack{aspect-ratio:4/3;display:grid;place-items:center;padding:28px;background:linear-gradient(145deg,#fff,#f4efe7)}
+    .daily-pack img{width:100%;height:100%;max-width:520px;object-fit:contain;background:transparent;filter:drop-shadow(0 20px 28px rgba(3,25,54,.14))}
+    .daily-life{aspect-ratio:16/9;overflow:hidden;background:#e8e2d8}
+    .daily-life img{width:100%;height:100%;object-fit:cover;background:#e8e2d8}
+    .daily-copy{padding:clamp(34px,5vw,68px)}
+    .daily-index{color:#bd9146;font-size:.76rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+    .daily-copy h2{margin:10px 0 8px;color:#08295b;font:400 clamp(2.8rem,5vw,5.2rem)/.96 Georgia,serif}
+    .daily-subtitle{margin:0 0 22px;color:#08295b;font-size:1.18rem;font-weight:700}
+    .daily-copy>p{color:#687482;font-size:1.04rem}
+    .daily-copy ul{display:grid;gap:10px;margin:26px 0 0;padding:0;list-style:none}
+    .daily-copy li{position:relative;padding-left:22px}.daily-copy li:before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:#bd9146}
+    .daily-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .daily-card:nth-child(even) .daily-media{order:2}.daily-card:nth-child(even) .daily-copy{order:1}
+    .daily-card#balance .daily-life img{object-position:center 48%}.daily-card#restart .daily-life img{object-position:center 44%}.daily-card#shield .daily-life img{object-position:center 40%}.daily-card#flow .daily-life img{object-position:center 44%}.daily-card#night .daily-life img{object-position:center 50%}.daily-card#ultra .daily-life img{object-position:center 42%}
+    @media(max-width:820px){.daily-card{grid-template-columns:1fr}.daily-card:nth-child(even) .daily-media,.daily-card:nth-child(even) .daily-copy{order:initial}.daily-pack{aspect-ratio:4/3;padding:20px}.daily-life{aspect-ratio:16/9}.daily-copy{padding:30px 24px 38px}}
+  </style>
 </head>
 <body class="rb-products">
   <header class="rb-header" data-site-header>
-    <a class="rb-brand" href="index.html" aria-label="Immunalia Biotech domů">
-      <img src="assets/imunelia-logo-nav.svg?v=20260710-exactlogo1" alt="Immunalia Biotech">
-    </a>
+    <a class="rb-brand" href="index.html" aria-label="Immunalia domů"><img src="assets/imunelia-logo-nav.svg?v=20260710-exactlogo1" alt="Immunalia Biotech"></a>
     <nav class="rb-nav" id="site-nav" aria-label="Hlavní navigace">
-      <a href="index.html">Úvod</a>
-      <a class="active" href="produkty.html">Produkty</a>
-      <a href="professional.html">Professional</a>
-      <a href="veda.html">Kvalita a vývoj</a>
-      <a href="o-znacce.html">O značce</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="index.html">Úvod</a><a class="active" href="produkty.html">Daily</a><a href="professional.html">Professional</a><a href="veda.html">Věda a kvalita</a><a href="o-znacce.html">Společnost</a><a href="kontakt.html">Kontakt</a>
     </nav>
-    <div class="rb-language" aria-label="Přepínač jazyka">
-      <a class="active" href="produkty.html" lang="cs">CZ</a>
-      <a href="produkty-en.html" lang="en">EN</a>
-    </div>
-    <a class="rb-header-cta" href="#collection">Kolekce</a>
-    <button class="rb-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Otevřít navigaci" data-nav-toggle>
-      <span></span><span></span><span></span>
-    </button>
+    <div class="rb-language" aria-label="Přepínač jazyka"><a class="active" href="produkty.html" lang="cs">CZ</a><a href="produkty-en.html" lang="en">EN</a></div>
+    <a class="rb-header-cta" href="#daily-products">Produkty</a>
+    <button class="rb-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Otevřít navigaci" data-nav-toggle><span></span><span></span><span></span></button>
   </header>
 
   <main>
-    <section class="rb-hero rb-products-hero" aria-labelledby="products-title">
-      <p class="rb-kicker">Kolekce Immunalia</p>
-      <h1 id="products-title">Jeden systém.<br>Šest přesných linií.</h1>
-      <p>Vyberte podle svého každodenního rytmu — od rovnováhy a odolnosti přes energii a výkon až po večerní regeneraci.</p>
-      <div class="rb-actions"><a class="rb-button" href="#collection">Zobrazit kolekci</a><a class="rb-button rb-button--light" href="professional.html">Professional</a></div>
+    <section class="daily-hero">
+      <p class="rb-kicker">Immunalia Daily</p>
+      <h1>Každodenní péče v šesti přesných liniích.</h1>
+      <p>Doplňky stravy pro různé životní rytmy — od dlouhodobé rovnováhy přes energii a odolnost až po večerní regeneraci a vysokou zátěž.</p>
+      <div class="daily-note">Immunalia Daily jsou doplňky stravy. Nejsou léčivými přípravky a nenahrazují pestrou stravu, zdravý životní styl ani doporučenou zdravotní péči.</div>
     </section>
 
-    <section class="rb-section" aria-labelledby="rhythm-title">
-      <div class="rb-section-head">
-        <div><p class="rb-kicker">Vyberte podle potřeby</p><h2 id="rhythm-title">Pět vstupů do kolekce.</h2></div>
-        <p>Všechny původní lifestyle fotografie byly odstraněny. Každá karta nyní používá nový lokální obrazový soubor uložený přímo v repozitáři.</p>
-      </div>
+    <section class="daily-products" id="daily-products" aria-label="Produkty Immunalia Daily">
+      <article class="daily-card" id="balance">
+        <div class="daily-media"><div class="daily-pack"><img src="assets/imunelia-balance-product.svg?v=20260804-daily4" alt="Obal Immunalia Balance"></div><div class="daily-life"><img src="assets/photos/home-coastal-group.jpg?v=20260804-daily4" alt="Společný čas s rodinou"></div></div>
+        <div class="daily-copy"><span class="daily-index">01 · Každodenní základ</span><h2>Balance</h2><p class="daily-subtitle">Rovnováha a dlouhodobý režim</p><p>Základní linie pro pravidelnou každodenní péči a konzistentní rutinu.</p><ul><li>Pro dlouhodobé každodenní užívání</li><li>Jednoduché zařazení do běžného dne</li><li>Základ spotřebitelské řady Daily</li></ul><div class="daily-actions"><a class="rb-button" href="kontakt.html">Mám zájem</a></div></div>
+      </article>
 
-      <div class="rb-rhythm-grid">
-        <a class="rb-rhythm-card" href="#shield">
-          <img src="assets/photos/home-story-immunity.jpg?v=20260804-rebuild1" alt="Odolnost a každodenní rovnováha" width="1448" height="1086" loading="eager" decoding="async">
-          <span class="rb-rhythm-copy"><strong>Odolnost</strong><span>Každodenní základ pro náročné období.</span><em>Shield</em></span>
-        </a>
-        <a class="rb-rhythm-card" href="#flow">
-          <img src="assets/photos/home-story-energy.jpg?v=20260804-rebuild1" alt="Energie pro aktivní den" width="1448" height="1086" loading="eager" decoding="async">
-          <span class="rb-rhythm-copy"><strong>Energie</strong><span>Vitalita a tempo pro aktivní dny.</span><em>Flow</em></span>
-        </a>
-        <a class="rb-rhythm-card" href="#ultra">
-          <img src="assets/photos/home-story-performance.jpg?v=20260804-rebuild1" alt="Intenzivní sportovní výkon" width="1448" height="1086" loading="lazy" decoding="async">
-          <span class="rb-rhythm-copy"><strong>Výkon</strong><span>Pro mimořádnou fyzickou a psychickou zátěž.</span><em>ULTRA</em></span>
-        </a>
-        <a class="rb-rhythm-card" href="#night">
-          <img src="assets/photos/night-evening.webp?v=20260804-rebuild1" alt="Večerní klid a regenerace" width="1600" height="900" loading="lazy" decoding="async">
-          <span class="rb-rhythm-copy"><strong>Regenerace</strong><span>Klidný večerní rituál a prostor pro obnovu.</span><em>Night</em></span>
-        </a>
-        <a class="rb-rhythm-card" href="#balance">
-          <img src="assets/photos/home-coastal-group.jpg?v=20260804-rebuild1" alt="Péče sdílená s nejbližšími" width="1600" height="900" loading="lazy" decoding="async">
-          <span class="rb-rhythm-copy"><strong>Pro celou rodinu</strong><span>Každodenní péče pro ty, na kterých záleží.</span><em>Balance</em></span>
-        </a>
-      </div>
-    </section>
+      <article class="daily-card" id="restart">
+        <div class="daily-media"><div class="daily-pack"><img src="assets/imunelia-restart-product.svg?v=20260804-daily4" alt="Obal Immunalia Restart"></div><div class="daily-life"><img src="assets/photos/home-coastal-couple.jpg?v=20260804-daily4" alt="Aktivní pár u pobřeží"></div></div>
+        <div class="daily-copy"><span class="daily-index">02 · Návrat k rytmu</span><h2>Restart</h2><p class="daily-subtitle">Obnova po náročném období</p><p>Linie pro návrat k pravidelnému režimu po cestování, zvýšené aktivitě nebo náročném období.</p><ul><li>Pro návrat k běžné rutině</li><li>Po cestování nebo zvýšené zátěži</li><li>Pro časově omezené intenzivnější období</li></ul><div class="daily-actions"><a class="rb-button" href="kontakt.html">Mám zájem</a></div></div>
+      </article>
 
-    <section class="rb-section" id="collection" aria-labelledby="collection-title">
-      <div class="rb-section-head">
-        <div><p class="rb-kicker">Šest produktových linií</p><h2 id="collection-title">Promyšlená podpora pro různé životní rytmy.</h2></div>
-        <p>Každý produkt má vlastní obal, vlastní roli a nový samostatný lifestyle vizuál. Staré fotografie ani externí obrazové odkazy se na této stránce nepoužívají.</p>
-      </div>
+      <article class="daily-card" id="shield">
+        <div class="daily-media"><div class="daily-pack"><img src="assets/imunelia-shield-product.svg?v=20260804-daily4" alt="Obal Immunalia Shield"></div><div class="daily-life"><img src="assets/photos/home-story-immunity.jpg?v=20260804-daily4" alt="Žena v pracovním dni"></div></div>
+        <div class="daily-copy"><span class="daily-index">03 · Odolnost</span><h2>Shield</h2><p class="daily-subtitle">Podpora každodenní odolnosti</p><p>Linie pro sezónní změny, cestování, náročnou práci nebo období zvýšených každodenních nároků.</p><ul><li>Pro období zvýšených nároků</li><li>Pro cestování a změny režimu</li><li>Doplněk pravidelné každodenní péče</li></ul><div class="daily-actions"><a class="rb-button" href="kontakt.html">Mám zájem</a></div></div>
+      </article>
 
-      <div class="rb-product-grid">
-        <article class="rb-product-card" id="balance">
-          <div class="rb-product-visual">
-            <div class="rb-product-pack"><img src="assets/imunelia-balance-product.svg?v=20260710-exactlogo1" alt="Obal Immunalia Balance" width="1280" height="960"></div>
-            <div class="rb-product-life"><img src="assets/photos/home-coastal-group.jpg?v=20260804-rebuild1" alt="Každodenní péče pro blízké" width="1600" height="900" loading="lazy"></div>
-          </div>
-          <div class="rb-product-copy">
-            <span class="rb-product-line">01 · Každodenní základ</span>
-            <h2>Balance</h2>
-            <p class="rb-product-subtitle">Rovnováha a dlouhodobý každodenní režim</p>
-            <p>Základní linie kolekce Immunalia pro pravidelnou péči, konzistentní režim a každodenní vitalitu.</p>
-            <ul><li>Pro dlouhodobý každodenní režim</li><li>Jednoduché zařazení do běžného dne</li><li>Základ kolekce Immunalia</li></ul>
-            <div class="rb-product-actions"><a class="rb-button" href="kontakt.html">Mám zájem</a><a class="rb-button rb-button--light" href="#collection">Zpět na kolekci</a></div>
-          </div>
-        </article>
+      <article class="daily-card" id="flow">
+        <div class="daily-media"><div class="daily-pack"><img src="assets/imunelia-flow-product.svg?v=20260804-daily4" alt="Obal Immunalia Flow"></div><div class="daily-life"><img src="assets/photos/home-story-energy.jpg?v=20260804-daily4" alt="Ranní běh u pobřeží"></div></div>
+        <div class="daily-copy"><span class="daily-index">04 · Energie</span><h2>Flow</h2><p class="daily-subtitle">Vitalita a aktivní denní rytmus</p><p>Linie pro aktivní životní styl, pravidelný pohyb a dny, ve kterých je důležité udržet vlastní tempo.</p><ul><li>Pro aktivní každodenní režim</li><li>Pro práci, cestování i pohyb</li><li>Jednoduchá součást denní rutiny</li></ul><div class="daily-actions"><a class="rb-button" href="kontakt.html">Mám zájem</a></div></div>
+      </article>
 
-        <article class="rb-product-card" id="restart">
-          <div class="rb-product-visual">
-            <div class="rb-product-pack"><img src="assets/imunelia-restart-product.svg?v=20260710-exactlogo1" alt="Obal Immunalia Restart" width="1280" height="960"></div>
-            <div class="rb-product-life"><img src="assets/photos/home-coastal-couple.jpg?v=20260804-rebuild1" alt="Návrat k aktivnímu rytmu" width="1600" height="900" loading="lazy"></div>
-          </div>
-          <div class="rb-product-copy">
-            <span class="rb-product-line">02 · Návrat k rytmu</span>
-            <h2>Restart</h2>
-            <p class="rb-product-subtitle">Obnova po náročném období</p>
-            <p>Linie navržená jako součást režimu po cestování, zvýšené aktivitě nebo období, kdy je potřeba znovu nastavit pravidelný rytmus.</p>
-            <ul><li>Pro návrat k pravidelnému režimu</li><li>Po cestování nebo zvýšené zátěži</li><li>Součást promyšlené každodenní rutiny</li></ul>
-            <div class="rb-product-actions"><a class="rb-button" href="kontakt.html">Mám zájem</a><a class="rb-button rb-button--light" href="#collection">Zpět na kolekci</a></div>
-          </div>
-        </article>
+      <article class="daily-card" id="night">
+        <div class="daily-media"><div class="daily-pack"><img src="assets/imunelia-night-product.svg?v=20260804-daily4" alt="Obal Immunalia Night"></div><div class="daily-life"><img src="assets/photos/night-evening.webp?v=20260804-daily4" alt="Klidný večer"></div></div>
+        <div class="daily-copy"><span class="daily-index">05 · Večerní režim</span><h2>Night</h2><p class="daily-subtitle">Klid, zpomalení a večerní rutina</p><p>Večerní linie pro pravidelný rituál, odpočinek a přípravu na další den.</p><ul><li>Pro klidný večerní režim</li><li>Pro pravidelnou noční rutinu</li><li>Prostor pro zpomalení po náročném dni</li></ul><div class="daily-actions"><a class="rb-button" href="kontakt.html">Mám zájem</a></div></div>
+      </article>
 
-        <article class="rb-product-card" id="shield">
-          <div class="rb-product-visual">
-            <div class="rb-product-pack"><img src="assets/imunelia-shield-product.svg?v=20260710-exactlogo1" alt="Obal Immunalia Shield" width="1280" height="960"></div>
-            <div class="rb-product-life"><img src="assets/photos/home-story-immunity.jpg?v=20260804-rebuild1" alt="Každodenní odolnost" width="1448" height="1086" loading="lazy"></div>
-          </div>
-          <div class="rb-product-copy">
-            <span class="rb-product-line">03 · Odolnost</span>
-            <h2>Shield</h2>
-            <p class="rb-product-subtitle">Rozšířená podpora každodenní odolnosti</p>
-            <p>Produktová linie pro období sezónních změn, cestování, náročné práce, studia nebo zvýšených každodenních nároků.</p>
-            <ul><li>Pro období zvýšených nároků</li><li>Pro cestování a změny režimu</li><li>Doplňuje pravidelnou každodenní péči</li></ul>
-            <div class="rb-product-actions"><a class="rb-button" href="kontakt.html">Mám zájem</a><a class="rb-button rb-button--light" href="#collection">Zpět na kolekci</a></div>
-          </div>
-        </article>
-
-        <article class="rb-product-card" id="flow">
-          <div class="rb-product-visual">
-            <div class="rb-product-pack"><img src="assets/imunelia-flow-product.svg?v=20260710-exactlogo1" alt="Obal Immunalia Flow" width="1280" height="960"></div>
-            <div class="rb-product-life"><img src="assets/photos/home-story-energy.jpg?v=20260804-rebuild1" alt="Energie pro aktivní den" width="1448" height="1086" loading="lazy"></div>
-          </div>
-          <div class="rb-product-copy">
-            <span class="rb-product-line">04 · Energie</span>
-            <h2>Flow</h2>
-            <p class="rb-product-subtitle">Vitalita a aktivní každodenní rytmus</p>
-            <p>Linie pro aktivní životní styl, pravidelný pohyb a dny, ve kterých je důležité udržet vlastní tempo.</p>
-            <ul><li>Pro aktivní každodenní režim</li><li>Pro práci, cestování i pohyb</li><li>Jednoduchá součást denní rutiny</li></ul>
-            <div class="rb-product-actions"><a class="rb-button" href="kontakt.html">Mám zájem</a><a class="rb-button rb-button--light" href="#collection">Zpět na kolekci</a></div>
-          </div>
-        </article>
-
-        <article class="rb-product-card" id="night">
-          <div class="rb-product-visual">
-            <div class="rb-product-pack"><img src="assets/imunelia-night-product.svg?v=20260710-exactlogo1" alt="Obal Immunalia Night" width="1280" height="960"></div>
-            <div class="rb-product-life"><img src="assets/photos/night-evening.webp?v=20260804-rebuild1" alt="Večerní klid" width="1600" height="900" loading="lazy"></div>
-          </div>
-          <div class="rb-product-copy">
-            <span class="rb-product-line">05 · Večerní režim</span>
-            <h2>Night</h2>
-            <p class="rb-product-subtitle">Klid, zpomalení a příprava na další den</p>
-            <p>Večerní linie navržená jako součást pravidelného nočního rituálu a prostoru pro odpočinek.</p>
-            <ul><li>Pro klidný večerní rituál</li><li>Pro pravidelnou noční rutinu</li><li>Prostor pro zpomalení po náročném dni</li></ul>
-            <div class="rb-product-actions"><a class="rb-button" href="kontakt.html">Mám zájem</a><a class="rb-button rb-button--light" href="#collection">Zpět na kolekci</a></div>
-          </div>
-        </article>
-
-        <article class="rb-product-card rb-product-card--ultra" id="ultra">
-          <div class="rb-product-visual">
-            <div class="rb-product-pack"><img src="assets/immunalia-ultra-product.jpg?v=20260711-ultraexact1" alt="Obal Immunalia ULTRA" width="1280" height="960"></div>
-            <div class="rb-product-life"><img src="assets/photos/ultra-multisport.webp?v=20260804-rebuild1" alt="Mix vytrvalostních sportovních výkonů" width="1600" height="900" loading="lazy"></div>
-          </div>
-          <div class="rb-product-copy">
-            <span class="rb-product-line">06 · Nejvyšší linie</span>
-            <h2>ULTRA</h2>
-            <p class="rb-product-subtitle">Pro mimořádnou fyzickou a psychickou zátěž</p>
-            <p>Nejvyšší produktová linie Immunalia určená pro období intenzivního tréninku, náročného cestování nebo dlouhodobě vysokých nároků.</p>
-            <ul><li>Vytrvalostní sport a intenzivní trénink</li><li>Náročná práce a mezinárodní cestování</li><li>Období mimořádné dlouhodobé zátěže</li></ul>
-            <div class="rb-product-actions"><a class="rb-button" href="kontakt.html">Mám zájem</a><a class="rb-button rb-button--light" href="#collection">Zpět na kolekci</a></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="rb-cta">
-      <h2>Potřebujete vybrat správnou linii?</h2>
-      <p>Napište nám. Pomůžeme vám zorientovat se v kolekci a v dostupnosti jednotlivých produktů.</p>
-      <div class="rb-actions"><a class="rb-button rb-button--light" href="kontakt.html">Kontaktovat Immunalia</a></div>
+      <article class="daily-card" id="ultra">
+        <div class="daily-media"><div class="daily-pack"><img src="assets/immunalia-ultra-product.jpg?v=20260804-daily4" alt="Obal Immunalia Ultra"></div><div class="daily-life"><img src="assets/photos/ultra-multisport.webp?v=20260804-daily4" alt="Vytrvalostní sportovní výkon"></div></div>
+        <div class="daily-copy"><span class="daily-index">06 · Nejvyšší linie</span><h2>Ultra</h2><p class="daily-subtitle">Pro období mimořádné zátěže</p><p>Nejvyšší spotřebitelská linie Daily pro intenzivní trénink, náročné cestování nebo dlouhodobě vysoké nároky.</p><ul><li>Vytrvalostní sport a intenzivní trénink</li><li>Náročná práce a cestování</li><li>Období mimořádné fyzické a psychické zátěže</li></ul><div class="daily-actions"><a class="rb-button" href="kontakt.html">Mám zájem</a></div></div>
+      </article>
     </section>
   </main>
 
-  <footer class="rb-footer">
-    <div class="rb-footer-inner"><span>© 2026 Immunalia Biotech</span><a href="odborna-sekce.html">Odborná sekce</a></div>
-  </footer>
-
-  <script src="assets/js/navigation.js?v=20260804-navclean1"></script>
+  <footer class="rb-footer"><div class="rb-footer-inner"><span>© 2026 Immunalia Biotech</span><a href="professional.html">Professional</a></div></footer>
+  <script src="assets/js/navigation.js?v=20260804-daily-rebuild4"></script>
 </body>
 </html>
