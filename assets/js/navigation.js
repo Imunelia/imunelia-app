@@ -5,6 +5,19 @@
   const toggle = document.querySelector('[data-nav-toggle]');
   const nav = document.getElementById('site-nav');
 
+  document.querySelectorAll('a[href="produkty.html"]').forEach(link => {
+    const label = link.textContent.trim().toLowerCase();
+    if (label === 'produkty' || label === 'naše produkty' || label === 'products') {
+      link.textContent = document.documentElement.lang === 'en' ? 'Daily' : 'Daily';
+    }
+  });
+
+  document.querySelectorAll('a[href="professional.html"]').forEach(link => {
+    if (link.textContent.trim().toLowerCase() === 'professional products') {
+      link.textContent = 'Professional';
+    }
+  });
+
   if (!header || !toggle || !nav) return;
 
   const close = () => {
