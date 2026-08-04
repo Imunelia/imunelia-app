@@ -3,145 +3,69 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Immunalia Biotech | Příběhy začínají každodenní péčí</title>
-  <meta name="description" content="Immunalia Biotech — energie, výkon, odolnost, regenerace a každodenní péče pro celou rodinu.">
-  <link rel="stylesheet" href="site-rebuild-v1.css?v=20260804-rebuild1">
+  <title>Immunalia | Daily a Professional</title>
+  <meta name="description" content="Immunalia propojuje dvě samostatné divize: Daily doplňky stravy pro každodenní péči a Professional odbornou platformu pro ambulantní specialisty a lékárny.">
+  <link rel="stylesheet" href="site-rebuild-v1.css?v=20260804-two-divisions">
+  <style>
+    .division-hero{min-height:calc(100vh - 84px);display:grid;grid-template-columns:1fr 1fr}.division{position:relative;display:flex;align-items:flex-end;min-height:720px;padding:clamp(32px,6vw,88px);overflow:hidden;text-decoration:none}.division:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,20,18,.08),rgba(8,18,17,.82));z-index:1}.division:after{content:"";position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .7s ease;z-index:0}.division:hover:after{transform:scale(1.035)}.division--daily:after{background-image:url('assets/photos/home-coastal-group.jpg?v=20260804-two-divisions')}.division--professional:after{background-image:linear-gradient(rgba(9,24,24,.18),rgba(9,24,24,.18)),url('assets/photos/home-story-immunity.jpg?v=20260804-two-divisions')}.division-content{position:relative;z-index:2;max-width:620px;color:#fff}.division-label{display:inline-block;margin-bottom:18px;padding:8px 13px;border:1px solid rgba(255,255,255,.55);border-radius:99px;font-size:12px;letter-spacing:.16em;text-transform:uppercase}.division h1,.division h2{margin:0 0 20px;color:#fff;font-size:clamp(44px,5.3vw,82px);line-height:.98}.division p{max-width:580px;margin:0 0 28px;font-size:clamp(17px,1.5vw,22px);line-height:1.55;color:rgba(255,255,255,.9)}.division-button{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;background:#fff;color:#17332d;border-radius:99px;font-weight:700}.division-note{display:block;margin-top:18px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.72)}.brand-system{padding:82px max(24px,6vw);background:#f4f0e8}.brand-system-inner{max-width:1220px;margin:auto}.brand-system h2{font-size:clamp(34px,4vw,60px);margin:0 0 22px}.brand-system>div>p{max-width:820px;font-size:19px;line-height:1.65}.system-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:42px}.system-card{padding:30px;background:#fff;border-radius:18px}.system-card h3{margin:0 0 12px;font-size:23px}.system-card p{margin:0;line-height:1.6}.legal-strip{padding:26px max(24px,6vw);background:#17332d;color:#fff;font-size:14px;line-height:1.6}.legal-strip div{max-width:1220px;margin:auto}.rb-header-cta{white-space:nowrap}@media(max-width:900px){.division-hero{grid-template-columns:1fr}.division{min-height:620px}.system-grid{grid-template-columns:1fr}.rb-header-cta{display:none}}
+  </style>
 </head>
 <body class="rb-home">
   <header class="rb-header" data-site-header>
-    <a class="rb-brand" href="index.html" aria-label="Immunalia Biotech domů">
-      <img src="assets/imunelia-logo-nav.svg?v=20260710-exactlogo1" alt="Immunalia Biotech">
-    </a>
+    <a class="rb-brand" href="index.html" aria-label="Immunalia domů"><img src="assets/imunelia-logo-nav.svg?v=20260710-exactlogo1" alt="Immunalia Biotech"></a>
     <nav class="rb-nav" id="site-nav" aria-label="Hlavní navigace">
       <a class="active" href="index.html">Úvod</a>
-      <a href="produkty.html">Produkty</a>
+      <a href="produkty.html">Daily</a>
       <a href="professional.html">Professional</a>
-      <a href="veda.html">Kvalita a vývoj</a>
-      <a href="o-znacce.html">O značce</a>
+      <a href="veda.html">Věda a kvalita</a>
+      <a href="o-znacce.html">Společnost</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
-    <div class="rb-language" aria-label="Přepínač jazyka">
-      <a class="active" href="index.html" lang="cs">CZ</a>
-      <a href="index-en.html" lang="en">EN</a>
-    </div>
-    <a class="rb-header-cta" href="produkty.html">Naše produkty</a>
-    <button class="rb-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Otevřít navigaci" data-nav-toggle>
-      <span></span><span></span><span></span>
-    </button>
+    <div class="rb-language" aria-label="Přepínač jazyka"><a class="active" href="index.html" lang="cs">CZ</a><a href="index-en.html" lang="en">EN</a></div>
+    <a class="rb-header-cta" href="professional.html">Pro odborníky</a>
+    <button class="rb-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Otevřít navigaci" data-nav-toggle><span></span><span></span><span></span></button>
   </header>
 
   <main>
-    <section class="rb-hero" aria-labelledby="home-title">
-      <p class="rb-kicker">Jeden den. Jeden rytmus.</p>
-      <h1 id="home-title">Příběhy začínají<br>každodenní péčí.</h1>
-      <p>Péče, která provází energii, výkon, odolnost, regeneraci i chvíle sdílené s těmi nejbližšími.</p>
-      <div class="rb-actions">
-        <a class="rb-button" href="produkty.html">Zobrazit produkty</a>
-        <a class="rb-button rb-button--light" href="veda.html">Kvalita a vývoj</a>
-      </div>
-    </section>
-
-    <section class="rb-section" aria-labelledby="story-title">
-      <div class="rb-section-head">
-        <div>
-          <p class="rb-kicker">Pět okamžiků jednoho dne</p>
-          <h2 id="story-title">Od ranní energie až k tomu nejdůležitějšímu.</h2>
+    <section class="division-hero" aria-label="Dvě divize Immunalia">
+      <a class="division division--daily" href="produkty.html">
+        <div class="division-content">
+          <span class="division-label">Immunalia Daily</span>
+          <h1>Každodenní péče.</h1>
+          <p>Doplňky stravy pro energii, rovnováhu, odolnost, výkon a regeneraci. Dostupné pro přímý nákup prostřednictvím e-shopu a vybraných partnerů.</p>
+          <span class="division-button">Vstoupit do Daily <span aria-hidden="true">→</span></span>
+          <small class="division-note">Daily produkty jsou doplňky stravy. Nejsou léčivými přípravky a nenahrazují pestrou stravu ani lékařskou péči.</small>
         </div>
-        <p>Každý blok je samostatný a kliknutím vede přímo k odpovídající produktové linii.</p>
-      </div>
+      </a>
 
-      <div class="rb-story-grid">
-        <a class="rb-story-card rb-story-card--energy" href="produkty.html#flow">
-          <div class="rb-story-photo">
-            <img src="assets/photos/home-story-energy.jpg?v=20260804-rebuild1" alt="Žena začíná den ranním během u pobřeží" width="1448" height="1086" loading="eager" decoding="async">
-          </div>
-          <div class="rb-story-body">
-            <span class="rb-story-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="10"/><path d="M32 8v8M32 48v8M8 32h8M48 32h8M15 15l6 6M43 43l6 6M49 15l-6 6M21 43l-6 6"/></svg></span>
-            <span class="rb-story-number">01</span>
-            <h3>Energie</h3>
-            <span class="rb-story-rule"></span>
-            <p>Každý den začíná energií.</p>
-            <span class="rb-story-link">Flow →</span>
-          </div>
-        </a>
-
-        <a class="rb-story-card rb-story-card--performance" href="produkty.html#ultra">
-          <div class="rb-story-photo">
-            <img src="assets/photos/home-story-performance.jpg?v=20260804-rebuild1" alt="Intenzivní sportovní výkon u pobřeží" width="1448" height="1086" loading="eager" decoding="async">
-          </div>
-          <div class="rb-story-body">
-            <span class="rb-story-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="39" cy="13" r="5"/><path d="M33 22l-8 10 9 7 5 12M33 22l10 7 8-3M26 33l-10 7M34 39l-12 12M41 29l-5 10"/></svg></span>
-            <span class="rb-story-number">02</span>
-            <h3>Výkon</h3>
-            <span class="rb-story-rule"></span>
-            <p>Když je potřeba víc.</p>
-            <span class="rb-story-link">ULTRA →</span>
-          </div>
-        </a>
-
-        <a class="rb-story-card rb-story-card--resilience" href="produkty.html#shield">
-          <div class="rb-story-photo">
-            <img src="assets/photos/home-story-immunity.jpg?v=20260804-rebuild1" alt="Žena v běžném tempu pracovního dne" width="1448" height="1086" loading="lazy" decoding="async">
-          </div>
-          <div class="rb-story-body">
-            <span class="rb-story-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 8c8 6 16 8 24 8 0 20-8 33-24 40C16 49 8 36 8 16c8 0 16-2 24-8Z"/><path d="m22 31 7 7 14-15"/></svg></span>
-            <span class="rb-story-number">03</span>
-            <h3>Odolnost</h3>
-            <span class="rb-story-rule"></span>
-            <p>V práci i v běžném tempu dne.</p>
-            <span class="rb-story-link">Shield →</span>
-          </div>
-        </a>
-
-        <a class="rb-story-card rb-story-card--recovery" href="produkty.html#night">
-          <div class="rb-story-photo">
-            <img src="assets/photos/night-evening.webp?v=20260804-rebuild1" alt="Klidný večer a prostor pro regeneraci" width="1600" height="900" loading="lazy" decoding="async">
-          </div>
-          <div class="rb-story-body">
-            <span class="rb-story-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M42 10c-2 21-15 31-31 31 5 10 14 15 25 15 15 0 27-12 27-27 0-8-4-15-10-20-3 1-7 1-11 1Z"/><path d="M48 14v8M44 18h8"/></svg></span>
-            <span class="rb-story-number">04</span>
-            <h3>Regenerace</h3>
-            <span class="rb-story-rule"></span>
-            <p>Večer patří regeneraci.</p>
-            <span class="rb-story-link">Night →</span>
-          </div>
-        </a>
-
-        <a class="rb-story-card rb-story-card--family" href="produkty.html#balance">
-          <div class="rb-story-photo">
-            <img src="assets/photos/home-coastal-group.jpg?v=20260804-rebuild1" alt="Společný čas s nejbližšími při západu slunce" width="1600" height="900" loading="lazy" decoding="async">
-          </div>
-          <div class="rb-story-body">
-            <span class="rb-story-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="20" cy="20" r="6"/><circle cx="44" cy="20" r="6"/><circle cx="32" cy="15" r="7"/><path d="M7 50c1-9 6-14 13-14s12 5 13 14M31 50c1-10 6-16 13-16s12 6 13 16M18 50c1-12 6-19 14-19s13 7 14 19"/></svg></span>
-            <span class="rb-story-number">05</span>
-            <h3>Pro celou rodinu</h3>
-            <span class="rb-story-rule"></span>
-            <p>To nejdůležitější sdílíme.</p>
-            <span class="rb-story-link">Balance →</span>
-          </div>
-        </a>
-      </div>
+      <a class="division division--professional" href="professional.html">
+        <div class="division-content">
+          <span class="division-label">Immunalia Professional</span>
+          <h2>Odborná péče.</h2>
+          <p>Specializované programy připravované pro spolupráci ambulantního specialisty, pacienta a lékárny. Bez běžného e-shopu a bez volného spotřebitelského prodeje.</p>
+          <span class="division-button">Vstoupit do Professional <span aria-hidden="true">→</span></span>
+          <small class="division-note">Konkrétní výdej na lékařský předpis a příprava v lékárně budou použity pouze u programů, pro které bude zaveden odpovídající zákonný a farmaceutický režim.</small>
+        </div>
+      </a>
     </section>
 
-    <section class="rb-values-wrap" aria-labelledby="values-title">
-      <div class="rb-values">
-        <p class="rb-kicker">Immunalia Biotech</p>
-        <h2 id="values-title">Věda. Příroda. Péče.</h2>
-        <p>Vývoj stojí na definovaných surovinách, přesném výrobním postupu, vhodném obalu a srozumitelné dokumentaci.</p>
-        <div class="rb-value-grid">
-          <a class="rb-value" href="veda.html"><svg viewBox="0 0 72 72"><path d="M31 12h10M36 12v14M30 26h12l8 12M42 35l-9 9M25 54h32M17 61h42M24 54c0-7 5-13 12-13M36 41c10 0 18 6 18 13M27 30l9 9M23 26l8-8M18 49h10"/></svg><h3>Vývoj</h3><p>Vlastní odborný směr a průběžné ověřování.</p></a>
-          <a class="rb-value" href="veda.html"><svg viewBox="0 0 72 72"><path d="M35 58c0-21 7-36 25-45 1 20-8 33-25 45Z"/><path d="M35 58c-1-17-8-28-23-34-1 17 8 28 23 34ZM35 58V28M35 42l15-13M35 47 22 36"/></svg><h3>Suroviny</h3><p>Výběr s důrazem na identitu, čistotu a stabilitu.</p></a>
-          <a class="rb-value" href="veda.html"><svg viewBox="0 0 72 72"><path d="M36 9c9 7 18 9 27 9 0 22-9 36-27 44C18 54 9 40 9 18c9 0 18-2 27-9Z"/><path d="m24 34 8 8 17-19"/></svg><h3>Kvalita</h3><p>Kontrolovaný postup od suroviny po hotový výrobek.</p></a>
-          <a class="rb-value" href="produkty.html"><svg viewBox="0 0 72 72"><path d="M36 59S11 45 11 26c0-9 6-15 14-15 6 0 10 3 11 8 2-5 6-8 12-8 8 0 14 6 14 15 0 19-26 33-26 33Z"/></svg><h3>Každodenní péče</h3><p>Přehledné produktové linie pro různé životní rytmy.</p></a>
+    <section class="brand-system">
+      <div class="brand-system-inner">
+        <p class="rb-kicker">Jedna biotechnologická platforma · dva oddělené režimy</p>
+        <h2>Objem v Daily. Odborná hodnota v Professional.</h2>
+        <p>Obě divize sdílejí důraz na vývoj, kvalitu surovin a přesný výrobní postup. Liší se však cílovou skupinou, regulací, způsobem komunikace i distribuční cestou.</p>
+        <div class="system-grid">
+          <article class="system-card"><h3>Daily</h3><p>Spotřebitelská řada doplňků stravy. Veřejná komunikace, přímý prodej, opakované nákupy a škálovatelná distribuce.</p></article>
+          <article class="system-card"><h3>Professional</h3><p>Odborné programy bez veřejných cen a tlačítek „Koupit“. Přístup přes spolupracující specialisty, lékárny a Professional zónu.</p></article>
+          <article class="system-card"><h3>Science</h3><p>Společný výzkumný základ, standardizace, dokumentace kvality, patentové portfolio a systematické vyhodnocování zkušeností.</p></article>
         </div>
       </div>
     </section>
+
+    <section class="legal-strip"><div>Immunalia Daily a Immunalia Professional jsou na webu záměrně odděleny. Informace o doplňcích stravy nesmějí být vykládány jako léčebná tvrzení. Professional programy budou poskytovány pouze v režimu odpovídajícím jejich skutečné právní klasifikaci a zavedené odborné dokumentaci.</div></section>
   </main>
 
-  <footer class="rb-footer">
-    <div class="rb-footer-inner"><span>© 2026 Immunalia Biotech</span><a href="odborna-sekce.html">Odborná sekce</a></div>
-  </footer>
-
-  <script src="assets/js/navigation.js?v=20260804-navclean1"></script>
+  <footer class="rb-footer"><div class="rb-footer-inner"><span>© 2026 Immunalia Biotech</span><a href="professional.html">Professional</a></div></footer>
+  <script src="assets/js/navigation.js?v=20260804-two-divisions"></script>
 </body>
 </html>
