@@ -1,39 +1,14 @@
-name: Deploy draft site to GitHub Pages
+name: Draft archived — deployment disabled
 
 on:
-  push:
-    branches: ["draft"]
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages-draft
-  cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  archived:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout draft
-        uses: actions/checkout@v4
-        with:
-          ref: draft
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload static site
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Draft is archived
+        run: echo "The draft branch is archived. GitHub Pages deploys only from main."
