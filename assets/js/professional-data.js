@@ -16,12 +16,36 @@ window.IMMUNALIA_PRO_PRODUCTS = [
     specialists:'Chirurgové, urologové, dermatologové a další ambulantní specialisté.'
   },
   {
-    slug:'flow', name:'Flow Professional', label:'Gynekologie', icon:'◇',
-    subtitle:'Podpůrná linie pro ženský komfort',
-    card:'Profesionální podpora ženského komfortu, rovnováhy a odborně vedeného gynekologického režimu.',
-    lead:'Flow Professional je určena pro spolupráci s gynekology a ambulantními pracovišti zaměřenými na ženský komfort.',
-    areas:['ženský komfort','odborně vedený režim','dlouhodobé sledování subjektivních obtíží'],
-    specialists:'Gynekologové a specializovaná ambulantní pracoviště.'
+    slug:'flow', name:'Flow Professional', label:'Gynekologie · Reprodukční medicína', icon:'◇',
+    subtitle:'Odborně vedené sledování zánětlivého prostředí endometria',
+    card:'Professional protokol pro objektivní sledování změn zánětlivého prostředí endometria, histologického nálezu a následných reprodukčních výsledků.',
+    lead:'Flow Professional je odborný program pro gynekology a pracoviště reprodukční medicíny zaměřený na standardizované sledování zánětlivého prostředí endometria. Program odděluje biologickou a histologickou odpověď od skutečného reprodukčního výsledku.',
+    areas:['chronické zánětlivé prostředí endometria','standardizované vyhodnocení před a po programu','sledování histologické a cytokinové odpovědi','návazné sledování implantace, těhotenství a živě narozeného dítěte'],
+    specialists:'Gynekologové, centra reprodukční medicíny a další specializovaná ambulantní pracoviště.',
+    flowProtocol:{
+      baseline:[
+        'Biopsie endometria se standardním histopatologickým vyhodnocením.',
+        'CD138: kvantifikace CD138+ plazmatických buněk v endometriu.',
+        'MUM1 / IRF4: doplňkový marker plazmatických buněk.',
+        'IL‑8 (CXCL8), IL‑10 a IL‑6; podle protokolu doplnit TNF‑α a hs‑CRP.',
+        'Zaznamenat fázi menstruačního cyklu, klinický stav a relevantní souběžnou léčbu.'
+      ],
+      biomarkers:[
+        {name:'CD138', role:'Primární histologický marker', note:'Hodnotí se imunohistochemicky ve vzorku endometria, nikoli z krve.'},
+        {name:'MUM1 / IRF4', role:'Doplňkový histologický marker', note:'Doplňuje identifikaci plazmatických buněk a interpretaci CD138.'},
+        {name:'IL‑8 / CXCL8', role:'Prozánětlivá a chemotaktická aktivita', note:'Sledovat změnu proti výchozí hodnotě; systémové a lokální hodnoty interpretovat odděleně.'},
+        {name:'IL‑10', role:'Regulační / protizánětlivá odpověď', note:'Hodnotit v kontextu ostatních cytokinů, nikoli izolovaně.'},
+        {name:'IL‑6', role:'Zánětlivá aktivita', note:'Doplňkový marker dynamiky zánětlivé odpovědi.'},
+        {name:'hs‑CRP', role:'Systémový zánět', note:'Doplňkový a nespecifický marker; sám neprokazuje stav endometria.'}
+      ],
+      evaluation:[
+        {title:'Biologická odpověď', text:'Změna cytokinového profilu proti výchozím hodnotám bez automatického závěru o fertilitě.'},
+        {title:'Histologická odpověď', text:'Kvantitativní pokles nebo vymizení CD138+ plazmatických buněk při kontrolní biopsii, interpretované společně s histologií a MUM1 / IRF4.'},
+        {title:'Kompletní sledovaná odpověď', text:'Příznivá změna histologického nálezu společně se změnou zánětlivého profilu.'},
+        {title:'Reprodukční výsledek', text:'Samostatně zaznamenat implantaci, biochemické a klinické těhotenství, pokračující těhotenství, ztrátu těhotenství a živě narozené dítě.'}
+      ],
+      note:'Biologická nebo histologická odpověď sama o sobě neprokazuje zvýšení fertility. Účinek na chronickou endometritidu, pravděpodobnost otěhotnění nebo živě narozené dítě musí být potvrzen odpovídajícím klinickým hodnocením.'
+    }
   },
   {
     slug:'skin', name:'Skin Professional', label:'Dermatologie · Estetická medicína', icon:'◌',
