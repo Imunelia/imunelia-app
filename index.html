@@ -3,53 +3,85 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Immunalia | Daily a Professional</title>
-  <meta name="description" content="Immunalia propojuje dvě samostatné divize: Daily doplňky stravy pro každodenní péči a Professional odbornou platformu pro ambulantní specialisty a lékárny.">
-  <link rel="stylesheet" href="site-rebuild-v1.css?v=20260804-photo-fix3">
-  <style>
-    .division-hero{min-height:calc(100vh - 84px);display:grid;grid-template-columns:1fr 1fr}
-    .division{position:relative;display:flex;align-items:flex-end;min-height:720px;padding:clamp(32px,6vw,88px);overflow:hidden;text-decoration:none;background:#17332d}
-    .division-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;background:#17332d}
-    .division--daily .division-image{object-position:center 48%}
-    .division--professional .division-image{object-position:center 42%}
-    .division-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,20,18,.10) 0%,rgba(8,18,17,.36) 48%,rgba(8,18,17,.90) 100%)}
-    .division-content{position:relative;z-index:2;max-width:620px;color:#fff}
-    .division-label{display:inline-block;margin-bottom:18px;padding:8px 13px;border:1px solid rgba(255,255,255,.55);border-radius:99px;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
-    .division h1,.division h2{margin:0 0 20px;color:#fff;font-size:clamp(44px,5.3vw,82px);line-height:.98}
-    .division p{max-width:580px;margin:0 0 28px;font-size:clamp(17px,1.5vw,22px);line-height:1.55;color:rgba(255,255,255,.92)}
-    .division-button{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;background:#fff;color:#17332d;border-radius:99px;font-weight:700}
-    .division-note{display:block;margin-top:18px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.78)}
-    .brand-system{padding:82px max(24px,6vw);background:#f4f0e8}.brand-system-inner{max-width:1220px;margin:auto}.brand-system h2{font-size:clamp(34px,4vw,60px);margin:0 0 22px}.brand-system>div>p{max-width:820px;font-size:19px;line-height:1.65}.system-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:42px}.system-card{padding:30px;background:#fff;border-radius:18px}.system-card h3{margin:0 0 12px;font-size:23px}.system-card p{margin:0;line-height:1.6}.legal-strip{padding:26px max(24px,6vw);background:#17332d;color:#fff;font-size:14px;line-height:1.6}.legal-strip div{max-width:1220px;margin:auto}.rb-header-cta{white-space:nowrap}
-    @media(max-width:900px){.division-hero{grid-template-columns:1fr}.division{min-height:640px;padding:38px 30px}.division-image{object-position:center}.division--daily .division-image{object-position:center 48%}.division--professional .division-image{object-position:center 45%}.system-grid{grid-template-columns:1fr}.rb-header-cta{display:none}}
-  </style>
+  <title>Immunalia | Daily & Professional</title>
+  <meta name="description" content="Immunalia Biotech propojuje dvě oddělené cesty: volně dostupnou řadu Daily jako doplňky stravy a odbornou řadu Professional pro spolupráci lékaře a lékárny.">
+  <link rel="stylesheet" href="medical-rebuild.css?v=20260902">
 </head>
-<body class="rb-home">
-  <header class="rb-header" data-site-header>
-    <a class="rb-brand" href="index.html" aria-label="Immunalia domů"><img src="assets/imunelia-logo-nav.svg?v=20260710-exactlogo1" alt="Immunalia Biotech"></a>
-    <nav class="rb-nav" id="site-nav" aria-label="Hlavní navigace">
-      <a class="active" href="index.html">Úvod</a><a href="produkty.html">Daily</a><a href="professional.html">Professional</a><a href="veda.html">Věda a kvalita</a><a href="o-znacce.html">Společnost</a><a href="kontakt.html">Kontakt</a>
+<body class="med-home">
+  <header class="med-header">
+    <a class="med-brand" href="index.html" aria-label="Immunalia domů"><img src="assets/imunelia-logo-nav.svg" alt="Immunalia Biotech"></a>
+    <nav class="med-nav" aria-label="Hlavní navigace">
+      <a class="active" href="index.html">Úvod</a>
+      <a href="produkty.html">Daily</a>
+      <a href="professional.html">Professional</a>
+      <a href="veda.html">Science</a>
+      <a href="o-znacce.html">Společnost</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a class="med-cta" href="professional-login.html">Pro odborníky</a>
     </nav>
-    <div class="rb-language" aria-label="Přepínač jazyka"><a class="active" href="index.html" lang="cs">CZ</a><a href="index-en.html" lang="en">EN</a></div>
-    <a class="rb-header-cta" href="professional.html">Pro odborníky</a>
-    <button class="rb-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Otevřít navigaci" data-nav-toggle><span></span><span></span><span></span></button>
   </header>
+
   <main>
-    <section class="division-hero" aria-label="Dvě divize Immunalia">
-      <a class="division division--daily" href="produkty.html">
-        <img class="division-image" src="assets/photos/home-coastal-group.jpg?v=20260804-photo-fix3" alt="Aktivní rodina u moře" width="1600" height="900" loading="eager" fetchpriority="high">
-        <span class="division-overlay" aria-hidden="true"></span>
-        <div class="division-content"><span class="division-label">Immunalia Daily</span><h1>Každodenní péče.</h1><p>Doplňky stravy pro energii, rovnováhu, odolnost, výkon a regeneraci. Dostupné pro přímý nákup prostřednictvím e-shopu a vybraných partnerů.</p><span class="division-button">Vstoupit do Daily <span aria-hidden="true">→</span></span><small class="division-note">Daily produkty jsou doplňky stravy. Nejsou léčivými přípravky a nenahrazují pestrou stravu ani lékařskou péči.</small></div>
-      </a>
-      <a class="division division--professional" href="professional.html">
-        <img class="division-image" src="assets/photos/home-story-immunity.jpg?v=20260804-photo-fix3" alt="Odborná spolupráce zdravotnických pracovníků" width="1448" height="1086" loading="eager" fetchpriority="high">
-        <span class="division-overlay" aria-hidden="true"></span>
-        <div class="division-content"><span class="division-label">Immunalia Professional</span><h2>Odborná péče.</h2><p>Specializované programy připravované pro spolupráci ambulantního specialisty, pacienta a lékárny. Bez běžného e-shopu a bez volného spotřebitelského prodeje.</p><span class="division-button">Vstoupit do Professional <span aria-hidden="true">→</span></span><small class="division-note">Konkrétní výdej na lékařský předpis a příprava v lékárně budou použity pouze u programů, pro které bude zaveden odpovídající zákonný a farmaceutický režim.</small></div>
-      </a>
+    <section class="med-hero">
+      <div class="med-copy">
+        <span class="med-kicker">Immunalia Biotech</span>
+        <h1>Jedna biotechnologická platforma. Dvě jasně oddělené cesty.</h1>
+        <p>Daily je volně dostupná spotřebitelská řada doplňků stravy. Professional je odborná platforma pro spolupráci lékaře, pacienta a lékárny, včetně programů připravovaných pro individuální magistraliter režim.</p>
+        <div class="med-actions">
+          <a class="med-btn primary" href="professional.html">Professional</a>
+          <a class="med-btn secondary" href="produkty.html">Daily doplňky stravy</a>
+        </div>
+      </div>
+      <div class="bottle-stage" aria-label="Nový obal Immunalia Professional">
+        <div class="bottle" role="img" aria-label="Bílá lahvička Immunalia Professional na 10 sublingválních tablet">
+          <div class="bottle-label">
+            <div class="bottle-bird">⌁</div>
+            <div class="bottle-brand">Immunalia</div>
+            <div class="bottle-sub">BIOTECH</div>
+            <h3>PROFESSIONAL</h3>
+            <small>10 sublingválních tablet</small>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="brand-system"><div class="brand-system-inner"><p class="rb-kicker">Jedna biotechnologická platforma · dva oddělené režimy</p><h2>Objem v Daily. Odborná hodnota v Professional.</h2><p>Obě divize sdílejí důraz na vývoj, kvalitu surovin a přesný výrobní postup. Liší se však cílovou skupinou, regulací, způsobem komunikace i distribuční cestou.</p><div class="system-grid"><article class="system-card"><h3>Daily</h3><p>Spotřebitelská řada doplňků stravy. Veřejná komunikace, přímý prodej, opakované nákupy a škálovatelná distribuce.</p></article><article class="system-card"><h3>Professional</h3><p>Odborné programy bez veřejných cen a tlačítek „Koupit“. Přístup přes spolupracující specialisty, lékárny a Professional zónu.</p></article><article class="system-card"><h3>Science</h3><p>Společný výzkumný základ, standardizace, dokumentace kvality, patentové portfolio a systematické vyhodnocování zkušeností.</p></article></div></div></section>
-    <section class="legal-strip"><div>Immunalia Daily a Immunalia Professional jsou na webu záměrně odděleny. Informace o doplňcích stravy nesmějí být vykládány jako léčebná tvrzení. Professional programy budou poskytovány pouze v režimu odpovídajícím jejich skutečné právní klasifikaci a zavedené odborné dokumentaci.</div></section>
+
+    <section class="dual">
+      <div class="dual-head">
+        <span class="med-kicker">Portfolio</span>
+        <h2>Retail zůstává volně dostupný. Professional získává medicínskou identitu.</h2>
+        <p>Obě větve sdílejí značku, vývoj a důraz na kvalitu. Liší se však regulatorním režimem, způsobem komunikace, distribuční cestou i obalem.</p>
+      </div>
+      <div class="dual-grid">
+        <article class="track">
+          <span class="pill">Daily / Retail</span>
+          <h3>Volně dostupné doplňky stravy</h3>
+          <p>Balance, Recover, Restart, Ultra a další spotřebitelské produkty. Veřejná komunikace, e‑shop, partnerský prodej a pouze tvrzení odpovídající skutečné právní klasifikaci produktu.</p>
+          <div class="med-actions"><a class="med-btn secondary" href="produkty.html">Zobrazit Daily</a></div>
+        </article>
+        <article class="track pro">
+          <span class="pill">Professional</span>
+          <h3>Odborná péče a magistraliter programy</h3>
+          <p>Programy určené pro spolupráci ambulantních specialistů a lékáren. Bez klasického retailového e‑shopu, s odbornou dokumentací, standardizovaným workflow a oddělenou Professional zónou.</p>
+          <div class="med-actions"><a class="med-btn primary" style="background:#fff;color:#071b35" href="professional.html">Vstoupit do Professional</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="dual" style="padding-top:0">
+      <div class="dual-head">
+        <span class="med-kicker">Nový systém</span>
+        <h2>Od blistru k malé farmaceutické lahvičce.</h2>
+      </div>
+      <div class="three">
+        <article class="feature"><h3>10 tablet</h3><p>Professional řada přechází na malou bílou lahvičku pro deset sublingválních tablet. Vizuálně čistá, přesná a snadno rozpoznatelná.</p></article>
+        <article class="feature"><h3>Navy + gold</h3><p>Základní identita Immunalia Biotech zůstává. Professional používá tmavě modrou a zlatou jako hlavní medicínskou vrstvu značky.</p></article>
+        <article class="feature"><h3>Jedna platforma</h3><p>Jednotlivé odborné oblasti nejsou prezentovány jako patnáct nesouvisejících retailových produktů, ale jako klinické programy jedné platformy.</p></article>
+      </div>
+    </section>
+
+    <section class="legal">Daily produkty jsou doplňky stravy a nejsou léčivými přípravky. Professional část popisuje odbornou platformu, výzkumné a magistraliter workflow. Konkrétní příprava, výdej a odborná komunikace se vždy řídí skutečnou právní klasifikací daného přípravku a platnými požadavky.</section>
   </main>
-  <footer class="rb-footer"><div class="rb-footer-inner"><span>© 2026 Immunalia Biotech</span><a href="professional.html">Professional</a></div></footer>
-  <script src="assets/js/navigation.js?v=20260804-photo-fix3"></script>
+
+  <footer class="med-footer"><span>© 2026 Immunalia Biotech</span><span><a href="produkty.html">Daily</a> · <a href="professional.html">Professional</a> · <a href="veda.html">Science</a></span></footer>
 </body>
 </html>
