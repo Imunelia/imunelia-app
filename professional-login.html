@@ -3,38 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Professional zóna | Immunalia</title>
-  <meta name="description" content="Přihlášení odborných partnerů Immunalia Professional.">
-  <link rel="stylesheet" href="styles.css?v=20260802-quality1">
-  <link rel="stylesheet" href="site-fixes.css?v=20260802-quality1">
-  <link rel="stylesheet" href="professional-v2.css?v=20260802-quality1">
+  <title>Professional Access | Immunalia</title>
+  <meta name="description" content="Odborný vstup pro lékaře, lékárníky a partnerská pracoviště Immunalia Professional.">
+  <link rel="stylesheet" href="medical-rebuild.css?v=20260902c">
+  <style>
+    .access-shell{min-height:calc(100vh - 82px);display:grid;grid-template-columns:1.08fr .92fr;background:linear-gradient(135deg,#071b35 0%,#0c2849 56%,#f6f2ea 56%,#fff 100%)}
+    .access-copy{padding:clamp(56px,8vw,110px) max(28px,7vw);color:#fff}.access-copy h1{font-family:Georgia,serif;font-size:clamp(50px,6.8vw,92px);font-weight:500;line-height:.94;margin:14px 0 24px}.access-copy p{max-width:730px;color:#d7deea;font-size:19px;line-height:1.7}.access-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:40px}.access-item{padding:20px;border:1px solid rgba(255,255,255,.15);border-radius:17px;background:rgba(255,255,255,.06)}.access-item strong{display:block;color:#e4c78d;margin-bottom:7px}.access-item span{color:#d7deea;font-size:14px;line-height:1.5}.login-side{display:flex;align-items:center;justify-content:center;padding:42px}.login-card{width:min(100%,470px);padding:38px;background:#fff;border-radius:26px;box-shadow:0 28px 70px rgba(7,27,53,.16);border:1px solid #e5e0d8}.login-card h2{font-family:Georgia,serif;color:#071b35;font-size:38px;font-weight:500;margin:4px 0 8px}.login-card p{color:#667085;line-height:1.6}.login-form{display:grid;gap:14px;margin-top:26px}.login-form label{font-size:13px;font-weight:800;color:#142033}.login-form input{width:100%;box-sizing:border-box;padding:14px 15px;border:1px solid #d9d7d1;border-radius:12px;font:inherit}.login-form button,.login-form a{justify-content:center;text-align:center}.status-note{display:none;margin-top:16px;padding:14px;border-radius:12px;background:#f6f2ea;color:#5e6a78;font-size:13px;line-height:1.55}.role-note{margin-top:22px;padding-top:20px;border-top:1px solid #ece7df;color:#667085;font-size:13px;line-height:1.6}@media(max-width:900px){.access-shell{grid-template-columns:1fr;background:#071b35}.login-side{background:#f6f2ea}.access-grid{grid-template-columns:1fr}} 
+  </style>
 </head>
-<body class="professional-page professional-v2">
-  <header class="site-header" data-site-header>
-    <a class="brand" href="index.html"><img class="brand-logo" src="assets/imunelia-logo-nav.svg" alt="Immunalia"></a>
-    <nav id="site-nav" class="nav"><a href="index.html">Úvod</a><a href="produkty.html">Produkty</a><a class="active" href="professional.html">Professional</a><a href="veda.html">Kvalita a vývoj</a><a href="o-znacce.html">O značce</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="header-cta" href="professional.html">Veřejný katalog</a>
-    <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Otevřít navigaci" data-nav-toggle><span></span><span></span><span></span></button>
-  </header>
-  <main class="pro-login-shell">
-    <section class="pro-login-copy">
-      <span class="pro-tag">Pouze pro odborné partnery</span>
-      <h1>Professional zóna</h1>
-      <p>Registrované pracoviště získá přístup pouze k produktovým liniím aktivovaným pro jeho odbornost.</p>
-      <h2>Co bude zóna obsahovat</h2>
-      <ul>
-        <li>produktový list a úplnou specifikaci produktu,</li>
-        <li>složení, doporučený způsob použití a informace k balení,</li>
-        <li>informace pro ambulantní pracoviště a distribuční podmínky,</li>
-        <li>objednávkový systém, partnerské ceny a historii objednávek,</li>
-        <li>schválené materiály pro komunikaci s klientem,</li>
-        <li>přímý kontakt na podporu Immunalia Professional.</li>
-      </ul>
-      <div class="pro-disclaimer">Zóna neobsahuje léčebné protokoly, indikace ani náhradu odborného rozhodování. Skutečné bezpečné přihlášení vyžaduje serverovou autentizaci, správu účtů a databázi oprávnění.</div>
+<body class="med-pro">
+  <header class="med-header"><a class="med-brand" href="index.html"><img src="assets/imunelia-logo-nav.svg" alt="Immunalia Biotech"></a><nav class="med-nav"><a href="index.html">Úvod</a><a href="produkty.html">Daily</a><a href="professional.html">Professional</a><a href="veda.html">Science</a><a class="active" href="professional-login.html">Professional Access</a></nav></header>
+  <main class="access-shell">
+    <section class="access-copy">
+      <span class="med-kicker">Professional Access</span>
+      <h1>Pracovní prostředí pro odborníka.</h1>
+      <p>Jednotný vstup pro specialistu nebo lékárníka: klinické programy, dokumentace, individuální příprava, laboratorní hodnoty, follow‑up a odborné materiály v jednom systému.</p>
+      <div class="access-grid">
+        <div class="access-item"><strong>Pacienti & programy</strong><span>Přehled anonymizovaných případů, zvoleného programu a stavu follow‑up.</span></div>
+        <div class="access-item"><strong>Magistraliter workflow</strong><span>Informace pro předepisujícího lékaře a spolupracující lékárnu.</span></div>
+        <div class="access-item"><strong>Biomarkery & outcomes</strong><span>Standardizované vstupní a kontrolní hodnoty podle konkrétní klinické oblasti.</span></div>
+        <div class="access-item"><strong>Dokumentace</strong><span>Pracovní protokoly, odborné podklady, historie a export záznamu.</span></div>
+      </div>
     </section>
-    <section class="pro-login-card"><h1>Přihlášení</h1><form class="pro-form" id="pro-login-form"><label for="login-email">Pracovní e-mail</label><input id="login-email" type="email" required><label for="login-password">Heslo</label><input id="login-password" type="password" required><button class="pro-btn primary" type="submit">Přihlásit se</button><a class="pro-btn secondary" href="professional-partner.html">Požádat o partnerský účet</a><div class="pro-status" id="pro-login-status">Bezpečné přihlášení bude aktivováno po napojení autentizační služby. Tato veřejná verze hesla neověřuje.</div></form></section>
+    <section class="login-side">
+      <div class="login-card">
+        <span class="med-kicker">Pouze pro odborné partnery</span><h2>Přihlášení</h2><p>Ověřený účet lékaře, lékárníka nebo partnerského pracoviště.</p>
+        <form class="login-form" id="pro-login-form"><label for="login-email">Pracovní e-mail</label><input id="login-email" type="email" autocomplete="username" required><label for="login-password">Heslo</label><input id="login-password" type="password" autocomplete="current-password" required><button class="med-btn primary" type="submit">Vstoupit do Professional Access</button><a class="med-btn secondary" href="professional-partner.html">Požádat o odborný účet</a><div class="status-note" id="pro-login-status">Toto je náhled rozhraní. Bezpečné přihlášení bude funkční po napojení autentizace a databáze oprávnění.</div></form>
+        <div class="role-note">Po přihlášení se obsah zobrazí podle role a odbornosti. Lékař, lékárník a interní tým nemají mít stejná oprávnění.</div>
+      </div>
+    </section>
   </main>
   <script>document.getElementById('pro-login-form').addEventListener('submit',e=>{e.preventDefault();document.getElementById('pro-login-status').style.display='block'});</script>
-  <script src="assets/js/navigation.js?v=20260802-quality1"></script>
 </body>
 </html>
