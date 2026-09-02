@@ -3,33 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Partnerská zóna | Immunalia Professional</title>
-  <meta name="description" content="Přehled partnerské zóny Immunalia Professional.">
-  <link rel="stylesheet" href="styles.css?v=20260802-pro15">
-  <link rel="stylesheet" href="site-fixes.css?v=20260802-pro15">
-  <link rel="stylesheet" href="professional-v2.css?v=20260802-pro15">
+  <title>Professional Dashboard | Immunalia</title>
+  <meta name="description" content="Pracovní dashboard Immunalia Professional pro specialisty a partnerské lékárny.">
+  <link rel="stylesheet" href="medical-rebuild.css?v=20260902c">
+  <style>
+    .dash{max-width:1500px;margin:0 auto;padding:48px max(22px,5vw) 80px}.dash-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:30px}.dash-head h1{font-family:Georgia,serif;font-size:clamp(44px,5vw,72px);font-weight:500;line-height:1;margin:8px 0;color:#071b35}.dash-head p{max-width:760px;color:#667085;line-height:1.65}.dash-actions{display:flex;gap:10px;flex-wrap:wrap}.metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:28px 0 34px}.metric{padding:22px;border-radius:18px;background:#071b35;color:#fff}.metric small{display:block;color:#e4c78d;font-size:11px;letter-spacing:.12em;text-transform:uppercase}.metric strong{display:block;font-family:Georgia,serif;font-size:38px;font-weight:500;margin:8px 0 3px}.metric span{font-size:13px;color:#cbd4e1}.dashboard-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:22px}.panel{background:#fff;border:1px solid #e5e0d8;border-radius:22px;padding:26px}.panel h2{font-family:Georgia,serif;color:#071b35;font-size:30px;font-weight:500;margin:0 0 8px}.panel>p{color:#667085;line-height:1.6;margin-top:0}.case-list{display:grid;gap:10px;margin-top:20px}.case{display:grid;grid-template-columns:1fr auto;gap:15px;align-items:center;padding:17px;border-radius:15px;background:#f8f5ef;border:1px solid #ece6db}.case strong{color:#071b35}.case small{display:block;color:#667085;margin-top:5px}.status{display:inline-block;padding:7px 9px;border-radius:999px;background:#fff;color:#071b35;border:1px solid #ded8cf;font-size:11px;font-weight:800;white-space:nowrap}.tool-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}.tool{display:block;padding:19px;border-radius:16px;background:#f8f5ef;text-decoration:none;color:#142033;border:1px solid #ece6db}.tool strong{display:block;color:#071b35;margin-bottom:7px}.tool span{font-size:13px;line-height:1.5;color:#667085}.workflow-list{display:grid;gap:12px;margin-top:18px}.workflow-row{display:grid;grid-template-columns:34px 1fr;gap:12px}.workflow-row b{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#071b35;color:#e4c78d}.workflow-row strong{display:block;color:#071b35}.workflow-row span{font-size:13px;color:#667085;line-height:1.5}.zone-note{margin-top:22px;padding:18px;border-left:3px solid #c69a4b;background:#f8f5ef;color:#667085;font-size:13px;line-height:1.65}@media(max-width:1050px){.metric-grid{grid-template-columns:repeat(2,1fr)}.dashboard-grid{grid-template-columns:1fr}}@media(max-width:640px){.dash-head{display:block}.metric-grid,.tool-grid{grid-template-columns:1fr}.case{grid-template-columns:1fr}.dash-actions{margin-top:18px}}
+  </style>
 </head>
-<body class="professional-page professional-v2">
-  <header class="site-header" data-site-header>
-    <a class="brand" href="index.html"><img class="brand-logo" src="assets/imunelia-logo-nav.svg" alt="Immunalia"></a>
-    <nav id="site-nav" class="nav"><a href="index.html">Úvod</a><a href="produkty.html">Produkty</a><a class="active" href="professional.html">Professional</a><a href="veda.html">Věda</a><a href="o-znacce.html">O značce</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="header-cta" href="professional.html">Odhlásit</a>
-    <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Otevřít navigaci" data-nav-toggle><span></span><span></span><span></span></button>
-  </header>
-  <main class="pro-zone">
-    <span class="pro-tag">Náhled partnerského rozhraní</span>
-    <h1>Professional zóna</h1>
-    <p>Specialista vidí celý katalog. Aktivované linie obsahují odborné materiály, objednávky a partnerské podmínky; ostatní lze otevřít žádostí o aktivaci.</p>
-    <section class="pro-zone-grid">
-      <article class="pro-zone-card"><span class="pro-tag">Aktivováno</span><h2>Moje produkty</h2><p>Plné odborné informace, materiály pro klienty a objednávky aktivovaných linií.</p><a class="pro-btn primary" href="professional.html">Otevřít katalog</a></article>
-      <article class="pro-zone-card"><h2>Objednávky</h2><p>Partnerské ceny, stav objednávek a historie opakovaných nákupů pracoviště.</p><span class="pro-tag">Vyžaduje e-commerce backend</span></article>
-      <article class="pro-zone-card"><h2>Materiály</h2><p>Produktové listy, pracovní protokoly, informace pro klienty a grafické podklady.</p><span class="pro-tag">Připraveno k napojení</span></article>
-      <article class="pro-zone-card"><h2>Klientské kódy</h2><p>Každé pracoviště může mít vlastní kód a QR odkaz pro opakované objednávky.</p><span class="pro-tag">Vyžaduje databázi</span></article>
-      <article class="pro-zone-card"><h2>Aktivace dalších linií</h2><p>Žádost o rozšíření oprávnění podle odbornosti pracoviště.</p><a class="pro-btn secondary" href="professional-partner.html">Požádat o aktivaci</a></article>
-      <article class="pro-zone-card pro-locked"><h2>Administrace</h2><p>Správa cen, účtů, produktových oprávnění a partnerů je určena internímu týmu Immunalia.</p><span class="pro-tag">Interní role</span></article>
+<body class="med-pro">
+  <header class="med-header"><a class="med-brand" href="index.html"><img src="assets/imunelia-logo-nav.svg" alt="Immunalia Biotech"></a><nav class="med-nav"><a href="professional.html">Professional</a><a class="active" href="professional-zone.html">Dashboard</a><a href="professional-product.html?product=flow">Programy</a><a href="professional-partner.html">Pracoviště</a><a class="med-cta" href="professional.html">Odhlásit</a></nav></header>
+  <main class="dash">
+    <div class="dash-head"><div><span class="med-kicker">Professional Dashboard · náhled</span><h1>Klinické programy a follow‑up.</h1><p>Pracovní rozhraní pro specialistu: pacientský kód, klinická oblast, příprava v lékárně, vstupní hodnoty, kontrolní měření a stav dokumentace.</p></div><div class="dash-actions"><a class="med-btn primary" href="professional-product.html?product=flow">Nový případ</a><a class="med-btn secondary" href="professional.html">Knihovna programů</a></div></div>
+
+    <section class="metric-grid" aria-label="Přehled"><div class="metric"><small>Aktivní případy</small><strong>12</strong><span>demo data</span></div><div class="metric"><small>Čeká na kontrolu</small><strong>4</strong><span>follow‑up</span></div><div class="metric"><small>Dokončená dokumentace</small><strong>18</strong><span>demo data</span></div><div class="metric"><small>Aktivní programy</small><strong>6</strong><span>dle odbornosti</span></div></section>
+
+    <section class="dashboard-grid">
+      <div class="panel"><h2>Moje případy</h2><p>Náhled struktury. Identita pacientů má být v ostrém provozu oddělena a chráněna; zde používáme pouze demonstrační kódy.</p><div class="case-list">
+        <div class="case"><div><strong>FLOW‑026</strong><small>Gynekologie · vstupní histologie + cytokiny</small></div><span class="status">Kontrola za 14 dní</span></div>
+        <div class="case"><div><strong>DENTAL‑114</strong><small>Stomatologie · extrakce · bolest / otok / analgetika</small></div><span class="status">Follow‑up otevřen</span></div>
+        <div class="case"><div><strong>POSTOP‑071</strong><small>Chirurgie · hojení · funkce · fotodokumentace</small></div><span class="status">Výsledek zapsán</span></div>
+        <div class="case"><div><strong>MIGRA‑033</strong><small>Neurologie · čas nástupu · trvání · intenzita</small></div><span class="status">Čeká na data</span></div>
+      </div></div>
+
+      <aside class="panel"><h2>Workflow případu</h2><p>Jednotný rámec napříč klinickými programy.</p><div class="workflow-list">
+        <div class="workflow-row"><b>1</b><div><strong>Baseline</strong><span>Klinický stav, anamnéza, standardní léčba, relevantní markery.</span></div></div>
+        <div class="workflow-row"><b>2</b><div><strong>Preskripce / příprava</strong><span>Odborné rozhodnutí a magistraliter workflow v partnerské lékárně.</span></div></div>
+        <div class="workflow-row"><b>3</b><div><strong>Aplikace</strong><span>Jednoznačné časování, způsob podání a evidence.</span></div></div>
+        <div class="workflow-row"><b>4</b><div><strong>Follow‑up</strong><span>Kontrolní klinické parametry, biomarkery a outcome.</span></div></div>
+      </div><div class="zone-note">Dashboard zatím pracuje pouze jako front‑end náhled. Skutečné pacientské záznamy, autentizace, auditní stopa a zdravotní data vyžadují zabezpečený backend a odpovídající právní režim.</div></aside>
     </section>
-    <div class="pro-disclaimer">Toto je hotová front-end struktura partnerské zóny. Skutečné zabezpečení, objednávky, ceny a účty musí běžet přes serverovou autentizaci a databázi; statické GitHub Pages samy bezpečné uživatelské účty neumějí.</div>
+
+    <section class="panel" style="margin-top:22px"><h2>Odborné nástroje</h2><p>Každý nástroj bude dostupný podle role a aktivovaných programů.</p><div class="tool-grid">
+      <a class="tool" href="professional-product.html?product=flow"><strong>Biomarkery & laboratorní sledování</strong><span>Výchozí a kontrolní hodnoty, změna proti baseline, oddělená interpretace klinických a laboratorních dat.</span></a>
+      <a class="tool" href="professional-product.html?product=dental"><strong>Procedurální protokoly</strong><span>Stomatologie, chirurgie, pooperační sledování a standardizované formuláře.</span></a>
+      <a class="tool" href="professional-contact.html"><strong>Partnerská lékárna</strong><span>Komunikační cesta pro přípravu, výdej, šarži, dobu použitelnosti a další dokumentaci.</span></a>
+      <a class="tool" href="veda.html"><strong>Science & evidence</strong><span>Mechanismus, hypotézy, pozorování a budoucí klinické ověřování oddělené podle úrovně důkazů.</span></a>
+    </div></section>
   </main>
-  <script src="assets/js/navigation.js"></script>
 </body>
 </html>
